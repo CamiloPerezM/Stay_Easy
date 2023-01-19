@@ -1,0 +1,20 @@
+url
+
+get
+
+localhost:8080/categorias/
+
+
+post
+
+
+localhost:8080/categorias/
+
+
+body
+
+{
+    "titulo":"Cabaña",
+    "descripcion":"Cabañas",
+    "urlImagen":"https://upload.wikimedia.org/wikipedia/commons/6/62/Zumpy_chata.jpg"
+}
