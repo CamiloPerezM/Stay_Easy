@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto:wght@500;700&display=swap');
+.container{
+    border: 1px solid #DFE4EA;
+    width: 635px;
+    height: 283px;
+    display: flex;
+    align-items: center;    
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cardImg{
+    width: 42%;
+    height: 282.5px;
+    border-radius: 10px;
+}
+
+.cardContainer{
+    width: 40%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.cardTitle{
+    font-family: 'Roboto', sans-serif;
+    margin-left: -100px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cardCategory{
+    font-family:'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 0.875rem;
+    color: #67676d;
+    margin:0px 0px 0px -100px;
+}
+
+.cardButton{
+    width: 20.6875rem;
+    height: 2.5rem;
+    margin-right: 1%;
+    margin-left: -100px;
+    background-color:#8ecae6 ;
+    border: none;
+    border-radius: 0.3125rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    font-size: 1rem;
+    color:#023047;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.cardButton:hover{
+    cursor: pointer;
+    opacity: .9;
+}
+
+.cardLocation{
+    margin-left: -100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #383B58;
+    margin-top: -15px;
+}
+
+.cardDescription{
+    margin-left: -100px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    color: #383B58;
+    margin-right: 5%;
+}
+.cardImgStar{
+    width: 4%;
+    height: 4%;
+}
+
+.cardImgLocation{
+    width: 3%;
+    height: 3%;
+    margin-right: .2rem;
+}
+
+.cardMostrarMapa{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    color: #219ebc;
+    text-decoration: none;
+}
+
+.cardPuntaje{
+    padding: 8px 12px;
+    color: #FFF;
+    border-radius: 0.625rem;
+    background-color:#383B58;
+    margin-left: 7.5rem;
+}
