@@ -18,8 +18,9 @@ public class CategoriaService {
         this.categoriaRepository = categoriaRepository;
     }
 
+    // get
 
-    public List<Categoria> buscarTodasCategoria(){
+    public List<Categoria> buscarCategorias(){
         return categoriaRepository.findAll();
     }
 
@@ -27,20 +28,20 @@ public class CategoriaService {
         return categoriaRepository.findById(id);
     }
 
+    // post
+
     public Categoria guardarCategoria(Categoria categoria){
         return categoriaRepository.save(categoria);
     }
+
+    // put
 
     public void actualizarCategoria(Categoria categoria){
         categoriaRepository.save(categoria);
     }
 
-    public void eliminarCategoria(Long id){
-        Optional<Categoria> categoriaAEliminar = buscarCategoria(id);
-        if(categoriaAEliminar.isPresent() ){
-            categoriaRepository.deleteById(id);
-        }
+    // delete
 
-    }
+    public void eliminarCategoria(Long id){categoriaRepository.deleteById(id);}
 
 }

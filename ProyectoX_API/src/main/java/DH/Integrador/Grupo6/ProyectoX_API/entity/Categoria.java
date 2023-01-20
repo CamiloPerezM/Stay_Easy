@@ -17,12 +17,15 @@ public class Categoria {
     @Column
     private String urlImagen;
 
+    //Constructor
+
+    public Categoria(){
+    }
     public Categoria(String titulo, String descripcion, String urlImagen) {
         this.titulo = titulo;
         this.descripcion = descripcion;
         this.urlImagen = urlImagen;
     }
-
     public Categoria(Long id, String titulo, String descripcion, String urlImagen) {
         this.id = id;
         this.titulo = titulo;
@@ -30,7 +33,7 @@ public class Categoria {
         this.urlImagen = urlImagen;
     }
 
-    public Categoria(){}
+    // Getters y setters
 
     public Long getId() {
         return id;

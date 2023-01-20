@@ -20,13 +20,15 @@ public class CategoriaController {
         this.categoriaService = categoriaService;
     }
 
+    // get
     @GetMapping
     public ResponseEntity<List<Categoria>> listarCategorias(){
-        return ResponseEntity.ok(categoriaService.buscarTodasCategoria());
+        return ResponseEntity.ok(categoriaService.buscarCategorias());
     }
 
     @GetMapping("{id}")
     public ResponseEntity<Categoria> buscarCategoria(@PathVariable Long id){
+        // verificamos que la categoria existe
         Optional<Categoria> categoriaBuscada=categoriaService.buscarCategoria(id);
         if (categoriaBuscada.isPresent()){
             return ResponseEntity.ok(categoriaBuscada.get());
@@ -36,16 +38,40 @@ public class CategoriaController {
         }
     }
 
+    // post
+
     @PostMapping
     public ResponseEntity<Categoria> registrarCategoria(@RequestBody Categoria categoria){
         return ResponseEntity.ok(categoriaService.guardarCategoria(categoria));
     }
 
+    // put
+    @PutMapping
+    public ResponseEntity<String> actualizarCategoria(@RequestBody Categoria categoria) {
+        // verificamos que la categoria existe
+        Optional<Categoria> categoriaBuscada=categoriaService.buscarCategoria(categoria.getId());
+        if (categoriaBuscada.isPresent()) {
+            categoriaService.actualizarCategoria(categoria);
+            return ResponseEntity.ok("Se actualizó la categoria con id= " + categoria.getId());
+        } else {
+            return ResponseEntity.badRequest().body("No se pudo actualizar la categoria con id= " + categoria.getId() +
+                    " ya que no existe en la base de datos.");
+        }
+    }
+
+    // delete
 
     @DeleteMapping("/{id}")
     public ResponseEntity<String> eliminarCategoria(@PathVariable Long id)  {
-        categoriaService.eliminarCategoria(id);
-        return ResponseEntity.ok("Se eliminó la categoria con id= "+id);
+        // verificamos que la categoria existe
+        Optional<Categoria> categoriaBuscada=categoriaService.buscarCategoria(id);
+        if (categoriaBuscada.isPresent()) {
+            categoriaService.eliminarCategoria(id);
+            return ResponseEntity.ok("Se eliminó la categoria con id= "+id);
+        } else {
+            return ResponseEntity.badRequest().body("No se puede eliminar categoria con id =  " + id +
+                    " ya que no existe en la base de datos.");
+        }
     }
 
 
