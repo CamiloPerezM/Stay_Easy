@@ -1,10 +1,9 @@
-package Grupo_7.ProyectoX_API.entity;
+package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="categorias" +
-        "")
+@Table(name="categorias")
 public class Categoria {
 
     @Id
@@ -64,4 +63,5 @@ public class Categoria {
     public void setUrlImagen(String urlImagen) {
         this.urlImagen = urlImagen;
     }
+
 }

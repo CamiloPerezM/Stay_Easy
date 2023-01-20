@@ -1,4 +1,4 @@
-package Grupo_7.ProyectoX_API;
+package DH.Integrador.Grupo6.ProyectoX_API;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

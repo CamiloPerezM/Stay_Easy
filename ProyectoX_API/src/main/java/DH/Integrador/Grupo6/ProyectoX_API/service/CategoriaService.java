@@ -1,7 +1,7 @@
-package Grupo_7.ProyectoX_API.service;
+package DH.Integrador.Grupo6.ProyectoX_API.service;
 
-import Grupo_7.ProyectoX_API.entity.Categoria;
-import Grupo_7.ProyectoX_API.repository.CategoriaRepository;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Categoria;
+import DH.Integrador.Grupo6.ProyectoX_API.repository.CategoriaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -42,7 +42,5 @@ public class CategoriaService {
         }
 
     }
-
-
 
 }

@@ -1,7 +1,7 @@
-package Grupo_7.ProyectoX_API.controller;
+package DH.Integrador.Grupo6.ProyectoX_API.controller;
 
-import Grupo_7.ProyectoX_API.entity.Categoria;
-import Grupo_7.ProyectoX_API.service.CategoriaService;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Categoria;
+import DH.Integrador.Grupo6.ProyectoX_API.service.CategoriaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,8 +12,8 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/categorias")
 public class CategoriaController {
-    private CategoriaService categoriaService;
 
+    private CategoriaService categoriaService;
 
     @Autowired
     public CategoriaController(CategoriaService categoriaService) {
@@ -47,6 +47,7 @@ public class CategoriaController {
         categoriaService.eliminarCategoria(id);
         return ResponseEntity.ok("Se eliminó la categoria con id= "+id);
     }
+
 
 
 }
