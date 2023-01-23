@@ -3,21 +3,24 @@
 
 In the project directory, you can run:
 
-##`npm start`
+## How to run
+`npm start`
 Runs the app in the development mode
 `npm run dev`
 
-##`Styled components`
-Run wiht `npm install --save styled-components`
+## Style package
+`Styled components`
+The styled component is used to give styles to the app, Run wiht
+`npm install --save styled-components`
 
-##`fontawesome`
+## fontawesome package
+fontawesome is a library that allows to import icons to app, Run wiht
 `npm i --save @fortawesome/fontawesome-svg-core`
 `npm i --save @fortawesome/free-solid-svg-icons`
 `npm i --save @fortawesome/free-regular-svg-icons`
 `npm i --save @fortawesome/react-fontawesome@latest`
 
 
-##
 
 ## Planificación 
 
