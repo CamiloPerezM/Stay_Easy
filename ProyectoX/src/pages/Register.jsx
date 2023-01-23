@@ -16,6 +16,7 @@ const Registro = () =>{
 
 const expresiones = {
 		nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, 
+        apellido: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
 		password: /^.{6,40}$/, 
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 	}
@@ -73,7 +74,7 @@ if(
                 leyendaError="Este campo es obligatorio"
                 expresionRegular={expresiones.nombre}
             />
-                <Input
+            <Input
 				estado={apellido}
                 cambiarEstado={cambiarApellido}
                 tipo="text"
@@ -83,7 +84,6 @@ if(
                 leyendaError="Este campo es obligatorio"
                 expresionRegular={expresiones.apellido}
 />
-
                 <Input
                 estado={correo}
                 cambiarEstado={cambiarCorreo}
@@ -128,7 +128,7 @@ if(
                 <ContenedorBotonCentrado>
                 <Boton type='submit'>Crear cuenta</Boton>
                 <p>¿Ya tienes una cuenta? <a href=""> Iniciar sesión</a> </p>
-                {formularioValido === true && <MensajeExito>Formulario enviado exitosamente!</MensajeExito>}
+                {formularioValido === true && <MensajeExito>Cuenta Registrada!</MensajeExito>}
                 </ContenedorBotonCentrado>
             </Formulario>
         </main>

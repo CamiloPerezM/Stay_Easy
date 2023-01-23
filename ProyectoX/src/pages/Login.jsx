@@ -5,6 +5,7 @@ import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../Components/Input';
 
 
+
 const Login = () =>{
 	const [password, cambiarPassword] = useState({campo: '', valido: null});
 	const [password2, cambiarPassword2] = useState({campo: '', valido: null});
@@ -39,8 +40,7 @@ if(
     ){
     cambiarFormularioValido(true);
 
-    cambiarNombre({campo: "", valido:null});
-    cambiarApellido({campo: "", valido:null});
+
     cambiarCorreo({campo: '', valido: null});
     cambiarPassword({campo: '', valido: null});
     cambiarPassword2({campo: '', valido: null});
@@ -91,7 +91,7 @@ if(
                 
 
 
-                <ContenedorTerminos>
+<ContenedorTerminos>
                 </ContenedorTerminos>
                 {formularioValido === false && <MensajeError>
                 <p>
@@ -101,8 +101,8 @@ if(
                 </MensajeError> }
                 <ContenedorBotonCentrado>
                 <Boton type='submit'>Login</Boton>
-                <p>¿No tienes cuenta? <a href="">Registrarse</a></p>
-                {formularioValido === true && <MensajeExito>Iniciando sesion</MensajeExito>}
+                <p>¿No estas registrado? <a href=""> Registrarse</a> </p>
+                {formularioValido === true && <MensajeExito>Iniciando sesión!</MensajeExito>}
                 </ContenedorBotonCentrado>
             </Formulario>
         </main>
