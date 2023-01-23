@@ -3,8 +3,8 @@ import React from "react";
 export function List(props){
     return(
         <section >
-            <h2>{props.title}</h2>
-            <div className='space'>
+            <h3>{props.title}</h3>
+            <div className={props.style}>
                 {props.children}
             </div>
         </section>

@@ -7,3 +7,11 @@
     flex-direction: column;
     gap: 10px;
 }
+
+.spaceCategory{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap:15px;
+    
+}
