@@ -9,44 +9,62 @@ function App() {
 
 
   return (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // ""
+
     <>
-    <List title="Categorias" style="spaceCategory">
-
-      {
-        dataCategory.map((data, i) => {
-          return (
-            <CardCategory datos={data} id={i} key={i} />
+      <List title="Categorias" style="spaceCategory">
+        {
+          dataCategory.map((data, i) => {
+            return (
+              <CardCategory datos={data} id={i} key={i} />
             )
+          })
+        }
+      </List>
 
-        })
-      }
-    </List>
-
-    <List title="Recomendados" style="spaceCategory" background="bgRecomendations">
-      {
-        data.map((data,i)=>{
-          return(
-            <Card datos={data} id={i} key={i}/>
-          )
-
-        })
-      }
-    </List>
-
-
-
+      <List title="Recomendados" style="spaceCategory" background="bgRecomendations">
+        {
+          data.map((data, i) => {
+            return (
+              <Card datos={data} id={i} key={i} />
+            )
+          })
+        }
+      </List>
     </>
-
-    // {/* <Card datos ={data[0]}/>   
-    // <Card datos ={data[1]}/>
-    // <Card datos ={data[2]}/>
-    // <Card datos ={data[3]}/>
-    // <Card datos ={data[4]}/>
-    // <Card datos ={data[5]}/>
-    // <Card datos ={data[6]}/>
-    // <Card datos ={data[7]}/> */}
-
-
   )
 }
 

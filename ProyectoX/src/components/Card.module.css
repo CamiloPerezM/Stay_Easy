@@ -35,8 +35,10 @@
 .cardTitle{
     font-family: 'Roboto', sans-serif;
     margin-left: -100px;
+    margin-top: 20px;
     font-size: 1.5rem;
     font-weight: 700;
+    margin-bottom: 25px;
 }
 
 .cardCategory{
@@ -81,6 +83,7 @@
     font-weight: 500;
     color: #383B58;
     margin-right: 5%;
+    margin-bottom: 10px;
 }
 .cardImgStar{
     width: 4%;
@@ -101,10 +104,36 @@
     text-decoration: none;
 }
 
-.cardPuntaje{
-    padding: 8px 12px;
-    color: #FFF;
-    border-radius: 0.625rem;
-    background-color:#383B58;
-    margin-left: 7.5rem;
+
+
+.cardPuntajeContainer{
+    font-family: 'Roboto';
+    font-size: 1rem;
+    color: #383B58;
+    opacity: .8;
 }
+
+.cardPuntaje{
+    font-size: 1rem;
+    font-family: 'Roboto';
+    color: #383B58;
+    font-weight: 700;
+}
+
+.cardCalificacion{
+    margin-left: -100px;
+    margin-top: 15px;
+}
+
+.cardVerMas{
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
+    color: #219ebc;
+}
+
+
+.cardVerMas:hover{
+    cursor: pointer;
+    opacity: .5;
+}
+

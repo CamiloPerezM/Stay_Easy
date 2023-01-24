@@ -10,7 +10,7 @@ export const CardCategory = ({ datos }) => {
 
     return (
         <div className={Styles.card2}>
-            <img className={Styles.cardImg} src={datos.crimg} alt="" />
+            <img className={Styles.cardImg} src={datos.crimg} alt="Img Categorias" />
             <div className={Styles.cardContainer}>
                 <h2 className={Styles.cardCategory}>{datos.category.toUpperCase()}</h2>
                 <p className={Styles.cardInfo}>{datos.total}</p>
