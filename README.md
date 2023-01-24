@@ -3,14 +3,14 @@
 
 In the project directory, you can run:
 
-##`npm start`
+## `npm start`
 Runs the app in the development mode
 `npm run dev`
 
-##`Styled components`
+## `Styled components`
 Run wiht `npm install --save styled-components`
 
-##`fontawesome`
+## `fontawesome`
 `npm i --save @fortawesome/fontawesome-svg-core`
 `npm i --save @fortawesome/free-solid-svg-icons`
 `npm i --save @fortawesome/free-regular-svg-icons`
