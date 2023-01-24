@@ -1,0 +1,7 @@
+
+
+create user 'springuser'@'%' identified by 'ThePassword' ;
+
+create database proyectox ;
+
+grant all on proyectox.* to 'springuser'@'%' ;
