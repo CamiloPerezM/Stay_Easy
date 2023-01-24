@@ -3,6 +3,7 @@ import { Formulario,ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeE
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../Components/Input';
+import { Link} from 'react-router-dom'
 
 
 
@@ -101,7 +102,7 @@ if(
                 </MensajeError> }
                 <ContenedorBotonCentrado>
                 <Boton type='submit'>Login</Boton>
-                <p>¿No estas registrado? <a href=""> Registrarse</a> </p>
+                <p>¿Aun no te has registrado? <Link to={`/registro`}>Registrate</Link></p>
                 {formularioValido === true && <MensajeExito>Iniciando sesión!</MensajeExito>}
                 </ContenedorBotonCentrado>
             </Formulario>
