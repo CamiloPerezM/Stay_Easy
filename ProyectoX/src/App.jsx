@@ -22,7 +22,7 @@ function App() {
       }
     </List>
 
-    <List title="Recomendados" style="spaceCategory">
+    <List title="Recomendados" style="spaceCategory" background="bgRecomendations">
       {
         data.map((data,i)=>{
           return(
