@@ -1,97 +1,70 @@
-import './App.css';
-import {useEffect, useState} from 'react';
-import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import React, { useState } from 'react';
+import { Form, Select, Button } from 'antd';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 
-function App() {
+const { Option } = Select;
 
-    const[usuarios, setUsuarios] = useState([])
-    const [tablausuarios, setTablaUsuarios] = useState([])
-    const [busqyeda, setBusqueda] = useState("")
+const cities = [
+  { name: 'New York', value: 'ny' },
+  { name: 'Los Angeles', value: 'la' },
+  { name: 'Chicago', value: 'ch' },
+  { name: 'Houston', value: 'ho' },
+  { name: 'Phoenix', value: 'ph' },
+];
 
-    const peticionGet=async()=>{
-        await axios.get("https://jsonplaceholder.typicode.com/users")
-        .then(response=>{
-            setUsuarios(response.data);
-            setTablaUsuarios(response.data);
-        }).catch(error=>{
-            console.log(error);
-        })
-    }
+function SearchForm() {
+  const [city, setCity] = useState(null);
+  const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
-    useEffect(()=>{
-        peticionGet();
+  const handleSubmit = e => {
+    e.preventDefault();
+    console.log('Selected City:', city);
+    console.log('Start Date:', startDate);
+    console.log('End Date:', endDate);
+    // realice la búsqueda aquí con la ciudad seleccionada, startDate y endDate
+  };
 
-    },[])
-
-    return (
-        <div className='App'>
-            <div className='containerInput'>
-                <input 
-                    className='form-control inputBuscar'
-                    value={busqueda}
-                    placeholder="¿A dónde vamos?"
-                
-                />
-                <button className='btn btn-success'>
-                    <FontAwesomeIcon icon={faSearch}/>
-                    <FontAwesomeIcon icon="fa-solid fa-location-dot" />
-                </button>
-            </div>
-
-
-
-            <div className='tavle-responsive'>
-                <table className='table table-sm table-bordered'>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Teléfono</th>
-                            <th>Nombre de Usuario</th>
-                            <th>Correo</th>
-                            <th>Sitio Web</th>
-                            <th>Ciudad</th>
-                            <th>Empresa</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {usuarios && usuarios.map((usuario)=>(
-                            <tr key={usuario.id}>
-                                <td>{usuario.id}</td>
-                                <td>{usuario.name}</td>
-                                <td>{usuario.phone}</td>
-                                <td>{usuario.username}</td>
-                                <td>{usuario.email}</td>
-                                <td>{usuario.wedsite}</td>
-                                <td>{usuario.addres.city}</td>
-                                <td>{usuario.company.name}</td>
-                            </tr>
-
-                        ))}
-                    </tbody>
-
-                </table>
-            </div>
-            {/* <header className='App-header'>
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a 
-                   className='App-link'
-                   href=""
-                   target="_blank"
-                   rel="noopener noreferrer"                   
-                >
-                    Learn React
-                </a>
-            </header> */}
-        </div>
-    )
+  return (
+    <Form onSubmit={handleSubmit}>
+      <Form.Item label="Select City">
+        <Select
+          placeholder="Select a city"
+          onChange={value => setCity(value)}
+          value={city}
+        >
+          {cities.map(city => (
+            <Option key={city.value} value={city.value}>
+              {city.name}
+            </Option>
+          ))}
+        </Select>
+      </Form.Item>
+      <Form.Item label="Start Date">
+        <DatePicker
+          selected={startDate}
+          onChange={date => setStartDate(date)}
+          placeholderText="Select start date"
+          minDate={new Date()}
+          maxDate={endDate}
+        />
+      </Form.Item>
+      <Form.Item label="End Date">
+        <DatePicker
+          selected={endDate}
+          onChange={date => setEndDate(date)}
+          placeholderText="Select end date"
+          minDate={startDate}
+        />
+      </Form.Item>
+      <Form.Item>
+        <Button type="primary" htmlType="submit">
+          Search
+        </Button>
+      </Form.Item>
+    </Form>
+  );
 }
 
-
-export default App
+export default SearchForm;
