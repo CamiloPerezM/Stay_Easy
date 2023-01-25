@@ -1,0 +1,82 @@
+[
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Cabaña",
+        "title":"Cabaña Vacacional",
+        "location":"Guatapé, Antioquia",
+        "description":"Cerca de Roca de Guatapé, Con una conveniente ubicación en Guatapé, esta cabaña se encuentra a 15 minutos en auto de Peñol-Guatapé Reservoir y Réplica del Viejo Peñol. Hospédate en esta cabaña y estarás a 4,3 km de La Piedra del Penol, así como a 4,6 km de Roca de Guatapé. Ponte cómodo en esta cabaña, que tiene cocina. Como entretenimiento, incluye una televisión por cable. Con un jardín donde descansar y comodidades, como acceso a internet por wifi gratuito, ¡no te faltará de nada!",
+        "map":"https://goo.gl/maps/AVoofNGHSNMDus8M8",
+        "calificacion":"Muy bueno"
+    },
+
+    {
+        "crimg":"https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/e0/6f/af/villa-tipo-c.jpg?w=700&h=-1&s=1",
+        "category":"Cabaña",
+        "title":"Luxe by The Charlee",
+        "location":"Guatapé, Antioquia",
+        "description":"Ubicación del establecimiento En Guatapé, Luxe by The Charlee te permite llegar cómodamente a Rock of Guatapé y La Piedra Del Peñol.Habitaciones En las 8 habitaciones, equipadas con chimenea y televisor de pantalla plana, te espera una estancia inolvidable. Las habitaciones tienen balcones o patios privados. La zona de cocina está equipada con frigorífico y horno microondas. Navega gracias a la conexión a Internet Wi-Fi gratuita, y la programación por cable está disponible para entretenimiento.Servicios Disfruta de las vistas desde el jardín.Para comer Tienes un restaurante a tu disposición para comer algo en Luxe by The Charlee. Se incluye un desayuno bufé gratuito.Servicios de negocios y otros Tendrás servicio de recepción 24 horas y ascensor a tu disposición. Aparcamiento sin asistencia gratuito disponible en el sitio. El check-in comienza a las 3 p. M. Hora de salida: 1 p. M.",
+        "map":"https://goo.gl/maps/zy4sw8SyMT8GSCyt5",
+        "calificacion":"Excelente"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/f2cf09de-e49f-4dfb-854d-3d26b89006b0/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hotel",
+        "title":"Four Points by Sheraton",
+        "location":"Medellín, Antioquia",
+        "description":"El Four Points by Sheraton se encuentra ubicado en la zona del Poblado, a 10 minutos en coche del Aeropuerto Internacional Olaya Herrera y del Parque Lleras. Cuenta con servicio de spa y gimnasio, además ofrece desayuno incluido.",
+        "map":"https://goo.gl/maps/Mhq8bG8gNHz5aBfv5",
+        "calificacion":"Muy bueno"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/6aaa17ec-a9e7-40f4-9958-f30e6a145155/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hotel",
+        "title":"Park 10",
+        "location":"Medellín, Antioquia",
+        "description":"Park 10 se encuentra en Medellín. Ofrece wi-fi gratis en zonas comunes, servicio de spa y sauna, además de estacionamiento gratis.",
+        "map":"https://goo.gl/maps/i4QVvukRWX2bnycP7",
+        "calificacion":"Bueno"
+    },
+
+    {
+        "crimg":"https://a0.muscache.com/im/pictures/miso/Hosting-53428451/original/5679c305-65e7-46ab-85a1-470781fddcb9.jpeg?im_w=1200",
+        "category":"Apartamento",
+        "title":"Apartament Molinos",
+        "location":"Medellín, Antioquia",
+        "description":"Molinos se ubica en una de las zonas más céntricas de Medellín, Cómoda y 24/7 Check In, ubicada desde las escaleras al Mall Molinos, lo que lo convierte en un lugar perfecto para visitar Medellín y ver los lugares más turísticos de la ciudad, ubicación céntrica cerca de las principales avenidas, Metro Plus, Restaurantes, cajeros automáticos, Vida Nocturna, Supermercados, Lavandería entre otros. Área plana que hace que sus viajes a pie sean muy fáciles.",
+        "map":"https://goo.gl/maps/7aMSknjxU9LuwmSy9",
+        "calificacion":"Bueno"
+    },
+
+    {
+        "crimg":"https://a0.muscache.com/im/pictures/miso/Hosting-51978429/original/007bb1f6-d0c1-4e9c-a65d-dc3b9ba22081.jpeg?im_w=1200",
+        "category":"Apartamento",
+        "title":"Loft Medellín",
+        "location":"Medellín, Antioquia",
+        "description":"Hermoso alojamiento con vistas espectaculares a la ciudad y las montañas, acabados de excelente calidad, staff preparado par brindarte la mejor experiencia durante tu estadía.",
+        "map":"https://goo.gl/maps/ofE1fQfDHtt2BR4cA",
+        "calificacion":"Excelente"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/258af537-0a08-4432-a1c3-e00aecf1ff22/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hostel",
+        "title":"Star Hostal",
+        "location":"Rionegro, Antioquia",
+        "description":"Star Hostal - Club de Tenis se encuentra ubicado en Rionegro, Antioquia, a 5 minutos en coche del Aeropuerto Internacional Jose Maria Cordova, a 25 minutos de Medellín y a 10 minutos de Rionegro. Cuenta con Wi-Fi gratuito.",
+        "map":"https://goo.gl/maps/RNnKV17Kjz2ZsyNF9",
+        "calificacion":"Bueno"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/7a3f9f9d-870d-4b8b-bd71-5637b008d1de/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hostel",
+        "title":"Casa Encuentro",
+        "location":"Guatapé, Antioquia",
+        "description":"Ubicación del establecimiento Casa Encuentro se sitúa en Guatapé, a poca distancia de Rock of Guatapé y de La Piedra Del Penol.Habitaciones Te sentirás como en tu propia casa en una de las 8 habitaciones. El acceso inalámbrico a Internet de cortesía está disponible para mantenerlo conectado. Los baños están provistos de ducha y bidé.",
+        "map":"https://goo.gl/maps/puVstYWwsHMLAgLe8",
+        "calificacion":"Bueno"
+    }
+
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Cabañas",
+        "total":"15 cabañas"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/f2cf09de-e49f-4dfb-854d-3d26b89006b0/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hoteles",
+        "total":"878.000 Hoteles"
+
+    },
+    {
+        "crimg":"https://a0.muscache.com/im/pictures/miso/Hosting-51978429/original/007bb1f6-d0c1-4e9c-a65d-dc3b9ba22081.jpeg?im_w=1200",
+        "category":"Apartamentos",
+        "total":"50.000 Apartamentos"
+    },
+
+    {
+        "crimg":"https://media.staticontent.com/media/pictures/258af537-0a08-4432-a1c3-e00aecf1ff22/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5",
+        "category":"Hostel",
+        "total":"100 Hostels"
+    }
+
+]
