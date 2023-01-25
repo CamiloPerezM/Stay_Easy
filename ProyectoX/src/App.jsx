@@ -47,7 +47,7 @@ function App() {
 
     <>
       <Header></Header>
-      <Footer></Footer>
+      
       <List title="Categorias" style="spaceCategory">
         {
           dataCategory.map((data, i) => {
@@ -67,6 +67,7 @@ function App() {
           })
         }
       </List>
+      <Footer></Footer>
     </>
   )
 }
