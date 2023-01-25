@@ -4,6 +4,9 @@ import { Card } from './components/Card'
 import { CardCategory } from './components/CardCategory'
 import { List } from './components/List'
 import dataCategory from "./api/dataCategory.json"
+import Header from './components/Header'
+import Footer from './components/Footer'
+
 
 function App() {
 
@@ -12,9 +15,7 @@ function App() {
 
 
 
-
-
-
+    
 
 
 
@@ -45,6 +46,8 @@ function App() {
     // ""
 
     <>
+      <Header></Header>
+      
       <List title="Categorias" style="spaceCategory">
         {
           dataCategory.map((data, i) => {
@@ -64,6 +67,7 @@ function App() {
           })
         }
       </List>
+      <Footer></Footer>
     </>
   )
 }
