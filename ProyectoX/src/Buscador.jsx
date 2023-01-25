@@ -6,11 +6,11 @@ import 'react-datepicker/dist/react-datepicker.css';
 const { Option } = Select;
 
 const cities = [
-  { name: 'New York', value: 'ny' },
-  { name: 'Los Angeles', value: 'la' },
-  { name: 'Chicago', value: 'ch' },
-  { name: 'Houston', value: 'ho' },
-  { name: 'Phoenix', value: 'ph' },
+  { name: 'Medellin', value: 'med' },
+  { name: 'Bogota', value: 'bog' },
+  { name: 'Cartagena', value: 'ctg' },
+  { name: 'Cali', value: 'clo' },
+  { name: 'Barranquilla', value: 'baq' },
 ];
 
 function SearchForm() {
