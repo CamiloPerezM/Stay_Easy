@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import { Route, Routes } from 'react-router'
 import Login from './pages/Login'
 import Registro from './pages/Register'
-import Home from './routes/Home'
+import Home from './pages/Home'
 
 
 function App() {
