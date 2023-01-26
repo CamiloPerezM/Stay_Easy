@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./Card.module.css"
+import Styles from "../Styles/Card.module.css"
 
 export function Card({ datos }) {
     

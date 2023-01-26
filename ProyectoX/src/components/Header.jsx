@@ -2,7 +2,7 @@ import React from "react";
 import "./Header.css"
 import Logo from "../assets/img/logo-booking.svg"
 import Menu from "../assets/img/menú.svg"
-import Buscador from "../Buscador";
+import Buscador from "../components/Buscador"
 import Ubicacion from "../assets/img/localizador.svg"
 import Calendar from "../assets/img/calendar.svg"
 import { Link } from "react-router-dom";
