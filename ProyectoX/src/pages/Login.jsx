@@ -80,7 +80,7 @@ if(
                 leyendaError="La contraseña debe tener 6 o mas digitos."
                 expresionRegular={expresiones.password}
 />
-            	<Input
+            	{/* <Input
                 estado={password2}
                 cambiarEstado={cambiarPassword2}
                 tipo="password"
@@ -89,7 +89,7 @@ if(
                 name="password2"
                 leyendaError="La contraseña no es igual"
                 funcion={validarPassword2}
-/>
+/> */}
                 
 
 
