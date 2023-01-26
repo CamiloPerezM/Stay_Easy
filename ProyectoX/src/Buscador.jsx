@@ -3,6 +3,7 @@ import { Form, Select, Button } from 'antd';
 import 'react-datepicker/dist/react-datepicker.css';
 // import { createRoot } from 'react-dom/client';
 // import { DatePicker, DatePickerProvider, useDatePickGetter, useDatePickReset } from '@bcad1591/react-date-picker';
+import "./Components/Header.css"
 
 const { Option } = Select;
 
@@ -33,7 +34,7 @@ function Buscador() {
 
 
   return (
-    <Form onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit} className="botones2">
       <Form.Item className="go">
         <Select
           placeholder="¿A dónde vamos?"
@@ -48,9 +49,8 @@ function Buscador() {
         </Select>
       </Form.Item>
 
-      <Form.Item>
-      
-      <input className="go" type= 'date' value= 'Check in - Check out'></input>
+      <Form.Item>      
+        <input className="go" type= 'date' value='Check in - Check out' placeholder='Check in - Check out'></input>
       </Form.Item>
 
     {/* <div>

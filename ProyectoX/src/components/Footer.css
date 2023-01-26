@@ -17,14 +17,24 @@
     margin-right: 20px;
 }
 
-img{
+.Logos{
     margin-left: 10px;
     margin-right: 10px;
     margin-bottom: 10px;
 }
 
-p{
+.derechos{
     margin-top: 0;
     margin-bottom: 10px;
     margin-left: 20px;
+}
+
+
+@media only screen and (max-width: 505px){
+    .icons-final{
+        height: 3rem;
+        width: 38.8rem;
+        margin-top: 1rem;
+        margin-left: 0;
+    }
 }

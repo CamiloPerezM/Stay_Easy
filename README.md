@@ -8,6 +8,13 @@
  **URL :** https://docs.google.com/spreadsheets/d/1hu9foUk536nNErQKNWQykqYZ99easMDb/edit?usp=sharing&ouid=115316850613722569479&rtpof=true&sd=true
 
 
+
+ ## Funcionamiento de la API
+
+ para inicializar la base de datos, en mysql workbench se deben ejecutar los comandos que se encuenran en el archivo Configuracion_MYSQL.txt,
+ si los comandos se ejecutaron correctamente se puede ejecutar la api atravez de el Intelij ya corriendo la api se pueden realizar peticiones atravez de postman.
+
+
 ## Getting started
 
 To make it easy for you to get started with GitLab, here's a list of recommended next steps.
@@ -29,6 +36,8 @@ git push -uf origin main
 ## Integrate with your tools
 
 - [ ] [Set up project integrations](https://gitlab.ctd.academy/ctd/proyecto-integrador-0123/0522-ft/grupo-06/-/settings/integrations)
+
+
 
 ## Collaborate with your team
 
