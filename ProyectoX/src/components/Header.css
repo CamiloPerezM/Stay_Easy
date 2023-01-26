@@ -1,3 +1,7 @@
+.header{
+    box-sizing: border-box;
+}
+
 .navBar-brand{
     display: flex;
     justify-content: space-between;  
@@ -25,6 +29,23 @@
     align-items: center;
     gap: 6.5rem;
     padding-left: 100px;
+    position: relative;
+}
+
+.ubicacion{
+    display: flex;
+    justify-content: flex-end;
+  bottom: .5rem;
+  right: 1rem;
+  user-select: none;
+  cursor: pointer;
+}
+
+.calendario{
+  bottom: .5rem;
+  right: 1rem;
+  user-select: none;
+  cursor: pointer;
 }
 
 .crear{
@@ -94,8 +115,13 @@
 }
 
 
+@media only screen and (max-width: 768px) {
+    
+}
 
-@media only screen and (min-width: 500px) {
+
+
+@media only screen and (max-width: 505px) {
 
     .navBar-brand{
         height: 6rem;
