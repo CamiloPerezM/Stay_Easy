@@ -1,11 +1,10 @@
 import React from 'react'
-import data from "./api/data.json"
-import { Card } from './components/Card'
-import { CardCategory } from './components/CardCategory'
-import { List } from './components/List'
-import dataCategory from "./api/dataCategory.json"
 import Header from './components/Header'
 import Footer from './components/Footer'
+import { Route, Routes } from 'react-router'
+import Login from './pages/Login'
+import Registro from './pages/Register'
+import Home from './routes/Home'
 
 
 function App() {
@@ -13,62 +12,23 @@ function App() {
 
   return (
 
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     // ""
 
     <>
+    
+    
       <Header></Header>
-      
-      <List title="Categorias" style="spaceCategory">
-        {
-          dataCategory.map((data, i) => {
-            return (
-              <CardCategory datos={data} id={i} key={i} />
-            )
-          })
-        }
-      </List>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route index path="/home" element={<Home/>} />
+        <Route path="/registro" element={<Registro/>} />
+        <Route path="/login" element={<Login />} />
 
-      <List title="Recomendados" style="spaceCategory" background="bgRecomendations">
-        {
-          data.map((data, i) => {
-            return (
-              <Card datos={data} id={i} key={i} />
-            )
-          })
-        }
-      </List>
+      </Routes>
       <Footer></Footer>
+
     </>
+  
   )
 }
 

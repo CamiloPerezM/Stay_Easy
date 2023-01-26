@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../Components/Input';
 import { Link} from 'react-router-dom'
+import "../Styles/estilos.css"
 
 
 
@@ -55,8 +56,8 @@ if(
 
 
     return(
-        <main>
-        <h1>Iniciar sesión</h1>
+        <main className='main  backgroundColor'>
+        <h1 className='titulo'>Iniciar sesión</h1>
             <Formulario action =""onSubmit={onSubmit}>
 
                 <Input
