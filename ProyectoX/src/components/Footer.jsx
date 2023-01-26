@@ -14,10 +14,10 @@ const Footer = () => {
             <p>©2021 Digital Booking</p>
         </div>
         <div className="icons">
-            <img className="LogoFacebook" src= {LogoFacebook}  alt= 'Facebook'></img>
-            <img className="LogoInstagram" src= {LogoInstagram} alt= 'Instagram'></img>
-            <img className="LogoLinkedin" src= {LogoLinkedin}  alt= 'Linkedin'></img>
-            <img className="LogoTweet" src= {LogoTweet}        alt= 'Tweeter'></img>
+            <img className="Logos" src= {LogoFacebook}  alt= 'Facebook'></img>
+            <img className="Logos" src= {LogoInstagram} alt= 'Instagram'></img>
+            <img className="Logos" src= {LogoLinkedin}  alt= 'Linkedin'></img>
+            <img className="Logos" src= {LogoTweet}        alt= 'Tweeter'></img>
         </div>
 
         </div>
