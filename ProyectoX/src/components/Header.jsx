@@ -1,9 +1,10 @@
 import React from "react";
-import Styles from "./Header.css"
+import "./Header.css"
 import Logo from "../assets/img/logo-booking.svg"
 import Menu from "../assets/img/menú.svg"
 import Ubicacion from "../assets/img/localizador.svg"
 import Calendar from "../assets/img/calendar.svg"
+import { Link } from "react-router-dom";
 
 
 const Header = () => {
@@ -13,8 +14,8 @@ const Header = () => {
         <a href="/"><img className="logo" src= {Logo}  alt= 'Logo Booking'></img></a>
         <img className="menu" src= {Menu}  alt= 'Menu'></img>
         <div className="botones">
-        <button className="crear">Crear cuenta</button>
-        <button className="crear">Iniciar sesión</button>
+        <Link  to={"/registro"}><button className="crear">Crear cuenta</button></Link>
+        <Link to={`/login`}><button className="crear">Iniciar sesión</button></Link> 
         </div>
         
         </div>
