@@ -2,6 +2,7 @@ import React from "react";
 import "./Header.css"
 import Logo from "../assets/img/logo-booking.svg"
 import Menu from "../assets/img/menú.svg"
+import Buscador from "../Buscador";
 import Ubicacion from "../assets/img/localizador.svg"
 import Calendar from "../assets/img/calendar.svg"
 import { Link } from "react-router-dom";
@@ -21,7 +22,7 @@ const Header = () => {
         </div>
         
 
-        <div className="busqueda">
+        {/* <div className="busqueda">
             <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
             <div className="botones2">
             <input className="go" type= 'text' value= '¿A donde vamos?'></input>
@@ -30,8 +31,13 @@ const Header = () => {
             <span className="calendario"> <img className="calendar" src= {Calendar} alt= 'Calendario'></img> </span>
             <button className="search">Buscar</button>
             </div>
+        </div> */}
+        <div className="busqueda">
+                <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
+            <div className="botones2">
+                <Buscador></Buscador>
+            </div>
         </div>
-
 
         </div>
     );
