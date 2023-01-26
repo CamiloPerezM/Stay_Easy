@@ -8,7 +8,7 @@ const Header = () => {
     return (
         <div className= "header">
         <div className="navBar-brand">
-        <img className="Logo" src= {Logo}  alt= 'Logo Booking'></img>
+        <a href="/"><img className="logo" src= {Logo}  alt= 'Logo Booking'></img></a>
         <img className="menu" src= {Menu}  alt= 'Menu'></img>
         <div className="botones">
         <button className="crear">Crear cuenta</button>
