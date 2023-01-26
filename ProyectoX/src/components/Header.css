@@ -1,5 +1,6 @@
 .header{
     box-sizing: border-box;
+    
 }
 
 .navBar-brand{
@@ -8,6 +9,13 @@
     height: 4rem;
     background-color: rgb(255, 252, 249);
 }
+
+/* .headerFijo{
+    max-width: 100%;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+} */
 
 .logo{
     margin-left: 2rem; 
@@ -70,7 +78,7 @@
     height: 120px;
     display: flex;
     /* justify-content: space-around; */
-    /* flex-direction: column; */
+    flex-direction: column;
     align-items: center;
 }
 

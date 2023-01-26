@@ -16,11 +16,12 @@ const Home = () => {
 
     return (
         <>
-            <List title="Categorias" style="spaceCategory">
+            <List title="Buscar por tipo de alojamiento" style="spaceCategory">
                 {
-                    categorias.map((data, i) => {
+                     categorias.map((data, i) => {
                         return (
-                            <CardCategory datos={data} id={i} key={i} />
+                            
+                            i<=3 ? <CardCategory datos={data} id={data.id} key={i} /> : null
                         )
                     })
                 }

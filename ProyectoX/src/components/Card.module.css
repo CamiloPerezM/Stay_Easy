@@ -2,9 +2,10 @@
 .container{
     background-color: #fff;
     border: 1px solid #DFE4EA;
-    width: 635px;
+    width: 550px;
     height: 283px;
     display: flex;
+    margin-bottom: 15px;
     align-items: center;    
     border-radius: 10px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -19,7 +20,7 @@
 }
 
 .cardImg{
-    width: 42%;
+    width: 39%;
     height: 282.5px;
     border-radius: 10px;
 }
@@ -50,7 +51,7 @@
 }
 
 .cardButton{
-    width: 20.6875rem;
+    width: 19rem;
     height: 2.5rem;
     margin-right: 1%;
     margin-left: -100px;
