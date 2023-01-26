@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Select, Button } from 'antd';
-import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+// import { createRoot } from 'react-dom/client';
+// import { DatePicker, DatePickerProvider, useDatePickGetter, useDatePickReset } from '@bcad1591/react-date-picker';
 
 const { Option } = Select;
 
@@ -13,24 +14,29 @@ const cities = [
   { name: 'Barranquilla', value: 'baq' },
 ];
 
-function SearchForm() {
+// const container = document.getElementById('root');
+// const root = createRoot(container);
+
+function Buscador() {
   const [city, setCity] = useState(null);
-  const [startDate, setStartDate] = useState(null);
-  const [endDate, setEndDate] = useState(null);
+  // const [dateRange, setDateRange] = useState(null);
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Selected City:', city);
-    console.log('Start Date:', startDate);
-    console.log('End Date:', endDate);
     // realice la búsqueda aquí con la ciudad seleccionada, startDate y endDate
   };
 
+  // const { pickedDates } = useDatePickGetter();
+
+  // const resetFunc = useDatePickReset();
+
+
   return (
     <Form onSubmit={handleSubmit}>
-      <Form.Item label="Select City">
+      <Form.Item className="go">
         <Select
-          placeholder="Select a city"
+          placeholder="¿A dónde vamos?"
           onChange={value => setCity(value)}
           value={city}
         >
@@ -41,30 +47,26 @@ function SearchForm() {
           ))}
         </Select>
       </Form.Item>
-      <Form.Item label="Start Date">
-        <DatePicker
-          selected={startDate}
-          onChange={date => setStartDate(date)}
-          placeholderText="Select start date"
-          minDate={new Date()}
-          maxDate={endDate}
-        />
-      </Form.Item>
-      <Form.Item label="End Date">
-        <DatePicker
-          selected={endDate}
-          onChange={date => setEndDate(date)}
-          placeholderText="Select end date"
-          minDate={startDate}
-        />
-      </Form.Item>
+
       <Form.Item>
-        <Button type="primary" htmlType="submit">
-          Search
-        </Button>
+      
+      <input className="go" type= 'date' value= 'Check in - Check out'></input>
+      </Form.Item>
+
+    {/* <div>
+      <DatePicker disablePreviousDays />
+      <hr />
+      <div>{pickedDates.firstPickedDate?.toString()}</div>
+      <div>{pickedDates.secondPickedDate?.toString()}</div>
+      <button type="button" onClick={resetFunc}>
+        Reset
+      </button>
+    </div> */}
+      <Form.Item>
+        <Button className="search">Buscar</Button>
       </Form.Item>
     </Form>
   );
 }
 
-export default SearchForm;
+export default Buscador;
