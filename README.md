@@ -11,8 +11,11 @@
 
  ## Funcionamiento de la API
 
- para inicializar la base de datos, en mysql workbench se deben ejecutar los comandos que se encuenran en el archivo Configuracion_MYSQL.txt,
- si los comandos se ejecutaron correctamente se puede ejecutar la api atravez de el Intelij ya corriendo la api se pueden realizar peticiones atravez de postman.
+ para inicializar la base de datos: 
+  - En mysql workbench se deben ejecutar los comandos que se encuenran en el archivo Configuracion_MYSQL.txt
+  - Si los comandos se ejecutaron correctamente 
+  - Ejecutar la api atravez de el Intelij 
+  - Ya corriendo la api se pueden realizar peticiones atravez de postman.
 
 
 ## Getting started
