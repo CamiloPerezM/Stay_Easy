@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./CardCategory.module.css"
+import Styles from "../Styles/CardCategory.module.css"
 
 
 export const CardCategory = ({ datos }) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import "./Header.css"
+import "../Styles/Header.css"
 import Logo from "../assets/img/logo-booking.svg"
 import Menu from "../assets/img/menú.svg"
 import Buscador from "../components/Buscador"
@@ -12,7 +12,7 @@ const Header = () => {
     return (
         <div className="header headerFijo">
             <div className="navBar-brand">
-                <a href="/"><img className="logo" src={Logo} alt='Logo Booking'></img></a>
+               <Link to={"/home"}> <img className="logo" src={Logo} alt='Logo Booking'></img></Link>
                 <img className="menu" src={Menu} alt='Menu'></img>
                 <div className="botones">
                     <Link to={"/registro"}><button className="crear">Crear cuenta</button></Link>
