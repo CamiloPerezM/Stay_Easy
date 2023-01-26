@@ -1,5 +1,5 @@
 import React from "react";
-import Styles from "./List.module.css"
+import Styles from "../Styles/List.module.css"
 
 export function List(props){
     return(
