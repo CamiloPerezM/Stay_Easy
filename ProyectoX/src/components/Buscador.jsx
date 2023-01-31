@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Form, Select, Button } from 'antd';
-import 'react-datepicker/dist/react-datepicker.css';
-// import { createRoot } from 'react-dom/client';
-// import { DatePicker, DatePickerProvider, useDatePickGetter, useDatePickReset } from '@bcad1591/react-date-picker';
 import "../Styles/Header.css"
+import { DateRangePicker } from 'react-date-range';
+import 'react-date-range/dist/styles.css'; // main style file
+import 'react-date-range/dist/theme/default.css'; // theme css file
+import { addDays } from 'date-fns';
 
 const { Option } = Select;
 
@@ -15,23 +16,24 @@ const cities = [
   { name: 'Barranquilla', value: 'baq' },
 ];
 
-// const container = document.getElementById('root');
-// const root = createRoot(container);
 
 function Buscador() {
   const [city, setCity] = useState(null);
-  // const [dateRange, setDateRange] = useState(null);
+  
+  const [value, setValue] = useState(null);
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Selected City:', city);
     // realice la búsqueda aquí con la ciudad seleccionada, startDate y endDate
   };
-
-  // const { pickedDates } = useDatePickGetter();
-
-  // const resetFunc = useDatePickReset();
-
+  const [state, setState] = useState([
+    {
+      startDate: new Date(),
+      endDate: addDays(new Date(), 7),
+      key: 'selection'
+    }
+  ]);
 
   return (
     <Form onSubmit={handleSubmit} className="botones2">
@@ -50,18 +52,16 @@ function Buscador() {
       </Form.Item>
 
       <Form.Item>      
-        <input className="go" type= 'date' value='Check in - Check out' placeholder='Check in - Check out'></input>
+        {/* <input className="go" type= 'date' value='Check in - Check out'></input> */}
+        <DateRangePicker
+  onChange={item => setState([item.selection])}
+  showSelectionPreview={true}
+  moveRangeOnFirstSelection={false}
+  months={2}
+  ranges={state}
+  direction="horizontal"
+/>;
       </Form.Item>
-
-    {/* <div>
-      <DatePicker disablePreviousDays />
-      <hr />
-      <div>{pickedDates.firstPickedDate?.toString()}</div>
-      <div>{pickedDates.secondPickedDate?.toString()}</div>
-      <button type="button" onClick={resetFunc}>
-        Reset
-      </button>
-    </div> */}
       <Form.Item>
         <Button className="search">Buscar</Button>
       </Form.Item>
