@@ -17,6 +17,10 @@
   - Ejecutar la api atravez de el Intelij 
   - Ya corriendo la api se pueden realizar peticiones atravez de postman.
 
+ Se puede acceder a la documentacion de los enponts con Swagger  se accede desde la url
+  
+  http://localhost:8080/swagger-ui/index.html#/
+
 
 ## Getting started
 
