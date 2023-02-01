@@ -17,7 +17,7 @@ export const ContextProvider = ({children}) =>{
     React.useEffect(() => {
       async function getData(){
         try{
-          const response = await fetch('http://localhost:8080/categorias/');
+          const response = await fetch('http://localhost:8080/ciudades/');
           const data = await response.json();
   
           // axios.get("http://localhost:8080/categorias/")
