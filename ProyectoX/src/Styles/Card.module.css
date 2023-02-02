@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&family=Roboto:wght@500;700&display=swap');
 .container{
+    box-sizing: border-box;
     background-color: #fff;
     border: 1px solid #DFE4EA;
     width: 550px;
@@ -136,5 +137,176 @@
 .cardVerMas:hover{
     cursor: pointer;
     opacity: .5;
+}
+
+
+@media(max-width: 505px){
+
+    .container{
+        background-color: #fff;
+        border: 1px solid #DFE4EA;
+        width:20rem;
+        height: 30rem;
+        display: flex;
+        margin-bottom: 15px;
+        align-items: center;    
+        border-radius: 10px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    
+    
+    .card{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .cardImg{
+        width: 20rem;
+        height: 14rem;
+        border-radius: 10px;
+        margin-top: -19px;
+        margin-left: -1px;
+    }
+    
+    .cardContainer{
+        width: 20rem;
+        /* height: 15%; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+          
+    }
+    
+    .cardTitle{
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 15px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+    }
+    
+    .cardCategory{
+        font-family:'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 0.8rem;
+        color: #67676d;
+        margin-left: 15px;
+        margin-top: 10px;
+        
+    }
+    
+    .cardButton{
+        width: 10rem;
+        height: 2rem;
+        margin-left: 23%;
+        margin-top: 10px;
+
+        background-color:#8ecae6 ;
+        border: none;
+        border-radius: 0.3125rem;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+        font-size: 0.8rem;
+        color:#023047;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
+    }
+    
+    .cardButton:hover{
+        cursor: pointer;
+        opacity: .9;
+    }
+    
+    .cardLocation{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #383B58;
+        width: 18rem;
+        margin-left: 15px;
+        margin-top: 10px;
+    }
+    
+    .cardDescription{
+        margin-left: 15px;
+        margin-top: 10px;
+        width: 18rem;
+        font-size: 0.9rem;
+        text-align: left;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #383B58;
+        margin-bottom: 5px;
+    }
+    .cardImgStar{
+        width: 4%;
+        height: 4%;
+    }
+    
+    .cardImgLocation{
+        width: 3%;
+        height: 3%;
+        margin-right: .2rem;
+    }
+    
+    .cardMostrarMapa{
+        font-family: 'Roboto',sans-serif;
+        font-weight: 500;
+        font-size: 0.8rem;
+        color: #219ebc;
+        text-decoration: none;
+    }
+    
+    
+    
+    .cardPuntajeContainer{
+        font-family: 'Roboto';
+        font-size: .85rem;
+        color: #383B58;
+        opacity: .8;
+    }
+    
+    .cardPuntaje{
+        font-size: 0.85rem;
+        font-family: 'Roboto';
+        color: #383B58;
+        font-weight: 700;
+    }
+    
+    .cardCalificacion{
+        margin-top: 8px;
+        margin-left: 15px;
+        
+    }
+    
+    .cardVerMas{
+        font-family: 'Roboto',sans-serif;
+        font-weight: 500;
+        color: #219ebc;
+    }
+    
+    
+    .cardVerMas:hover{
+        cursor: pointer;
+        opacity: .5;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
 
