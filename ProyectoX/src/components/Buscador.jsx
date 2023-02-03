@@ -20,7 +20,7 @@ const cities = [
 function Buscador() {
   const [city, setCity] = useState(null);
   
-  const [value, setValue] = useState(null);
+  // const [value, setValue] = useState(null);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -51,16 +51,14 @@ function Buscador() {
         </Select>
       </Form.Item>
 
-      <Form.Item>      
-        {/* <input className="go" type= 'date' value='Check in - Check out'></input> */}
-        <DateRangePicker
-  onChange={item => setState([item.selection])}
-  showSelectionPreview={true}
-  moveRangeOnFirstSelection={false}
-  months={2}
-  ranges={state}
-  direction="horizontal"
-/>;
+      <Form.Item>
+        <DateRangePicker onChange={item => setState([item.selection])}
+           showSelectionPreview={true}
+                moveRangeOnFirstSelection={false}
+                  months={2}
+                     ranges={state}
+                           direction="horizontal"
+        />;
       </Form.Item>
       <Form.Item>
         <Button className="search">Buscar</Button>

@@ -35,7 +35,7 @@ const Header = () => {
             <div className="busqueda">
                 <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
                 <div className="botones2">
-                    <Buscador></Buscador>
+                    <Buscador />
                 </div>
             </div>
 
