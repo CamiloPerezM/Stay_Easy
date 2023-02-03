@@ -1,37 +1,36 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Entity
-@Table(name="ciudades")
-public class Ciudad {
+@Table(name="usuarios")
+public class Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(unique = true)
+    @NotBlank
     private String nombre;
     @Column
-    private String pais;
+    @NotBlank
+    private String contrasenna;
 
-    //Constructor
-
-    public Ciudad() {
+    public Usuario() {
     }
 
-    public Ciudad(String nombre, String pais) {
+    public Usuario(String nombre, String contrasenna) {
         this.nombre = nombre;
-        this.pais = pais;
+        this.contrasenna = contrasenna;
     }
 
-    public Ciudad(Long id, String nombre, String pais) {
+    public Usuario(Long id, String nombre, String contrasenna) {
         this.id = id;
         this.nombre = nombre;
-        this.pais = pais;
+        this.contrasenna = contrasenna;
     }
-
-    // Getters y setters
-
 
     public Long getId() {
         return id;
@@ -49,11 +48,11 @@ public class Ciudad {
         this.nombre = nombre;
     }
 
-    public String getPais() {
-        return pais;
+    public String getContrasenna() {
+        return contrasenna;
     }
 
-    public void setPais(String pais) {
-        this.pais = pais;
+    public void setContrasenna(String contrasenna) {
+        this.contrasenna = contrasenna;
     }
 }
