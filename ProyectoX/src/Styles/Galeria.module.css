@@ -3,6 +3,7 @@
     display: flex;
     width: 600px;
     height: 430px;
+    /* Se debe modificar los PX estan en modo ejemplo */
 }
 
 .galeria img{
@@ -16,6 +17,7 @@
 .galeria img:hover{
     cursor: crosshair;
     width: 300px;
+    /* Se debe modificar los PX estan en modo ejemplo */
     opacity: 1;
     filter: contrast(120%);
 }
