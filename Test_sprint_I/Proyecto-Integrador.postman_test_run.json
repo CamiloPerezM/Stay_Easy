@@ -1,0 +1,207 @@
+{
+	"id": "1f1d89be-ed58-4cfd-88b3-ae12e77eb744",
+	"name": "Proyecto-Integrador",
+	"timestamp": "2023-02-01T16:28:34.835Z",
+	"collection_id": "23250829-4e147cac-8d98-415e-a92f-fbf757030a48",
+	"folder_id": "23250829-29e1f70c-62d7-4ab7-936b-3f5fa3dde551",
+	"environment_id": "0",
+	"totalPass": 10,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-01T16:28:33.989Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "d18b3470-2bc8-40ea-9187-28697b7cd97a",
+			"name": "Listar_Categorias",
+			"url": "localhost:8080/categorias",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Length": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Length": true
+				}
+			]
+		},
+		{
+			"id": "c7bb09a2-68db-48dd-93ee-ae3d17e8b18c",
+			"name": "Agregar_Categoria",
+			"url": "localhost:8080/categorias",
+			"time": 69,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true,
+				"Equal ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Equal ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				69
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true,
+					"Equal ID": true
+				}
+			]
+		},
+		{
+			"id": "54d1f0a1-5b42-4d5f-b2dc-95d3206b9c77",
+			"name": "Buscar_Categoria_x_id",
+			"url": "localhost:8080/categorias/3",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				}
+			]
+		},
+		{
+			"id": "4b5da1d1-25dc-4a54-a81b-e8e60323ed86",
+			"name": "Actualizar_Categoria",
+			"url": "localhost:8080/categorias",
+			"time": 25,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				25
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "4acc7f9a-2ed4-4275-a2fd-116df6fd229c",
+			"name": "Eliminar_Categoria",
+			"url": "localhost:8080/categorias/26",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 162,
+	"collection": {
+		"requests": [
+			{
+				"id": "d18b3470-2bc8-40ea-9187-28697b7cd97a",
+				"method": "GET"
+			},
+			{
+				"id": "c7bb09a2-68db-48dd-93ee-ae3d17e8b18c",
+				"method": "POST"
+			},
+			{
+				"id": "54d1f0a1-5b42-4d5f-b2dc-95d3206b9c77",
+				"method": "GET"
+			},
+			{
+				"id": "4b5da1d1-25dc-4a54-a81b-e8e60323ed86",
+				"method": "PUT"
+			},
+			{
+				"id": "4acc7f9a-2ed4-4275-a2fd-116df6fd229c",
+				"method": "DELETE"
+			}
+		]
+	}
+}
