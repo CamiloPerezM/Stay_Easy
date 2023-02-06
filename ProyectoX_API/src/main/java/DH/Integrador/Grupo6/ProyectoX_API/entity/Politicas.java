@@ -7,40 +7,39 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="categorias")
-public class Categoria {
-
+@Table(name = "politicas")
+public class Politicas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column
     private Long id;
 
     @Column
     private String titulo;
+
     @Column
     private String descripcion;
-    @Column
-    private String urlImagen;
 
-    //Constructor
+    @ManyToMany(mappedBy = "politicas", fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Producto> productos = new HashSet<>();
 
-    public Categoria(){
+
+    public Politicas(){
+
     }
-    public Categoria(String titulo, String descripcion, String urlImagen) {
+
+    public Politicas(String titulo, String descripcion) {
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
     }
-    public Categoria(Long id, String titulo, String descripcion, String urlImagen) {
+
+    public Politicas(Long id, String titulo, String descripcion) {
         this.id = id;
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
     }
-
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
-    private Set<Producto> productos= new HashSet<>();
-
-    // Getters y setters
 
     public Long getId() {
         return id;
@@ -65,13 +64,4 @@ public class Categoria {
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
-
-    public String getUrlImagen() {
-        return urlImagen;
-    }
-
-    public void setUrlImagen(String urlImagen) {
-        this.urlImagen = urlImagen;
-    }
-
 }
