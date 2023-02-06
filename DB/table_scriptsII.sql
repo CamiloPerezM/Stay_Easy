@@ -1,0 +1,50 @@
+-- Tabla productos
+CREATE TABLE IF NOT EXISTS productos(
+id_producto INTEGER AUTO_INCREMENT Primary Key NOT NULL,
+Nombre VARCHAR(255) NOT NULL,
+Descripcion VARCHAR(255) NOT NULL,
+Ubicaccion_maps VARCHAR(255) NOT NULL,
+Disponibilidad BOOLEAN  NOT NULL,
+Puntaje DOUBLE NOT NULL
+);
+-- Tabla Imagenes
+CREATE TABLE IF NOT EXISTS imagenes(
+id_imagenes INTEGER AUTO_INCREMENT Primary Key NOT NULL,
+Titulo VARCHAR(255) NOT NULL,
+URL VARCHAR(255) NOT NULL,
+Producto_id INTEGER NOT NULL
+);
+
+-- TABLA CIUDADES
+
+CREATE TABLE IF NOT EXISTS ciudades(
+id_ciudad INTEGER AUTO_INCREMENT Primary Key,
+Nombre VARCHAR(255) NOT NULL,
+Pais VARCHAR(255) NOT NULL
+);
+
+-- TABLA CARACTERISTICAS
+
+CREATE TABLE IF NOT EXISTS caracteristicas(
+id_caracteristicas INTEGER AUTO_INCREMENT Primary Key,
+Nombre BOOLEAN NOT NULL
+);
+
+
+-- TABLA POLITICAS
+
+CREATE TABLE IF NOT EXISTS politicas(
+id_politicas INTEGER AUTO_INCREMENT Primary Key,
+Nombre VARCHAR(255) NOT NULL,
+Descripcion VARCHAR(255) NOT NULL
+);
+
+
+-- TABLA CATEGORIAS
+
+  CREATE TABLE IF NOT EXISTS categorias(
+  id_categoria INTEGER PRIMARY KEY NOT NULL,
+  Titulo VARCHAR(255),
+  Descripcion VARCHAR(255) NOT NULL,
+  url_imagen VARCHAR(200)  NOT NULL
+  );
