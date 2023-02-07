@@ -1,0 +1,121 @@
+CREATE SCHEMA IF NOT EXISTS `PI_db_GRUPO6` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
+USE `PI_db_GRUPO6` ;
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`productos`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`productos` (
+  `Id` INT NOT NULL,
+  `nombre` VARCHAR(255) NOT NULL,
+  `puntaje` DOUBLE NOT NULL,
+  `titulo_descripcion` VARCHAR(255) NOT NULL,
+  `contenido_descripcion` VARCHAR(800) NOT NULL,
+  `ubicacion_maps` VARCHAR(255) NOT NULL,
+  `Ciudad_Id` INT NOT NULL,
+  `categoria_producto_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Productos_Ciudad1_idx` (`Ciudad_Id` ASC) VISIBLE,
+  INDEX `fk_Productos_categoria_producto1_idx` (`categoria_producto_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Productos_Ciudad1`
+    FOREIGN KEY (`Ciudad_Id`)
+    REFERENCES `PI_db_GRUPO6`.`ciudad` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Productos_categoria_producto1`
+    FOREIGN KEY (`categoria_producto_Id`)
+    REFERENCES `PI_db_GRUPO6`.`categoria` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`imagenes_producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`imagenes_producto` (
+  `Id` INT NOT NULL,
+  `url_imagen` VARCHAR(255) NOT NULL,
+  `Productos_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Imagenes_Productos_idx` (`Productos_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Imagenes_Productos`
+    FOREIGN KEY (`Productos_Id`)
+    REFERENCES `PI_db_GRUPO6`.`productos` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`caracteristicas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`caracteristicas` (
+  `Id` INT NOT NULL,
+  `descripcion` VARCHAR(255) NOT NULL,
+  `id_icono` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`Id`));
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`politicas_producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`politicas_producto` (
+  `Id` INT NOT NULL,
+  `descripcion_politica` VARCHAR(255) NOT NULL,
+  `Productos_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_Politicas_producto_Productos1_idx` (`Productos_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Politicas_producto_Productos1`
+    FOREIGN KEY (`Productos_Id`)
+    REFERENCES `PI_db_GRUPO6`.`productos` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`producto_caracteristicas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`producto_caracteristicas` (
+  `Productos_Id` INT NOT NULL,
+  `Caracteristicas_Id` INT NOT NULL,
+  INDEX `fk_Producto_has_caracteristicas_Productos1_idx` (`Productos_Id` ASC) VISIBLE,
+  INDEX `fk_Producto_has_caracteristicas_Caracteristicas1_idx` (`Caracteristicas_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_Producto_has_caracteristicas_Productos1`
+    FOREIGN KEY (`Productos_Id`)
+    REFERENCES `PI_db_GRUPO6`.`productos` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Producto_has_caracteristicas_Caracteristicas1`
+    FOREIGN KEY (`Caracteristicas_Id`)
+    REFERENCES `PI_db_GRUPO6`.`caracteristicas` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`tipo_politica`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`tipo_politica` (
+  `Id` INT NOT NULL,
+  `descripcion` VARCHAR(255) NOT NULL,
+  `Politicas_producto_Id` INT NOT NULL,
+  PRIMARY KEY (`Id`),
+  INDEX `fk_tipo_politica_Politicas_producto1_idx` (`Politicas_producto_Id` ASC) VISIBLE,
+  CONSTRAINT `fk_tipo_politica_Politicas_producto1`
+    FOREIGN KEY (`Politicas_producto_Id`)
+    REFERENCES `PI_db_GRUPO6`.`politicas_producto` (`Id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION);
+
+USE `PI_db_GRUPO6` ;
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`ciudades`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `PI_db_GRUPO6`.`ciudades` (
+  `id` BIGINT NOT NULL AUTO_INCREMENT,
+  `nombre` VARCHAR(255) NULL DEFAULT NULL,
+  `pais` VARCHAR(255) NULL DEFAULT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 10
+DEFAULT CHARACTER SET = utf8mb4
+COLLATE = utf8mb4_0900_ai_ci;

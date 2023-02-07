@@ -21,13 +21,9 @@ public class Politicas {
     @Column
     private String descripcion;
 
-    @ManyToMany(mappedBy = "politicas", fetch = FetchType.EAGER)
-    @JsonIgnore
-    private Set<Producto> productos = new HashSet<>();
 
 
     public Politicas(){
-
     }
 
     public Politicas(String titulo, String descripcion) {

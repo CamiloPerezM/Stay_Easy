@@ -37,9 +37,6 @@ public class Categoria {
         this.urlImagen = urlImagen;
     }
 
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
-    private Set<Producto> productos= new HashSet<>();
-
     // Getters y setters
 
     public Long getId() {

@@ -18,9 +18,6 @@ public class Caracteristicas {
     @Column
     private Boolean nombre;
 
-    @ManyToMany(mappedBy = "caracteristicas", fetch = FetchType.EAGER)
-    private Set<Producto> productos;
-
     public Caracteristicas(){
 
     }
@@ -50,5 +47,6 @@ public class Caracteristicas {
     public void setNombre(Boolean nombre) {
         this.nombre = nombre;
     }
+
 
 }
