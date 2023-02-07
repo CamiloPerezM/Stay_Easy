@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import { Form, Select, Button } from 'antd';
+import { DatePicker } from "antd";
 import "../Styles/Header.css"
-import { DateRangePicker } from 'react-date-range';
-import 'react-date-range/dist/styles.css'; // main style file
-import 'react-date-range/dist/theme/default.css'; // theme css file
-import { addDays } from 'date-fns';
+
 
 const { Option } = Select;
 
@@ -16,24 +14,23 @@ const cities = [
   { name: 'Barranquilla', value: 'baq' },
 ];
 
+const { RangePicker } = DatePicker;
+
+const onOpenChange = (open) => {
+  console.log("onOpenChange", open);
+};
+
+const onCalendarChange = (dates) => {
+  console.log("onCalendarChange", dates);
+};
 
 function Buscador() {
   const [city, setCity] = useState(null);
-  
-  // const [value, setValue] = useState(null);
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Selected City:', city);
-    // realice la búsqueda aquí con la ciudad seleccionada, startDate y endDate
   };
-  const [state, setState] = useState([
-    {
-      startDate: new Date(),
-      endDate: addDays(new Date(), 7),
-      key: 'selection'
-    }
-  ]);
 
   return (
     <Form onSubmit={handleSubmit} className="botones2">
@@ -50,16 +47,14 @@ function Buscador() {
           ))}
         </Select>
       </Form.Item>
-
-      <Form.Item>
-        <DateRangePicker onChange={item => setState([item.selection])}
-           showSelectionPreview={true}
-                moveRangeOnFirstSelection={false}
-                  months={2}
-                     ranges={state}
-                           direction="horizontal"
-        />;
+      
+      <Form.Item className='go'>
+        <RangePicker
+          onOpenChange={onOpenChange}
+          onCalendarChange={onCalendarChange}
+        />
       </Form.Item>
+
       <Form.Item>
         <Button className="search">Buscar</Button>
       </Form.Item>

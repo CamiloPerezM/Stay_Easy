@@ -6,6 +6,7 @@ import Buscador from "../components/Buscador"
 import Ubicacion from "../assets/img/localizador.svg"
 import Calendar from "../assets/img/calendar.svg"
 import { Link } from "react-router-dom";
+import Calendario from "./Calendario";
 
 
 const Header = () => {
@@ -22,16 +23,6 @@ const Header = () => {
             </div>
 
 
-            {/* <div className="busqueda">
-            <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
-            <div className="botones2">
-            <input className="go" type= 'text' value= '¿A donde vamos?'></input>
-            <span className="ubicacion"> <img className="ubication" src= {Ubicacion} alt= 'Ubicacion'></img> </span>
-            <input className="go" type= 'text' value= 'Check in - Check out'></input>
-            <span className="calendario"> <img className="calendar" src= {Calendar} alt= 'Calendario'></img> </span>
-            <button className="search">Buscar</button>
-            </div>
-        </div> */}
             <div className="busqueda">
                 <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
                 <div className="botones2">
