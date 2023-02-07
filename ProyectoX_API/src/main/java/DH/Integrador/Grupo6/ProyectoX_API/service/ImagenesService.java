@@ -1,6 +1,6 @@
 package DH.Integrador.Grupo6.ProyectoX_API.service;
 
-import DH.Integrador.Grupo6.ProyectoX_API.entity.Categoria;
+
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Imagenes;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ImagenesRepository;
 import org.springframework.beans.factory.annotation.Autowired;

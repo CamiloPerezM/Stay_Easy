@@ -1,0 +1,167 @@
+-- Imagenes--
+-- Tabla Imagenes 1
+INSERT INTO `imagenes_producto` ( id,  url_imagen, Productos_id) values (1,  "https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5" , 1);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (2,  "https://nautilusbr.com/dev/wp-content/uploads/2092-scaled.jpg" , 1);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (3,  "https://scontent-bog1-1.xx.fbcdn.net/v/t1.6435-9/44699238_1021034708068822_7238772257596637184_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=laoqkVRUZTkAX83s7cB&_nc_ht=scontent-bog1-1.xx&oh=00_AfDIAvMHc5VgfJFX8jo0xou95OohJYJizfHkjKx07WtSLQ&oe=64035CAE" , 1);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (4,  "https://www.elmueble.com/medio/2022/10/19/mueble-de-bano-en-madera-de-gran-capacidad-00551675_c430a0c6_900x900.jpg" , 1);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (5, "https://www.elmueble.com/medio/2022/06/21/00528807-dormitorio-blanco-con-butaca-de-fibra_2bfe3521_1200x630.jpg" , 1);
+
+-- Tabla imagenes_producto 2
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (6,  "https://cf.bstatic.com/xdata/images/hotel/max1280x900/137849379.jpg?k=8a525b49bdc462c1e9a3b5cddc61dd151960e9c59275fd9ba537c3b18a082bea&o=&hp=1" , 2);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (7,  "https://cf.bstatic.com/xdata/images/hotel/max1280x900/362732017.jpg?k=291bc645842a14ce7e1e6fac0608b8c4e5b8e7fe5c0531543eee5ba311aac18d&o=&hp=1" , 2);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (8,  "https://cf.bstatic.com/xdata/images/hotel/max1280x900/387304670.jpg?k=7d24259219dbd9a601592e177e016858fdbfb007e7376151be47cca18087792f&o=&hp=1" , 2);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (9,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/395595331.jpg?k=c44458a43ab3390a79f9b173140ec96bedc9c05bf3acbf8a379b8f1a60be9ea3&o=&hp=1" , 2);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (10,  "https://cf.bstatic.com/xdata/images/hotel/max1280x900/395595329.jpg?k=d8da55584964fc4c3dedfead5ee39f1540df4bfeb2b9be9846f7b95d7d8d85ed&o=&hp=1" , 2);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (11,  "https://cf.bstatic.com/xdata/images/hotel/max1280x900/394196909.jpg?k=ebd4d11777cdca3f5407ae0d03ab15f121981cd71ae88490ad2651d35fb8dee4&o=&hp=1" , 2);
+
+-- Tabla imagenes_producto 3
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (12,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/327299710.jpg?k=72b71087a1c2485e6e01d8a13e475b26ffaa21876f21399da20317ce3f914b0a&o=&hp=1" , 3);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (13,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/282604784.jpg?k=0d10e5cf919b911f3203d0acb6b07d437712ba6026111d6af3e85036386c280b&o=&hp=1" , 3);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (14,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/227923843.jpg?k=6224b731394cffdafdfc18f1682ed67e94fb4cd700c36bda0adb66614263a1ad&o=&hp=1" , 3);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (15,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/97961427.jpg?k=df10230311fffb38d3a42027fb64d7307c83e88893e793cd9ce6df960e4a08e5&o=&hp=1" , 3);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (16,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/97960409.jpg?k=1ceae544b6c0e36ed7e8b6ff07abbd541e8a6f05e91d27d56e3916bedab94330&o=&hp=1" , 3);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (17,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/98748005.jpg?k=3b1594a5ced5bf6f0926fffac88036b9fb87d9dac19409ac1915ff65c8ed72fa&o=&hp=1" , 3);
+
+-- Tabla imagenes_producto 4
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (18,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/202202150.jpg?k=707786f5c6cfd494ac6b15e379ee110771750a098ed4bdb4742ff0e500c5c8d6&o=&hp=1" , 4);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (20,  "https://upload.wikimedia.org/wikipedia/commons/6/62/Barbieri_-_ViaSophia25668.jpg" , 4);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (21,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/372419298.jpg?k=fce480b3fc4b2c6fef31f60acab44db82db3c53c3f934d116e9d51f5b45e0d33&o=&hp=1" , 4);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (22,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/422330625.jpg?k=e23675e1d0fe5703fd8e168c60ac57b0a72a0d86cfaab3517abb89344a2bcfae&o=&hp=1" , 4);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (23,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/422332866.jpg?k=53c979851c916a7403d6663b1a3c44780a2842ff9f4dd8f4c3ea2934dd8bbf43&o=&hp=1" , 4);
+
+
+-- Tabla imagenes_producto 5
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (24,  "https://www.constructoracapital.com/web_datas/1640035085_dji_0001.jpg" , 5);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (25,  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/226559219.jpg?k=c1f1cbacef1a52d8deeefa73d943bc5ecca4cd8c77737cf5034ffe88e50261fe&o=" , 5);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (26,  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/195237111.jpg?k=af36dabd64edf2a4d3ce338398991317dcc51a552e5f72ed2bd6357dac29c7a6&o=" , 5);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (27,  "https://q-xx.bstatic.com/xdata/images/hotel/max1024x768/227693870.jpg?k=b42a7e904c28f0c4ecacb0f527ac9c4da19ff5d5c7abbeb3bbbc52a4e3f3082f&o=" , 5);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (28,  "https://imgcy.trivago.com/c_fill,d_dummy.jpeg,e_sharpen:60,f_auto,h_627,q_auto,w_1200/itemimages/13/69/13692740.jpeg" , 5);
+
+
+-- Tabla imagenes_producto 6
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (29,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/247795261.jpg?k=638267a558a251a8292e4284c26790305e51be3f17b13cb8b002ae87aa443fd6&o=" , 6);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (30,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/247795296.jpg?k=50eb8e16d27c6c743924cb39d34177b1ef8682dc46d39219c3b5458c72c64fc2&o=" , 6);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (31,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/247795305.jpg?k=96f36eea0d95e76fbcdef4b3ad0f51031f98faebb50d5598106b79d6a7e4b5fa&o=" , 6);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (32,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/247795271.jpg?k=e0e55fab422b4a73c41b7722f84681c7fc25fed037da8ccb3d661a96d28eb1c4&o=" , 6);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (33,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/92267450.jpg?k=4c3b83d694ba41bc4a1151579da411d91b07e6dcb9998d0d6283e0a3f54f1ae4&o=" , 6);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (34,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/247795155.jpg?k=2e9b932f61b32f079ee559fd5368f7cdda2089df04b1db55303746d259057a4b&o=" , 6);
+
+-- Tabla imagenes_producto 7
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (35,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/94780757.jpg?k=a1473eb09cd63e2ace236adff5f6d8d46e80ba29c01cc371ce7e0c28f79daf24&o=" , 7);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (36,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/131208624.jpg?k=b57cef6fcdba1a534f48b02ae37413234563e8316c1b9a43ed3e53908d16c2d7&o=" , 7);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (37,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/383696862.jpg?k=9f74b019aa0874937b15b7fff0b1ef277755a77d24d5b77b13c51cd48a3c5867&o=" , 7);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (38,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/95198472.jpg?k=706fbcfee1ace0c5ffba9dfd3bc19b5ba0009d8168bbe45f1ec93290db54d028&o=" , 7);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (39,  "https://q-xx.bstatic.com/xdata/images/hotel/840x460/253572767.jpg?k=0fe0553e87ea9c62c71dfdc5f439fd1fcda93208bde7295898d718d3b62dbab0&o=" , 7);
+
+-- Tabla imagenes_producto 8
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (40,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/282967791.jpg?k=077d80caa26928c7fdee134f74c05475326b3e0e202ab251e2548d2f4e208359&o=&hp=1" , 8);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (41,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/385582993.jpg?k=af1df9a209351e1beda2cc2a8b3d9c7ddd305e4a075b27bda680f05a6a996fee&o=&hp=1" , 8);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (42,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346202680.jpg?k=b68fd37c9c1f0e40842561704b3f99bb4103cedae59728b86d5f76628f878c62&o=&hp=1" , 8);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (43,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/332955610.jpg?k=f00ac7d83782d567dba24d0127350c23fc53b19612062111a34175eb23e7fc21&o=&hp=1" , 8);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (44,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/282872885.jpg?k=3207843466566f2da8f2a766944da6ad147314f74152a96a0139bdb866762256&o=&hp=1" , 8);
+INSERT INTO `imagenes_producto` ( id,  url_imagen, productos_id) values (45,  "https://cf.bstatic.com/xdata/images/hotel/max1024x768/282967793.jpg?k=841ce994f072a275d37d401385035cf3238d3b15740a1cfd69e733a48316a2bc&o=&hp=1" , 8);
+
+
+-- TABLA CIUDADES
+
+INSERT INTO `ciudades` (id, nombre, pais) values (1,'Medellin','Colombia');
+INSERT INTO `ciudades` (id, nombre, pais) values (2,'Rio negro','Colombia');
+INSERT INTO `ciudades` (id, nombre, pais) values (3,'Guatape','Colombia');
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`caracteristicas`
+-- -----------------------------------------------------
+
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(1, "wifi",`fa-wifi` );
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(2, 'Restaurante', `fa-utensils`);
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(3,'Piscina',`fa-swimmer` );
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(4,'Libre de humo', `fa-smoking` );
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(5,'Parqueadero', `fa-car` );
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(6,'Lavanderia', `fa-washer`);
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(7,'Spa', `fa-spa`);
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(8,'Jacuzzi', `fa-hot-tub` );
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(9,'Recepción 24 horas',`fa-bell-concierge`);
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(10,'Gimnasio', `fa-dumbbell`);
+INSERT INTO `caracteristicas` (id, descripcion, id_icono) VALUES(11,'Mascotas' 'fa-paw-simple' );
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`categorias`
+-- -----------------------------------------------------
+
+INSERT INTO `categorias` (id, descripcion, titulo, url_imagen) VALUES  (1, `Fuera de la ciudad`, `Cabaña` ,  `https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5`);
+INSERT INTO `categorias` (id, descripcion, titulo, url_imagen) VALUES (2, `Zona cerca al centro de la ciudad`,`Hotel`, `Hotel`, `https://media.staticontent.com/media/pictures/f2cf09de-e49f-4dfb-854d-3d26b89006b0/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5`);
+INSERT INTO `categorias` (id, descripcion, titulo, url_imagen) VALUES (3, `Ideal para viajes entre amigos`,`Apartamento`, `Apartamento`, `https://a0.muscache.com/im/pictures/miso/Hosting-53428451/original/5679c305-65e7-46ab-85a1-470781fddcb9.jpeg?im_w=1200`);
+INSERT INTO `categorias` (id, descripcion, titulo, url_imagen) VALUES (4, `Economicos y confiables`, `Hostel`, `https://media.staticontent.com/media/pictures/258af537-0a08-4432-a1c3-e00aecf1ff22/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5`);
+
+
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`tipo_politica`
+-- -----------------------------------------------------
+
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (1, `No fumar`, `zona libre de humo`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (2, `Fumar`,`zona para fumador`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (3, `No fiesta`,` no se permiten fiestas`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (4, `Check in`,`13:00`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (5, `Check out`,`10:00`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (6, `Distanciamiento`,`Se aplican las pautas de distanciamiento social`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (7, `Deposito`,` Deposito de seguridad`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (8, `Dectector de humo`,`Detector de humo y alrma contra incendios`);
+INSERT INTO `tipo_politicas` (id, titulo, descripcion) VALUES (9, `Cancelacion`,`Avisar 2 dias antes de hacer una cancelacion de hospedaje`);
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`productos`
+-- -----------------------------------------------------
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(1,`Cabaña Vacacional`,9.0,`Alojamiento fuera de la ciudad`,`Cerca de Roca de Guatapé, Con una conveniente ubicación en Guatapé, esta cabaña se encuentra a 15 minutos en auto de Peñol-Guatapé Reservoir`,`https://www.google.com/maps/place/Caba%C3%B1a+en+el+pe%C3%B1ol/@6.1701903,-75.5717975,12z/data=!4m7!3m6!1s0x8e441bf687c0de75:0x8f0c169fbfc33101!8m2!3d6.300932!4d-75.2204929!15sCihDYWJhw7FhIFZhY2FjaW9uYWwgZWwgUGXDsW9sIGNvbiBKYWN1enppkgEHY290dGFnZeABAA!16s%2Fg%2F11lm6rbbkw?hl=es&coh=164777&entry=tt&shorturl=1`,3,1);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(2,`Luxe by The Charlee`,10.0,`Alojamiento fuera de la ciudad`,`Ubicación del establecimiento En Guatapé, Luxe by The Charlee te permite llegar cómodamente a Rock of Guatapé y La Piedra Del Peñol.`,`https://www.google.com/maps/place/Lux%C3%A9+by+The+Charlee/@6.2419555,-75.1878173,17z/data=!3m1!4b1!4m8!3m7!1s0x8e441ce49a42b339:0x10df32efe8d67d08!5m2!4m1!1i2!8m2!3d6.2419555!4d-75.1856286?hl=es&coh=164777&entry=tt&shorturl=1`,3,1);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(3,`Four Points by Sheraton`, 9.4,`Zona comercial`,`El Four Points by Sheraton se encuentra ubicado en la zona del Poblado, a 10 minutos en coche del Aeropuerto Internacional Olaya Herrera y del Parque Lleras.`,`https://www.google.com/maps/place/Hotel+Four+Points+Sheraton+Medell%C3%ADn/@7.8186684,-79.3114328,6z/data=!4m9!3m8!1s0x8e46827d09383b51:0x7728be1955d8988d!5m2!4m1!1i2!8m2!3d6.1992837!4d-75.5761368!16s%2Fg%2F1q6kk14zl?hl=es`,1,2);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(4,`Park 10`,8.4,`Perfecto para conocer la ciudad`,`Park 10 se encuentra en Medellín. Ofrece wi-fi gratis en zonas comunes, servicio de spa y sauna, además de estacionamiento gratis.`,`https://www.google.com/maps/place/Hotel+Park+10/@6.2119026,-75.5652279,17z/data=!3m1!4b1!4m8!3m7!1s0x8e442828d6691f3b:0x431750389d76d0cc!5m2!4m1!1i2!8m2!3d6.2119051!4d-75.5652571?hl=es`,1,2);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(5,`Apartament Molinos`,6.7,`Para estadias largas`,`Molinos se ubica en una de las zonas más céntricas de Medellín, Cómoda y 24/7 Check In, ubicada desde las escaleras al Mall Molinos, lo que lo convierte en un lugar perfecto para visitar Medellín`,`https://www.google.com/maps/place/apartaestudio+los+molinos/@6.2313173,-75.6206546,15z/data=!4m9!3m8!1s0x8e442982c8931525:0xee85f6d8e00055d3!5m2!4m1!1i2!8m2!3d6.231304!4d-75.6031451!16s%2Fg%2F11hm3g45pz?hl=es`,1,3);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(6,`Loft Medellín`,7.9,`Comodidad con buena vista`,`Hermoso alojamiento con vistas espectaculares a la ciudad y las montañas, acabados de excelente calidad, staff preparado par brindarte la mejor experiencia durante tu estadía.`,`https://www.google.com/maps/place/The+Lofts+@+11/@6.2118971,-75.5888347,15z/data=!4m9!3m8!1s0x8e4429e46eb76733:0x5fae4c5b729be309!5m2!4m1!1i2!8m2!3d6.2118971!4d-75.5713252!16s%2Fg%2F11j1c8kr6w?hl=es`,1,3);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(7,`Star Hostal`,5.3,`Club`,`Star Hostal - Club de Tenis se encuentra ubicado en Rionegro, Antioquia, a 5 minutos en coche del Aeropuerto Internacional Jose Maria Cordova, a 25 minutos de Medellín`,`https://www.google.com/maps/place/Star+HOSTAL+y+Club+De+Tenis/@6.1810798,-75.4370677,17z/data=!3m1!4b1!4m8!3m7!1s0x8e469ddf8ecfeae9:0x592271a8da45d673!5m2!4m1!1i2!8m2!3d6.1810716!4d-75.4348482?hl=es&coh=164777&entry=tt&shorturl=1`,2,4);
+
+INSERT INTO `productos` (id, nombre, puntaje, titulo_descripcion, contenido_descripcion, ubicacion_maps, ciudades_id, categorias_id)
+VALUES(8,`Casa Encuentro`,8.5,`Fuera de la ciudad`,`Ubicación del establecimiento Casa Encuentro se sitúa en Guatapé, a poca distancia de Rock of Guatapé y de La Piedra Del Penol.Habitaciones Te sentirás como en tu propia casa en una de las 8 habitaciones.`,`https://www.google.com/maps/place/Casa+Encuentro+Alojamiento+rural+Guatape/@6.2296886,-75.1537152,17z/data=!3m1!4b1!4m8!3m7!1s0x8e441d29271bf49f:0xb13a9d5c3bf9434a!5m2!4m1!1i2!8m2!3d6.2296886!4d-75.1537152?hl=es`,3,4);
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`politicas_producto`
+-- -----------------------------------------------------
+INSERT INTO `politicas_producto` (productos_id, tipo_politica_id)
+Values (1,1), (1,3), (1,4), (1,5),(1,9),
+(2,1), (2,3), (2,4), (2,5), (2,9),
+(3,1), (3,3), (3,4), (3,5), (3,7),(3,8), (3,9),
+(4,1), (4,3), (4,4), (4,5), (4,7),(4,8), (4,9),
+(5,2), (5,4), (5,5), (5,7), (5,8),(5,9),
+(6,2), (6,3), (6,4), (6,5), (6,7),(6,8), (6,9),
+(7,2), (7,3), (7,4), (7,5), (7,7),(7,8), (7,9),
+(8,2), (8,3), (8,4), (8,5), (8,7),(8,8), (8,9);
+
+-- -----------------------------------------------------
+-- Table `PI_db_GRUPO6`.`producto_carateristicas`
+-- -----------------------------------------------------
+
+INSERT INTO `producto_carateristicas` (productos_id, caracteristicas_id)
+Values (1,1), (1,2), (1,4), (1,5),(1,8),
+(2,1), (2,4), (2,5), (2,7), (2,8),
+(3,1), (3,2), (3,3), (3,4), (3,5),(3,6), (3,7), (3,9), (3,10),
+(4,1), (4,2), (4,3), (4,4), (4,5),(4,6), (4,7), (4,9), (4,10),
+(5,1), (5,5), (5,9), (5,11),
+(6,1), (6,5), (6,9), (6,11),
+(7,1), (7,2), (7,4), (7,5), (7,7),(7,8), (7,9),
+(8,1), (8,3), (8,4), (8,5), (8,7),(8,8), (8,9);

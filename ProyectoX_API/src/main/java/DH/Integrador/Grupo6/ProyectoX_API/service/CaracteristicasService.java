@@ -26,7 +26,7 @@ public class CaracteristicasService {
 
     // post
 
-    public Caracteristicas guardarImagen(Caracteristicas caracteristicas ){
+    public Caracteristicas guardarCaracteristica(Caracteristicas caracteristicas ){
         return  caracteristicasRepository.save(caracteristicas);
     }
 

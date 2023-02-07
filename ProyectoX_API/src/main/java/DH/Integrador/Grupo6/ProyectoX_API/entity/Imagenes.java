@@ -1,6 +1,8 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIncludeProperties;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,26 +14,27 @@ public class Imagenes {
 
     @Column
     private Long id;
-
     @Column
-    private String titulo;
+    private String urlImagen;
 
-    @Column
-    private String URL;
+    @JsonIncludeProperties(value = {"id"})
+    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @JoinColumn(name = "producto_id")
+    private Producto producto;
 
+    public Imagenes(){
 
-
-    public Imagenes() {
-    }
-    public Imagenes(String titulo, String URL) {
-        this.titulo = titulo;
-        this.URL = URL;
     }
 
-    public Imagenes(Long id, String titulo, String URL) {
+    public Imagenes(String urlImagen, Producto producto) {
+        this.urlImagen = urlImagen;
+        this.producto = producto;
+    }
+
+    public Imagenes(Long id, String urlImagen, Producto producto) {
         this.id = id;
-        this.titulo = titulo;
-        this.URL = URL;
+        this.urlImagen = urlImagen;
+        this.producto = producto;
     }
 
     public Long getId() {
@@ -42,19 +45,22 @@ public class Imagenes {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public String getUrlImagen() {
+        return urlImagen;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
+    public void setUrlImagen(String urlImagen) {
+        this.urlImagen = urlImagen;
     }
 
-    public String getURL() {
-        return URL;
+    public Producto getProducto() {
+        return producto;
     }
 
-    public void setURL(String URL) {
-        this.URL = URL;
+    public void setProducto(Producto producto) {
+        this.producto = producto;
     }
 }
+
+
+

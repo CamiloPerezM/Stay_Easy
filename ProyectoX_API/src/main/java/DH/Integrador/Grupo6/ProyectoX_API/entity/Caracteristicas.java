@@ -16,20 +16,32 @@ public class Caracteristicas {
     private Long id;
 
     @Column
-    private Boolean nombre;
+    private String descripcion;
 
-    public Caracteristicas(){
+    @Column
+    private String idIcono;
+
+    @ManyToMany(mappedBy = "caracteristicas", fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Producto> productos;
+
+    public Caracteristicas() {
 
     }
     //Constructor
 
-    public Caracteristicas(Boolean nombre) {
-        this.nombre = nombre;
+
+    public Caracteristicas(String descripcion, String idIcono, Set<Producto> productos) {
+        this.descripcion = descripcion;
+        this.idIcono = idIcono;
+        this.productos = productos;
     }
 
-    public Caracteristicas(Long id, Boolean nombre) {
+    public Caracteristicas(Long id, String descripcion, String idIcono, Set<Producto> productos) {
         this.id = id;
-        this.nombre = nombre;
+        this.descripcion = descripcion;
+        this.idIcono = idIcono;
+        this.productos = productos;
     }
 
     public Long getId() {
@@ -40,13 +52,27 @@ public class Caracteristicas {
         this.id = id;
     }
 
-    public Boolean getNombre() {
-        return nombre;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setNombre(Boolean nombre) {
-        this.nombre = nombre;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
+    public String getIdIcono() {
+        return idIcono;
+    }
 
+    public void setIdIcono(String idIcono) {
+        this.idIcono = idIcono;
+    }
+
+    public Set<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(Set<Producto> productos) {
+        this.productos = productos;
+    }
 }

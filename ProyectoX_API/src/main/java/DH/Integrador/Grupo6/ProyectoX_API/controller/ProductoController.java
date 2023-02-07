@@ -26,7 +26,7 @@ public class ProductoController {
         return  ResponseEntity.ok(productoService.buscarProducto());
     }
     
-    @GetMapping("/{id}}")
+    @GetMapping("/{id}")
     public  ResponseEntity<Producto> buscarProducto(@PathVariable Long id) {
         Optional<Producto> productoBuscado = productoService.buscarProducto(id);
         if (productoBuscado.isPresent()) {
