@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Select, Button } from 'antd';
-import { DatePicker } from "antd";
+import { Form, Select, Button, DatePicker } from 'antd';
 import "../Styles/Header.css"
 
 
