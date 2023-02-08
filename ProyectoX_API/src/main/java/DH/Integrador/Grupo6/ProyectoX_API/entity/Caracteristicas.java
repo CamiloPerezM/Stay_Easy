@@ -1,47 +1,46 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
+
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
-import java.util.HashSet;
 import java.util.Set;
 
 @Entity
-@Table(name="categorias")
-public class Categoria {
-
+@Table(name = "caracteristicas")
+public class Caracteristicas {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+
+    @Column
     private Long id;
 
-    @Column(unique = true)
-    private String titulo;
     @Column
     private String descripcion;
+
     @Column
-    private String urlImagen;
+    private String idIcono;
 
-    @OneToMany(mappedBy = "categoria", fetch = FetchType.EAGER)
+    @ManyToMany(mappedBy = "caracteristicas", fetch = FetchType.EAGER)
     @JsonIgnore
-    private Set<Producto> productos = new HashSet<>();
+    private Set<Producto> productos;
 
+    public Caracteristicas() {
+
+    }
     //Constructor
 
-    public Categoria(){
-    }
 
-    public Categoria(String titulo, String descripcion, String urlImagen, Set<Producto> productos) {
-        this.titulo = titulo;
+    public Caracteristicas(String descripcion, String idIcono, Set<Producto> productos) {
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
+        this.idIcono = idIcono;
         this.productos = productos;
     }
 
-    public Categoria(Long id, String titulo, String descripcion, String urlImagen, Set<Producto> productos) {
+    public Caracteristicas(Long id, String descripcion, String idIcono, Set<Producto> productos) {
         this.id = id;
-        this.titulo = titulo;
         this.descripcion = descripcion;
-        this.urlImagen = urlImagen;
+        this.idIcono = idIcono;
         this.productos = productos;
     }
 
@@ -53,14 +52,6 @@ public class Categoria {
         this.id = id;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
     public String getDescripcion() {
         return descripcion;
     }
@@ -69,12 +60,12 @@ public class Categoria {
         this.descripcion = descripcion;
     }
 
-    public String getUrlImagen() {
-        return urlImagen;
+    public String getIdIcono() {
+        return idIcono;
     }
 
-    public void setUrlImagen(String urlImagen) {
-        this.urlImagen = urlImagen;
+    public void setIdIcono(String idIcono) {
+        this.idIcono = idIcono;
     }
 
     public Set<Producto> getProductos() {
