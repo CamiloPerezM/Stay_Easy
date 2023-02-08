@@ -22,6 +22,13 @@ public class Politicas {
     private String descripcion;
 
 
+    @OneToMany(mappedBy = "politicas", fetch = FetchType.EAGER)
+    @JsonIgnore
+    private Set<Producto> productos = new HashSet<>();
+
+
+
+
 
     public Politicas(){
     }
