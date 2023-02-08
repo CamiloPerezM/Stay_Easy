@@ -7,40 +7,61 @@ export const ContextGlobal = createContext(undefined);
 export const ContextProvider = ({children}) =>{
 
     const[categorias, setCategorias] = React.useState([]);
-
-    // const handleFetchRequest = async () => {
-    //   const response = await fetch("http://localhost:8080/categorias/");
-    //   const jsonResponse = await response.json();
-    //   setCategorias(jsonResponse);
-    // };
+    const[ciudades, setCiudades] = React.useState([]);
+    const [productos, setProductos] = React.useState([]);
     
     React.useEffect(() => {
       async function getData(){
         try{
           const response = await fetch('http://localhost:8080/categorias/');
           const data = await response.json();
-  
-          // axios.get("http://localhost:8080/categorias/")
-          // .then(response => {
-          //   setCategorias(response.data);
-          //   console.log(response.data);
-          // })
           console.log(data);
-  
           setCategorias(data);
+
         }catch(e){
           console.log("Error");
           console.log(e);
         }
       }
+
+
+      async function getCiudades(){
+        try{
+          const response = await fetch('http://localhost:8080/ciudades/');
+          const data = await response.json();
+          console.log(data);
+          setCiudades(data);
+
+        }catch(e){
+          console.log("Error");
+          console.log(e);
+        }
+      }
+
+
+      async function getProducto(){
+        try{
+          const response = await fetch('http://localhost:8080/producto/');
+          const data = await response.json();
+          console.log(data);
+          setProductos(data);
+
+        }catch(e){
+          console.log("Error");
+          console.log(e);
+        }
+      }
+
       getData();
-      // handleFetchRequest()
+      getCiudades();
+      getProducto();
+  
 
     }, []);
   
   
     return (
-      <ContextGlobal.Provider value={{categorias}}>
+      <ContextGlobal.Provider value={{categorias,ciudades,productos}}>
         {children}
       </ContextGlobal.Provider>
     );

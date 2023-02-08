@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { Form, Select, Button, DatePicker } from 'antd';
 import "../Styles/Header.css"
+import { ContextGlobal } from './utils/global.context';
 
 
 const { Option } = Select;
 
-const cities = [
-  { name: 'Medellin', value: 'med' },
-  { name: 'Bogota', value: 'bog' },
-  { name: 'Cartagena', value: 'ctg' },
-  { name: 'Cali', value: 'clo' },
-  { name: 'Barranquilla', value: 'baq' },
-];
+// const cities = [
+//   { name: 'Medellin', value: 'med' },
+//   { name: 'Bogota', value: 'bog' },
+//   { name: 'Cartagena', value: 'ctg' },
+//   { name: 'Cali', value: 'clo' },
+//   { name: 'Barranquilla', value: 'baq' },
+// ];
 
 const { RangePicker } = DatePicker;
 
@@ -25,6 +26,7 @@ const onCalendarChange = (dates) => {
 
 function Buscador() {
   const [city, setCity] = useState(null);
+  const {ciudades} =useContext(ContextGlobal);
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -39,9 +41,9 @@ function Buscador() {
           onChange={value => setCity(value)}
           value={city}
         >
-          {cities.map(city => (
-            <Option key={city.value} value={city.value}>
-              {city.name}
+          {ciudades.map(city => (
+            <Option key={city.id} value={city.pais}>
+              {city.nombre}
             </Option>
           ))}
         </Select>
