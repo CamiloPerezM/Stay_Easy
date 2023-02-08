@@ -1,6 +1,5 @@
 package DH.Integrador.Grupo6.ProyectoX_API.service;
 
-import DH.Integrador.Grupo6.ProyectoX_API.entity.Politicas;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -48,6 +47,10 @@ public class ProductoService {
     public void eliminarProducto(Long id){
         productoRepository.deleteById(id);
     }
+
+    //public List<Producto> buscarCategoria(Long id) {
+     //   return productoRepository.buscarCategoriaId(id);
+    //}
 
 }
 

@@ -67,4 +67,10 @@ public class ProductoController {
                     "ya que no existe en la base de datos. ");
         }
     }
+
+   /* @GetMapping("/categoria/{categoriaId}")
+    public ResponseEntity<List<?>> categoriaBuscada(@PathVariable Long categoriaId) {
+        return ResponseEntity.ok(productoService.buscarCategoria(categoriaId));
+    }
+*/
 }

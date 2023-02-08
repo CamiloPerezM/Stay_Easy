@@ -4,10 +4,11 @@ package DH.Integrador.Grupo6.ProyectoX_API.service;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Imagenes;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ImagenesRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-
+@Service
 public class ImagenesService {
 
     private ImagenesRepository imagenesRepository;
