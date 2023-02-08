@@ -12,7 +12,7 @@ export const CardCategory = ({ datos }) => {
         <div className={Styles.card2}>
             <img className={Styles.cardImg} src={datos.urlImagen} alt="Img Categorias" />
             <div className={Styles.cardContainer}>
-                <h2 className={Styles.cardCategory}>{datos.titulo.toUpperCase()}</h2>
+                { <h2 className={Styles.cardCategory}>{datos.titulo.toUpperCase()}</h2> }
                 <p className={Styles.cardInfo}>{datos.descripcion}</p>
             </div>
         </div>
