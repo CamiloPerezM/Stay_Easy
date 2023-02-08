@@ -11,11 +11,9 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
-    @NotBlank
+    @Column
     private String nombre;
     @Column
-    @NotBlank
     private String contrasenna;
 
     public Usuario() {

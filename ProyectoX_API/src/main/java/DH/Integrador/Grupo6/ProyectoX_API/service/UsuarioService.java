@@ -29,7 +29,7 @@ public class UsuarioService {
         return usuarioRepository.findById(id);
     }
 
-    public Optional<Usuario> buscarUsuarioPorNombre(String nombre){
+    public List<Usuario> buscarUsuarioPorNombre(String nombre){
         return usuarioRepository.findByNombre(nombre);
     }
 

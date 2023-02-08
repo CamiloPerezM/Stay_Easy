@@ -1,6 +1,8 @@
 package DH.Integrador.Grupo6.ProyectoX_API.service;
 
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +30,11 @@ public class ProductoService {
 
         return productoRepository.findById(id);
     }
+
+    public List<Producto> buscarPorCiudad(Optional<Ciudad> ciudad){
+        return productoRepository.findByCiudad(ciudad);
+    }
+
 
 
     // post
