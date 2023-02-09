@@ -4,6 +4,7 @@ import Footer from "./Footer"
 import { ContextGlobal } from "./utils/global.context";
 import { List } from "./List";
 import { Card } from "./Card";
+import { useLocation } from "react-router";
 
 
 
@@ -12,6 +13,10 @@ import { Card } from "./Card";
 const FiltroCategoria = () => {
 
     const {productos} = useContext(ContextGlobal);
+    const location = useLocation();
+    const categoriaSelecionada = location.state?.categoriaId;
+
+    console.log('categoria id ===>>>>',categoriaSelecionada);
 
     return (
 
@@ -20,6 +25,7 @@ const FiltroCategoria = () => {
     <List title="" style="spaceCategory" background="bgRecomendations">
         {
             productos
+            .filter((producto) => producto.categoria.id === categoriaSelecionada)
             .map((producto) => ({
                 crimg: producto.imagenes[0].urlImagen,
                 category: producto.categoria.titulo,

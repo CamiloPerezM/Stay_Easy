@@ -25,7 +25,11 @@ export const CardCategory = ({ datos }) => {
 
     function selectCategori () {
         
-            navigate('/filtroCategoria');
+            navigate('/filtroCategoria',{
+                state: {
+                    categoriaId: datos.id
+                }
+            });
         
     }
 }
