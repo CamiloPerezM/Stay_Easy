@@ -24,15 +24,6 @@ const FiltroCategoria = () => {
         {
             productos
             .filter((producto) => producto.categoria.id === categoriaSelecionada)
-            .map((producto) => ({
-                crimg: producto.imagenes[0].urlImagen,
-                category: producto.categoria.titulo,
-                title: producto.tituloDescripcion,
-                location: producto.ciudad.nombre,
-                description: producto.contenidoDescripcion,
-                map: producto.ubicacionMaps,
-                calificacion: producto.puntaje
-            }))
             .map((data, i) => {
                 return (
                     <Card datos={data} id={i} key={i} />

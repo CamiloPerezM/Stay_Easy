@@ -6,7 +6,7 @@ import Login from './pages/Login'
 import Registro from './pages/Register'
 import Home from './pages/Home'
 import FiltroCategoria from './components/FiltroCategoria'
-import HeaderContenedor from './Contenedor/Headercontenedor'
+import TemplateContenedor from './Contenedor/TemplateContenedor'
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
           <Route path="/registro" element={<Registro/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/filtroCategoria" element={<FiltroCategoria />} />
-          <Route path="/headerContenedor" element={<HeaderContenedor />} />
+          <Route path="/templateContenedor" element={<TemplateContenedor />} />
 
         </Routes>
       <Footer />
