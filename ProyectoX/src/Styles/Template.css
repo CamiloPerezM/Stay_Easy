@@ -1,0 +1,20 @@
+.categoryProduct {
+    background-color: rgba(251, 134, 0, 0.753);
+    display: flex;
+    align-content: space-around;
+    width: 100vw;
+}
+
+.arroeLeft {
+    width: auto;
+}
+
+.ubication {
+    background-color: rgba(255, 184, 3, 0.445);
+    margin: auto;
+}
+
+header {
+    
+    width: 100vw;
+}

@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import { Formulario,ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../components/utils/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import Input from '../Components/Input';
+import Input from '../components/Input';
 import { Link} from 'react-router-dom'
 import "../Styles/estilos.css"
 

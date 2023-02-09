@@ -2,8 +2,8 @@ import React, {useState} from 'react';
 import { Formulario,ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError} from '../components/utils/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import Input from '../Components/Input';
-import { Link} from 'react-router-dom'
+import Input from '../components/Input';
+import { Link, useNavigate } from 'react-router-dom'
 import "../Styles/estilos.css"
 
 
@@ -13,52 +13,72 @@ const Login = () =>{
 	const [password2, cambiarPassword2] = useState({campo: '', valido: null});
 	const [correo, cambiarCorreo] = useState({campo: '', valido: null});
 	const [formularioValido, cambiarFormularioValido] = useState(null);
+    const [isLogin, setIsLogin] = useState (false);
+
+    let navigate = useNavigate();
 
 const expresiones = { 
 		password: /^.{6,40}$/, 
 		correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
 	}
 
-const validarPassword2 = () => {
-		if(password.campo.length > 0){
-			if(password.campo !== password2.campo){
-				cambiarPassword2((prevState) => {
-					return {...prevState, valido: 'false'}
-				});
-			} else {
-				cambiarPassword2((prevState) => {
-					return {...prevState, valido: 'true'}
-				});
-			}
-		}
-	}
+// const validarPassword2 = () => {
+// 		if(password.campo.length > 0){
+// 			if(password.campo !== password2.campo){
+// 				cambiarPassword2((prevState) => {
+// 					return {...prevState, valido: 'false'}
+// 				});
+// 			} else {
+// 				cambiarPassword2((prevState) => {
+// 					return {...prevState, valido: 'true'}
+// 				});
+// 			}
+// 		}
+// 	}
 const onSubmit =(e) =>{
     e.preventDefault();
 
-if(
-    password.valido === 'true' && 
-    password2.valido === 'true' && 
-    correo.valido === 'true'
-    ){
-    cambiarFormularioValido(true);
+// if(
+//     password.valido === 'true' && 
+//     password2.valido === 'true' && 
+//     correo.valido === 'true'
+//     ){
+//     cambiarFormularioValido(true);
 
 
-    cambiarCorreo({campo: '', valido: null});
-    cambiarPassword({campo: '', valido: null});
-    cambiarPassword2({campo: '', valido: null});
-    }else{
-    cambiarFormularioValido(false)
-    }
+//     cambiarCorreo({campo: '', valido: null});
+//     cambiarPassword({campo: '', valido: null});
+//     cambiarPassword2({campo: '', valido: null});
+//     }else{
+//     cambiarFormularioValido(false)
+//     }
 }
 
 
+function handleSubmit () {
+    let account = {correo, password}
+    if (account){
+        ifMatch(account);
+    }
+}
 
-
+function ifMatch () {
+    if(correo.valido === 'true' && password.valido === 'true') {
+        let acept = {correo, password}
+        let account = JSON.stringify(acept);
+        localStorage.setItem('account', account);
+        setIsLogin(true);
+        document.getElementById('form').style.display = 'none';
+        navigate('/home', { replace: true });
+    } else {
+        setIsLogin(false);
+    }
+}
 
     return(
         <main className='main  backgroundColor'>
         <h1 className='titulo'>Iniciar sesión</h1>
-            <Formulario action =""onSubmit={onSubmit}>
+            <Formulario action =""onSubmit={onSubmit} id='form'>
 
                 <Input
                 estado={correo}
@@ -70,6 +90,7 @@ if(
                 leyendaError="Este email no es valido ingrese un formato correcto, ejemplo: example@mail.com"
                 expresionRegular={expresiones.correo}
                 />
+
                 <Input
                 estado={password}
                 cambiarEstado={cambiarPassword}
@@ -79,7 +100,9 @@ if(
                 name="password1"
                 leyendaError="La contraseña debe tener 6 o mas digitos."
                 expresionRegular={expresiones.password}
-/>
+                />
+
+
             	{/* <Input
                 estado={password2}
                 cambiarEstado={cambiarPassword2}
@@ -102,7 +125,7 @@ if(
                 </p>
                 </MensajeError> }
                 <ContenedorBotonCentrado>
-                <Boton type='submit'>Login</Boton>
+                <Boton type='submit' onClick={handleSubmit}>Login</Boton>
                 <p>¿Aun no te has registrado? <Link to={`/registro`}>Registrate</Link></p>
                 {formularioValido === true && <MensajeExito>Iniciando sesión!</MensajeExito>}
                 </ContenedorBotonCentrado>
