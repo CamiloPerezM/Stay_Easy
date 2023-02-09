@@ -58,6 +58,7 @@ function Buscador() {
 
       <Form.Item>
         <Button className="search">Buscar</Button>
+        {/* onClick={handleClick} */}
       </Form.Item>
     </Form>
   );
