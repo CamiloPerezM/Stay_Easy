@@ -33,6 +33,14 @@ public class Producto {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
+            name = "tipo_politica",
+            joinColumns = @JoinColumn(name = "productos_id"),
+            inverseJoinColumns = @JoinColumn(name = "politicas_id")
+    )
+    private Set<Politicas> politicas = new HashSet<>();
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(
             name = "atributos",
             joinColumns = @JoinColumn(name = "productos_id"),
             inverseJoinColumns = @JoinColumn(name = "caracteristicas_id")
