@@ -5,8 +5,8 @@ import { Route, Routes } from 'react-router'
 import Login from './pages/Login'
 import Registro from './pages/Register'
 import Home from './pages/Home'
-import filtrarCategoria from './components/FiltroCategoria'
 import FiltroCategoria from './components/FiltroCategoria'
+import HeaderContenedor from './Contenedor/Headercontenedor'
 
 
 function App() {
@@ -26,6 +26,7 @@ function App() {
           <Route path="/registro" element={<Registro/>} />
           <Route path="/login" element={<Login />} />
           <Route path="/filtroCategoria" element={<FiltroCategoria />} />
+          <Route path="/headerContenedor" element={<HeaderContenedor />} />
 
         </Routes>
       <Footer />

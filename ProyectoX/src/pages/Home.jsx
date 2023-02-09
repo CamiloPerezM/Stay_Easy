@@ -1,5 +1,5 @@
 import React from 'react'
-import data from "../api/data.json"
+// import data from "../api/data.json"
 // import dataCategory from "../api/dataCategory.json"
 import {List} from "../components/List"
 import {CardCategory} from "../components/CardCategory"
@@ -12,16 +12,25 @@ import { ContextGlobal } from '../components/utils/global.context'
 
 const Home = () => {
 
-    const {categorias} = useContext(ContextGlobal);
+    const {categorias,productos} = useContext(ContextGlobal);
+
+    categorias.sort(()=>{
+        return 0.5 - Math.random();
+    })
+
+
+    productos.sort(()=>{
+        return 0.5 - Math.random();
+    })
 
     return (
         <>
             <List title="Buscar por tipo de alojamiento" style="spaceCategory">
                 {
-                     categorias.map((data, i) => {
+                     categorias.map((data,i) => {
                         return (
                             
-                            i<=3 ? <CardCategory datos={data} id={data.id} key={i} /> : null
+                            i<=3 ? <CardCategory datos={data} id={data.id} key={data.id} /> : null
                         )
                     })
                 }
@@ -29,9 +38,9 @@ const Home = () => {
 
             <List title="Recomendados" style="spaceCategory" background="bgRecomendations">
                 {
-                    data.map((data, i) => {
+                    productos.map((data) => {
                         return (
-                            <Card datos={data} id={i} key={i} />
+                            <Card datos={data} id={data.id} key={data.id} />
                         )
                     })
                 }

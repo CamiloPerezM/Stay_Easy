@@ -1,6 +1,4 @@
 import React, { useContext } from "react";
-import Header from "./Header"
-import Footer from "./Footer"
 import { ContextGlobal } from "./utils/global.context";
 import { List } from "./List";
 import { Card } from "./Card";

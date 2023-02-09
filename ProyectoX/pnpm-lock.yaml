@@ -1,7 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@bcad1591/react-date-picker': ^0.1.1
   '@fortawesome/fontawesome-svg-core': ^6.2.1
   '@fortawesome/free-regular-svg-icons': ^6.2.1
   '@fortawesome/free-solid-svg-icons': ^6.2.1
@@ -10,8 +9,9 @@ specifiers:
   '@types/react-dom': ^18.0.9
   '@vitejs/plugin-react-swc': ^3.0.0
   antd: ^5.1.6
+  date-fns: ^2.29.3
   react: ^18.2.0
-  react-datepicker: ^4.8.0
+  react-date-range: ^1.4.0
   react-dom: ^18.2.0
   react-hook-form: ^7.42.1
   react-native-axios: ^0.17.1
@@ -21,14 +21,14 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
-  '@bcad1591/react-date-picker': 0.1.1_2zpt4ilzykmne4yndyzrqd4gdm
   '@fortawesome/fontawesome-svg-core': 6.2.1
   '@fortawesome/free-regular-svg-icons': 6.2.1
   '@fortawesome/free-solid-svg-icons': 6.2.1
   '@fortawesome/react-fontawesome': 0.2.0_z27bm67dtmuyyvss23ckjdrcuy
-  antd: 5.1.7_biqbaboplfbrettd7655fr4n2y
+  antd: 5.1.7_3pf3ktbrffvgnzxoo2eotyjcpi
+  date-fns: 2.29.3
   react: 18.2.0
-  react-datepicker: 4.10.0_biqbaboplfbrettd7655fr4n2y
+  react-date-range: 1.4.0_r6j3756ioqf5pjc2u22wj25rla
   react-dom: 18.2.0_react@18.2.0
   react-hook-form: 7.43.0_react@18.2.0
   react-native-axios: 0.17.1
@@ -225,19 +225,6 @@ packages:
       '@babel/helper-string-parser': 7.19.4
       '@babel/helper-validator-identifier': 7.19.1
       to-fast-properties: 2.0.0
-    dev: false
-
-  /@bcad1591/react-date-picker/0.1.1_2zpt4ilzykmne4yndyzrqd4gdm:
-    resolution: {integrity: sha512-FBJ5NxBUbyXLefPmZ/hTvTmQ0Oj2aNcuu1euw7Fi5QJRnQ57hGd45o7V/U59SKkcfPdfCWeYWJvA6V2YW09HkQ==}
-    peerDependencies:
-      react: ^18.1.0
-      react-dom: ^18.1.0
-      styled-components: ^5.3.5
-    dependencies:
-      date-fns: 2.29.3
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      styled-components: 5.3.6_biqbaboplfbrettd7655fr4n2y
     dev: false
 
   /@ctrl/tinycolor/3.5.0:
@@ -536,10 +523,6 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: false
 
-  /@popperjs/core/2.11.6:
-    resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
-    dev: false
-
   /@rc-component/context/1.3.0_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-6QdaCJ7Wn5UZLJs15IEfqy4Ru3OaL5ctqpQYWd5rlfV9wwzrzdt6+kgAQZV/qdB0MUPN4nhyBfRembQCIvBf+w==}
     peerDependencies:
@@ -753,7 +736,7 @@ packages:
       color-convert: 1.9.3
     dev: false
 
-  /antd/5.1.7_biqbaboplfbrettd7655fr4n2y:
+  /antd/5.1.7_3pf3ktbrffvgnzxoo2eotyjcpi:
     resolution: {integrity: sha512-rz7wrUPWfE1WAt7o8vlTmjfxVmbV0Vyh00PEO8F837Gq0wugvOiWVPJ4BI/piIxUIpKXASYmCYWOczoHCkwBMQ==}
     peerDependencies:
       react: '>=16.9.0'
@@ -786,7 +769,7 @@ packages:
       rc-motion: 2.6.3_biqbaboplfbrettd7655fr4n2y
       rc-notification: 5.0.2_biqbaboplfbrettd7655fr4n2y
       rc-pagination: 3.2.0_biqbaboplfbrettd7655fr4n2y
-      rc-picker: 3.1.4_mlnkrlbros4rghcauwy625gk7y
+      rc-picker: 3.1.4_42wj3zduwzb6phokkqsgy2rgci
       rc-progress: 3.4.1_biqbaboplfbrettd7655fr4n2y
       rc-rate: 2.9.2_biqbaboplfbrettd7655fr4n2y
       rc-resize-observer: 1.2.1_biqbaboplfbrettd7655fr4n2y
@@ -1346,7 +1329,7 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /rc-picker/3.1.4_mlnkrlbros4rghcauwy625gk7y:
+  /rc-picker/3.1.4_42wj3zduwzb6phokkqsgy2rgci:
     resolution: {integrity: sha512-4qANXNc3C02YENNQvun329zf9VLvSQ2W8RkKQRu8k1P+EtSGqe3klcAKCfz/1TuCiDvgRjJlzRmyZAkwvsbI8w==}
     engines: {node: '>=8.x'}
     peerDependencies:
@@ -1365,6 +1348,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.13
       classnames: 2.3.2
+      date-fns: 2.29.3
       dayjs: 1.11.7
       rc-trigger: 5.3.4_biqbaboplfbrettd7655fr4n2y
       rc-util: 5.27.2_biqbaboplfbrettd7655fr4n2y
@@ -1637,20 +1621,18 @@ packages:
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /react-datepicker/4.10.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-6IfBCZyWj54ZZGLmEZJ9c4Yph0s9MVfEGDC2evOvf9AmVz+RRcfP2Czqad88Ff9wREbcbqa4dk7IFYeXF1d3Ag==}
+  /react-date-range/1.4.0_r6j3756ioqf5pjc2u22wj25rla:
+    resolution: {integrity: sha512-+9t0HyClbCqw1IhYbpWecjsiaftCeRN5cdhsi9v06YdimwyMR2yYHWcgVn3URwtN/txhqKpEZB6UX1fHpvK76w==}
     peerDependencies:
-      react: ^16.9.0 || ^17 || ^18
-      react-dom: ^16.9.0 || ^17 || ^18
+      date-fns: 2.0.0-alpha.7 || >=2.0.0
+      react: ^0.14 || ^15.0.0-rc || >=15.0
     dependencies:
-      '@popperjs/core': 2.11.6
       classnames: 2.3.2
       date-fns: 2.29.3
       prop-types: 15.8.1
       react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      react-onclickoutside: 6.12.2_biqbaboplfbrettd7655fr4n2y
-      react-popper: 2.3.0_r6q5zrenym2zg7je7hgi674bti
+      react-list: 0.8.17_react@18.2.0
+      shallow-equal: 1.2.1
     dev: false
 
   /react-dom/18.2.0_react@18.2.0:
@@ -1661,10 +1643,6 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
-    dev: false
-
-  /react-fast-compare/3.2.0:
-    resolution: {integrity: sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==}
     dev: false
 
   /react-hook-form/7.43.0_react@18.2.0:
@@ -1680,36 +1658,21 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
 
+  /react-list/0.8.17_react@18.2.0:
+    resolution: {integrity: sha512-pgmzGi0G5uGrdHzMhgO7KR1wx5ZXVvI3SsJUmkblSAKtewIhMwbQiMuQiTE83ozo04BQJbe0r3WIWzSO0dR1xg==}
+    peerDependencies:
+      react: 0.14 || 15 - 18
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
+
   /react-native-axios/0.17.1:
     resolution: {integrity: sha512-HQO5RB6+SYMYX6ckXPkzGtIC2H7LVdRrXhB6IVrUNj+QpJH9rWVDeKM51juvvhPBQtXJjB1vORWPrQhvnYOvMA==}
     dependencies:
       follow-redirects: 0.0.7
     transitivePeerDependencies:
       - supports-color
-    dev: false
-
-  /react-onclickoutside/6.12.2_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-NMXGa223OnsrGVp5dJHkuKxQ4czdLmXSp5jSV9OqiCky9LOpPATn3vLldc+q5fK3gKbEHvr7J1u0yhBh/xYkpA==}
-    peerDependencies:
-      react: ^15.5.x || ^16.x || ^17.x || ^18.x
-      react-dom: ^15.5.x || ^16.x || ^17.x || ^18.x
-    dependencies:
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: false
-
-  /react-popper/2.3.0_r6q5zrenym2zg7je7hgi674bti:
-    resolution: {integrity: sha512-e1hj8lL3uM+sgSR4Lxzn5h1GxBlpa4CQz0XLF8kx4MDrDRWY0Ena4c97PUeSX9i5W3UAfDP0z0FXCTQkoXUl3Q==}
-    peerDependencies:
-      '@popperjs/core': ^2.0.0
-      react: ^16.8.0 || ^17 || ^18
-      react-dom: ^16.8.0 || ^17 || ^18
-    dependencies:
-      '@popperjs/core': 2.11.6
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      react-fast-compare: 3.2.0
-      warning: 4.0.3
     dev: false
 
   /react-router-dom/6.8.0_biqbaboplfbrettd7655fr4n2y:
@@ -1777,6 +1740,10 @@ packages:
     resolution: {integrity: sha512-s+/F50jwTOUt+u5oEIAzum9MN2lUQNvWBe/zfEsVQcbaERjGkKLq1s+2wCHkahMLC8nMLbzMVKivx9JhunXaZg==}
     dependencies:
       compute-scroll-into-view: 2.0.4
+    dev: false
+
+  /shallow-equal/1.2.1:
+    resolution: {integrity: sha512-S4vJDjHHMBaiZuT9NPb616CSmLf618jawtv3sufLl6ivK8WocjAo58cXwbRV1cgqxH0Qbv+iUt6m05eqEa2IRA==}
     dev: false
 
   /shallowequal/1.1.0:
@@ -1881,9 +1848,3 @@ packages:
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
-
-  /warning/4.0.3:
-    resolution: {integrity: sha512-rpJyN222KWIvHJ/F53XSZv0Zl/accqHR8et1kpaMTD/fLCRxtV8iX8czMzY7sVZupTI3zcUTg8eycS2kNF9l6w==}
-    dependencies:
-      loose-envify: 1.4.0
-    dev: false

@@ -1,5 +1,8 @@
 package DH.Integrador.Grupo6.ProyectoX_API.controller;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
+import DH.Integrador.Grupo6.ProyectoX_API.service.CiudadService;
 import DH.Integrador.Grupo6.ProyectoX_API.service.ProductoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -10,16 +13,22 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/producto")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = {"http://localhost:5173","http://127.0.0.1:5173/"})
 public class ProductoController {
+
+
+    private CiudadService ciudadService;
 
     private ProductoService productoService;
 
-
     @Autowired
-    public ProductoController(ProductoService productoService) {
+    public ProductoController(CiudadService ciudadService, ProductoService productoService) {
+        this.ciudadService = ciudadService;
         this.productoService = productoService;
     }
+
+
+
 
     @GetMapping
     public ResponseEntity<List<Producto>> listProductos (){
@@ -34,6 +43,29 @@ public class ProductoController {
         } else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @GetMapping("/ciudad/{id}")
+    public ResponseEntity<List<Producto>> buscarProductoPorCiudad(@PathVariable Long id){
+
+        Optional<Ciudad> ciudadBuscada=ciudadService.buscarCiudad(id);
+        if (ciudadBuscada.isPresent()){
+
+
+            List<Producto> productoBuscado= productoService.buscarPorCiudad(ciudadBuscada);
+            if (!productoBuscado.isEmpty()){
+                return ResponseEntity.ok(productoBuscado);
+            }
+            else{
+                return ResponseEntity.notFound().build();
+            }
+
+        }
+        else{
+            return ResponseEntity.notFound().build();
+        }
+
+
     }
     
         

@@ -8,8 +8,8 @@ const HeaderContenedor = ({datos}) => {
     return (
         <div>
             <div>
-                <p> {datos.nombre.toUpperCase()} </p>
-                <title> {datos.titulo.toUpperCase()} </title>
+                <p> Hola Mundo </p>
+                <title> Hey tu!!! </title>
                 <FontAwesomeIcon icon={faArrowLeft}/>
             </div>
 
@@ -21,3 +21,5 @@ const HeaderContenedor = ({datos}) => {
         </div>
     )
 }
+
+export default HeaderContenedor;

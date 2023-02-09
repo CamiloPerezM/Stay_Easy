@@ -7,53 +7,61 @@ export const ContextGlobal = createContext(undefined);
 export const ContextProvider = ({children}) =>{
 
     const[categorias, setCategorias] = React.useState([]);
-    const[productos, setProductos] = React.useState([]);
-
-
-
-    // const handleFetchRequest = async () => {
-    //   const response = await fetch("http://localhost:8080/categorias/");
-    //   const jsonResponse = await response.json();
-    //   setCategorias(jsonResponse);
-    // };
-
-    async function getData(){
-      try{
-        const response = await fetch('http://localhost:8080/categorias/');
-        const data = await response.json();
-        console.log(data);
-
-        setCategorias(data);
-      }catch(e){
-        console.log("Error");
-        console.log(e);
-      }
-    }
-
-    async function getProductos(){
-      try{
-        const response = await fetch('http://localhost:8080/producto/');
-        const data = await response.json();
-        console.log('Producto', data);
-
-        setProductos(data);
-      }catch(e){
-        console.log("Error");
-        console.log(e);
-      }
-    }
+    const[ciudades, setCiudades] = React.useState([]);
+    const [productos, setProductos] = React.useState([]);
     
-    React.useEffect(() => {
-      
+    React.useEffect(() => {  
+      async function getData(){
+        try{
+          const response = await fetch('http://localhost:8080/categorias/');
+          const data = await response.json();
+          console.log(data);
+          setCategorias(data);
+
+        }catch(e){
+          console.log("Error");
+          console.log(e);
+        }
+      }
+
+
+      async function getCiudades(){
+        try{
+          const response = await fetch('http://localhost:8080/ciudades/');
+          const data = await response.json();
+          console.log(data);
+          setCiudades(data);
+
+        }catch(e){
+          console.log("Error");
+          console.log(e);
+        }
+      }
+
+
+      async function getProductos(){
+        try{
+          const response = await fetch('http://localhost:8080/producto/');
+          const data = await response.json();
+          console.log(data);
+          setProductos(data);
+
+        }catch(e){
+          console.log("Error");
+          console.log(e);
+        }
+      }
+
       getData();
+      getCiudades();
       getProductos();
-      // handleFetchRequest()
+  
 
     }, []);
   
   
     return (
-      <ContextGlobal.Provider value={{categorias, productos}}>
+      <ContextGlobal.Provider value={{categorias,ciudades,productos}}>
         {children}
       </ContextGlobal.Provider>
     );

@@ -41,10 +41,10 @@ public class UsuarioController {
     }
 
     @GetMapping("/buscar/nombre/{nombre}")
-    public ResponseEntity<Usuario> buscarUsuarioPorNombre(@PathVariable String nombre){
-        Optional<Usuario> usuarioBuscado= usuarioService.buscarUsuarioPorNombre(nombre);
-        if (usuarioBuscado.isPresent()){
-            return ResponseEntity.ok(usuarioBuscado.get());
+    public ResponseEntity<List<Usuario>> buscarUsuarioPorNombre(@PathVariable String nombre){
+        List<Usuario> usuarioBuscado= usuarioService.buscarUsuarioPorNombre(nombre);
+        if (!usuarioBuscado.isEmpty()){
+            return ResponseEntity.ok(usuarioBuscado);
         }
         else{
             return ResponseEntity.notFound().build();
