@@ -14,14 +14,19 @@ const Home = () => {
 
     const {categorias,productos} = useContext(ContextGlobal);
 
-    categorias.sort(()=>{
-        return 0.5 - Math.random();
-    })
+    
 
+        categorias.sort(()=>{
+            return 0.5 - Math.random();
+        })
+    
+    
+        productos.sort(()=>{
+            return 0.5 - Math.random();
+        })
 
-    productos.sort(()=>{
-        return 0.5 - Math.random();
-    })
+    
+    
 
     return (
         <>

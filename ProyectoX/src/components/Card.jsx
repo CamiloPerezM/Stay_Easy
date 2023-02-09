@@ -3,6 +3,8 @@ import Styles from "../Styles/Card.module.css"
 
 export function Card({ datos }) {
     
+    datos.imagenes.sort((a,b)=> a.id-b.id);
+
     return (
         <div className={Styles.container}>
             <div className={Styles.card}>
