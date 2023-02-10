@@ -9,13 +9,19 @@ import { Link } from "react-router-dom";
 import Galeria from "./Galeria";
 
 
+
 const Header = () => {
+    let user = localStorage.getItem('account');
+    console.log('user,', user);
+
     return (
+    
         <div className="header headerFijo">
             <div className="navBar-brand">
                <Link to={"/home"}> <img className="logo" src={Logo} alt='Logo Booking'></img></Link>
                 <img className="menu" src={Menu} alt='Menu'></img>
-                <div className="botones">
+                
+                <div className="botones" id="botones-inicio">
                     <Link to={"/registro"}><button className="crear">Crear cuenta</button></Link>
                     <Link to={`/login`}><button className="crear">Iniciar sesión</button></Link>
                 </div>

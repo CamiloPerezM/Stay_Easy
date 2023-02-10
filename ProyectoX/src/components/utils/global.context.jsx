@@ -10,7 +10,7 @@ export const ContextProvider = ({children}) =>{
     const[ciudades, setCiudades] = React.useState([]);
     const [productos, setProductos] = React.useState([]);
     
-    React.useEffect(() => {
+    React.useEffect(() => {  
       async function getData(){
         try{
           const response = await fetch('http://localhost:8080/categorias/');
@@ -39,7 +39,7 @@ export const ContextProvider = ({children}) =>{
       }
 
 
-      async function getProducto(){
+      async function getProductos(){
         try{
           const response = await fetch('http://localhost:8080/producto/');
           const data = await response.json();
@@ -54,7 +54,7 @@ export const ContextProvider = ({children}) =>{
 
       getData();
       getCiudades();
-      getProducto();
+      getProductos();
   
 
     }, []);
