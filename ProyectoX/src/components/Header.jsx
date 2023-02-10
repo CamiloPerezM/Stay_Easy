@@ -6,7 +6,7 @@ import Buscador from "../components/Buscador"
 import Ubicacion from "../assets/img/localizador.svg"
 import Calendar from "../assets/img/calendar.svg"
 import { Link } from "react-router-dom";
-import Galeria from "./Galeria";
+
 
 
 
@@ -36,7 +36,7 @@ const Header = () => {
                 </div>
             </div>
 
-            <Galeria />
+            
 
         </div>
     );
