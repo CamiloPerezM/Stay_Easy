@@ -16,7 +16,7 @@
     color: #023047;
 }
 .iconLocation{
-    margin-right: 10px;
+    margin-right: 4px;
 }
 
 .card{
@@ -28,7 +28,7 @@
 
 .cardImg{
     width: 39%;
-    height: 282.5px;
+    height: 283.5px;
     border-radius: 10px;
     margin-left: -2px;
 }
@@ -116,7 +116,8 @@
 
 
 .cardPuntajeContainer{
-    font-family: 'Roboto';
+    font-family: 'Roboto',sans-serif;
+    font-weight: 500;
     font-size: 1rem;
     color: #383B58;
     opacity: .8;
