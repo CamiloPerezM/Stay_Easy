@@ -42,7 +42,7 @@ function Buscador() {
           value={city}
         >
           {ciudades.map(city => (
-            <Option key={city.id} value={city.pais}>
+            <Option key={city.id} value={city.nombre}>
               {city.nombre}
             </Option>
           ))}
@@ -53,6 +53,7 @@ function Buscador() {
         <RangePicker
           onOpenChange={onOpenChange}
           onCalendarChange={onCalendarChange}
+          placeholder={["Check in", "Check out"]}
         />
       </Form.Item>
 

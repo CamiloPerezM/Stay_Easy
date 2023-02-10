@@ -1,5 +1,6 @@
-import React from 'react';
-import '../Styles/Galeria.module.css';
+import React, { useContext, useEffect, useState } from 'react';
+import '../Styles/Galeria.module.css'
+// import { ContextGlobal } from './utils/global.context';
 
 // const imagenes = [
 //   { id: 1, src: 'imagen1.jpg' },
@@ -7,24 +8,47 @@ import '../Styles/Galeria.module.css';
 //   { id: 3, src: 'imagen3.jpg' },
 // ];
 
+// const {imagenes} = useContext(ContextGlobal); 
+
+// El bloque debe incluir en su región inferior derecha el texto “Ver Más”, el cual, permitirá acceder a un componente de galería de imágenes para ver todas las imágenes disponibles del producto. La elección de la galería específica a utilizar es libre, lo mismo que su estética (no es necesario seguir al pie de la letra la galería presentada en Figma).
+function Galeria() {
+
+  const [imagenes, setImagenes] = useState([])
+  const pedidoImagenes = async() => {
+    const pedidoFetch = await fetch('http://localhost:8080/imagenes');
+    const respuesta = await pedidoFetch.json();
+    setImagenes(respuesta)
+  }
+  useEffect(() => {
+    pedidoImagenes()
+  },[])
 
 
-const Galeria = () => {
+
   return (
-    <section>
       <div className="galeria">
-        {imagenes.map((image) => (
-          <img key={image.id} src={image.src} alt="Imagen" />
+          <div className='imgPrincipal'>
+            <img src={imagenes[0]?.urlImagen} />
+          </div>
+        <div className='img4'>
+
+          {imagenes?.slice(1, 5).map((image) => (
+          <div className='contenedorImg'>
+          <img key={image.id} src={image.urlImagen} alt="Imagen" />
+          </div>
+          
           ))}
-
-        <button className='botonVer' src=''>Ver más</button>
+        </div>
+        <a href="">
+          <button className='botonVer' src=''>Ver más</button>
+        </a>
       </div>
-    </section>
 
-    // <section>    
-    //     <img src="https://cdn.pixabay.com/photo/2020/07/07/16/38/landscape-5381068_960_720.jpg" alt="" />
-    //     <img src="https://cdn.pixabay.com/photo/2016/02/10/21/59/landscape-1192669_640.jpg" alt="" />
-    //     <img src="https://cdn.pixabay.com/photo/2013/11/28/10/03/river-219972_640.jpg" alt="" />
+    // <section>  
+    //   <img src="https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/61132ead.jpg?impolicy=resizecrop&rw=1200&r" alt="" />
+    //   <img src="https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/9e8bcff5.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="" />
+    //   <img src="https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/5be7eebb.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="" />   
+    //   <img src="https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/w4350h2897x0y0-52642bdd.jpg?impolicy=resizecrop&rw=1200&ra=fit" alt="" />
     //     <a href="../assets/img">
     //       <button className='botonVer' src=''>Ver más</button>
     //     </a>
