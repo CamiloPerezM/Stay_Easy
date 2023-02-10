@@ -2,6 +2,8 @@ import React, { useContext, useState } from 'react';
 import { Form, Select, Button, DatePicker } from 'antd';
 import "../Styles/Header.css"
 import { ContextGlobal } from './utils/global.context';
+import { Link } from 'react-router-dom';
+// import Link from 'antd/es/typography/Link';
 
 
 const { Option } = Select;
@@ -42,7 +44,7 @@ function Buscador() {
           value={city}
         >
           {ciudades.map(city => (
-            <Option key={city.id} value={city.pais}>
+            <Option key={city.id} value={city.nombre}>
               {city.nombre}
             </Option>
           ))}
@@ -57,7 +59,7 @@ function Buscador() {
       </Form.Item>
 
       <Form.Item>
-        <Button className="search">Buscar</Button>
+         {<Link to={`/producto/ciudad/${1}`}> <Button className="search">Buscar</Button></Link>}
       </Form.Item>
     </Form>
   );
