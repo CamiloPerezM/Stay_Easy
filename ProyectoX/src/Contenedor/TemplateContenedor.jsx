@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Template.css"
 import { useParams } from "react-router";
-
+import Galeria from "../components/Galeria";
 
 
 const TemplateContenedor = () => {
@@ -50,9 +50,8 @@ const TemplateContenedor = () => {
             </header>
 
             <body>
-                <div className="grilla-imagenes">
-                    <p> Grilla Imagenes </p>
-                    {/* {datosProducto.imagenes.map((elemento) => {<img href={elemento.urlImagen}/>})} */}
+                <div> {/* className="grilla-imagenes" */}
+                    <Galeria />
                 </div>
 
                 <div className="descripcion">

@@ -8,14 +8,6 @@ import { Link } from 'react-router-dom';
 
 const { Option } = Select;
 
-// const cities = [
-//   { name: 'Medellin', value: 'med' },
-//   { name: 'Bogota', value: 'bog' },
-//   { name: 'Cartagena', value: 'ctg' },
-//   { name: 'Cali', value: 'clo' },
-//   { name: 'Barranquilla', value: 'baq' },
-// ];
-
 const { RangePicker } = DatePicker;
 
 const onOpenChange = (open) => {
@@ -55,6 +47,7 @@ function Buscador() {
         <RangePicker
           onOpenChange={onOpenChange}
           onCalendarChange={onCalendarChange}
+          placeholder={["Check in", "Check out"]}
         />
       </Form.Item>
 
