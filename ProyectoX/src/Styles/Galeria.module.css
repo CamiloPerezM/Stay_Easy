@@ -1,15 +1,9 @@
-/* Se debe modificar los PX estan en modo ejemplo */
-/* Se debe modificar los PX estan en modo ejemplo */
 .galeria{
-    background-color: yellow;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
     width: 100vw;
     height: 70vh;
-    border: 5px solid red;
 }
-
+/* 
 .imgPrincipal{
     border: 5px solid red;
     width: 100vw;
@@ -37,7 +31,7 @@
     width: 300px;
     opacity: 1;
     filter: contrast(120%);
-}
+} */
 
 /* section a{
     display: grid;
@@ -46,7 +40,7 @@
     justify-content: flex-end;
     text-decoration: none;
 } */
-
+/* 
 .botonVer{
     background-color: #e7e7e7;
     border: none;
@@ -62,4 +56,4 @@
 
 @media only screen and (max-width: 505px){
     
-}
+} */

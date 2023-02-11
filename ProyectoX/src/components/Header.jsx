@@ -8,8 +8,6 @@ import Calendar from "../assets/img/calendar.svg"
 import { Link } from "react-router-dom";
 
 
-
-
 const Header = () => {
     let user = localStorage.getItem('account');
     console.log('user,', user);
@@ -35,8 +33,6 @@ const Header = () => {
                     <Buscador />
                 </div>
             </div>
-
-            
 
         </div>
     );

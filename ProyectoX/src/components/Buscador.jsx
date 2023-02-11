@@ -2,17 +2,11 @@ import React, { useContext, useState } from 'react';
 import { Form, Select, Button, DatePicker } from 'antd';
 import "../Styles/Header.css"
 import { ContextGlobal } from './utils/global.context';
+import { Link } from 'react-router-dom';
+// import Link from 'antd/es/typography/Link';
 
 
 const { Option } = Select;
-
-// const cities = [
-//   { name: 'Medellin', value: 'med' },
-//   { name: 'Bogota', value: 'bog' },
-//   { name: 'Cartagena', value: 'ctg' },
-//   { name: 'Cali', value: 'clo' },
-//   { name: 'Barranquilla', value: 'baq' },
-// ];
 
 const { RangePicker } = DatePicker;
 
@@ -58,8 +52,7 @@ function Buscador() {
       </Form.Item>
 
       <Form.Item>
-        <Button className="search">Buscar</Button>
-        {/* onClick={handleClick} */}
+         {<Link to={`/producto/ciudad/${1}`}> <Button className="search">Buscar</Button></Link>}
       </Form.Item>
     </Form>
   );

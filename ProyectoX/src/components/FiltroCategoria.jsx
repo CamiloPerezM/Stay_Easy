@@ -20,7 +20,7 @@ const FiltroCategoria = () => {
 
     <div>
     
-    <List title="" style="spaceCategory" background="bgRecomendations">
+    <List title="Hospedajes Disponibles:" style= "spaceCategory"  background="bgRecomendations">
         {
             productos
             .filter((producto) => producto.categoria.id === categoriaSelecionada)
