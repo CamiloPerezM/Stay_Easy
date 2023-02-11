@@ -1,13 +1,6 @@
-.galeria{
-    display: grid;
-    width: 100vw;
-    height: 70vh;
-}
-/* 
 .imgPrincipal{
-    border: 5px solid red;
-    width: 100vw;
-
+    width: 50%;
+    height: 50%;
 }
 
 .contenedorImg{
@@ -18,30 +11,7 @@
     overflow: hidden;
 }
 
-.galeria img{
-    width: 0;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-}
-
-.galeria img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
-} */
-
-/* section a{
-    display: grid;
-    align-items: flex-end;
-    justify-items: center;
-    justify-content: flex-end;
-    text-decoration: none;
-} */
-/* 
-.botonVer{
+.verMas{
     background-color: #e7e7e7;
     border: none;
     color: #fff;
@@ -53,7 +23,3 @@
     font-weight: 700;
     cursor: pointer;
 }
-
-@media only screen and (max-width: 505px){
-    
-} */
