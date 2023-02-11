@@ -27,10 +27,10 @@ console.log(imagenes);
   return (
       <div className="galeria">
           <div className='imgPrincipal'>
-            <img src={imagenes[0]?.urlImagen} />
+            <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} />
           </div>
         <div className='img4'>
-          {imagenes.imagenes?.slice(1, 6).map((image) => (
+          { imagenes.imagenes?.slice(1, 5).map((image) => (
           <div className='contenedorImg'>
             <img key={image.id} src={image.urlImagen} alt="Imagen" />
           </div>
