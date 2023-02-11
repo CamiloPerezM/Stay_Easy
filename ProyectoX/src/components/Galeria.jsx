@@ -38,7 +38,7 @@ console.log(imagenes);
           ))}
         </div>
         <a href="">
-          <button className='botonVer' src=''>Ver más</button>
+          <button className='verMas' src='./Carrusel.jsx'>Ver más</button>
         </a>
       </div>
   );

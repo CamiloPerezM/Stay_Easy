@@ -50,7 +50,7 @@ const TemplateContenedor = () => {
             </header>
 
             <body>
-                <div> {/* className="grilla-imagenes" */}
+                <div className="grilla-imagenes">
                     <Galeria />
                 </div>
 
