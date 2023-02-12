@@ -96,7 +96,7 @@ const TemplateContenedor = () => {
                 </div>
             </body>
         </div>
-
+        </div>
     );
 }
 
