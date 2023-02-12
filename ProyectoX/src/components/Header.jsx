@@ -23,16 +23,9 @@ const Header = () => {
                 <div className="botones" id="botones-inicio">
                     <Link to={"/registro"}><button className="crear">Crear cuenta</button></Link>
                     <Link to={`/login`}><button className="crear">Iniciar sesión</button></Link>
+                    
                 </div>
 
-            </div>
-
-
-            <div className="busqueda">
-                <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
-                <div className="botones2">
-                    <Buscador />
-                </div>
             </div>
 
         </div>

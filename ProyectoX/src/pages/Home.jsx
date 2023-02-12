@@ -6,6 +6,7 @@ import {CardCategory} from "../components/CardCategory"
 import {Card} from "../components/Card"
 import { useContext } from 'react'
 import { ContextGlobal } from '../components/utils/global.context'
+import Buscador from '../components/Buscador'
 
 
 
@@ -30,6 +31,14 @@ const Home = () => {
 
     return (
         <>
+            <header>
+            <div className="busqueda">
+        <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
+        <div className="botones2">
+            <Buscador />
+        </div>
+        </div>
+            </header>
             <List title="Buscar por tipo de alojamiento" style="spaceCategory">
                 {
                      categorias.map((data,i) => {

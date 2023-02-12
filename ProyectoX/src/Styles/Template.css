@@ -1,20 +1,20 @@
 .categoryProduct {
-    background-color: rgba(251, 134, 0, 0.753);
-    display: flex;
-    align-content: space-around;
     width: 100vw;
+    height: 4rem;
+    background-color: rgba(15, 77, 92, 0.692);
+    display: inline-block;
+    
 }
 
-.arroeLeft {
-    width: auto;
+.envolvent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
+
 
 .ubication {
-    background-color: rgba(255, 184, 3, 0.445);
+    background-color: rgba(15, 77, 92, 0.164);
     margin: auto;
-}
-
-header {
-    
-    width: 100vw;
 }

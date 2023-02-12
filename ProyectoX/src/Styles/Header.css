@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     gap: 6.5rem;
-    padding-left: 100px;
+    padding-left: 50px;
     position: relative;
 }
 
@@ -57,7 +57,7 @@
     border-radius: 0.3125rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     font-size: 1rem;
-    color:#023047;
+    color:rgb(2, 48, 71);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     background-color: rgb(255, 252, 249);
@@ -67,7 +67,8 @@
 }
     
 .busqueda{
-    background-color: rgb(142, 202, 230);
+    width: auto;
+    background-color: rgb(15, 76, 92);
     height: 120px;
     display: flex;
     flex-direction: column;
@@ -77,7 +78,7 @@
 .bienvenida{
     height: 3rem;
     font-size: 1.7rem;
-    color:#023047;
+    color:rgb(251, 139, 36);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
@@ -91,7 +92,7 @@
     border-radius: 0.3125rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     font-size: 1rem;
-    color:#02304781;
+    color:rgba(2, 48, 71);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     cursor: pointer;
@@ -103,12 +104,12 @@
     height: 2.2rem;
     margin-right: 1%;
     margin-left: -100px;
-    background-color:rgb(255, 183, 3);
+    background-color:rgb(251, 139, 36);
     border: none;
     border-radius: 0.3125rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     font-size: 1rem;
-    color:#023047;
+    color:rgb(2, 48, 71);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     cursor: pointer;

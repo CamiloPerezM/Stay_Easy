@@ -20,4 +20,5 @@ export function Card({ datos }) {
             </div>
         </div>
     )
+    
 }

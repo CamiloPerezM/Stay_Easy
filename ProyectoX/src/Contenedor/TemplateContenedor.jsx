@@ -9,20 +9,25 @@ const TemplateContenedor = () => {
 
     return (
 
+
+
         <div className="contenedor">
-            <header>
+
+            <div className="envolvent">
             <div className="categoryProduct">
                 <p>  Tipo alojamiento </p>
-                <h3> Nombre alojamiento </h3>
-                <div className="arrowLeft"> <FontAwesomeIcon icon={faArrowLeft}/> </div>
-                
+                <h3> Nombre alojamiento </h3> 
+            </div>
+            <div className="arrowLeft">
+                 <FontAwesomeIcon icon={faArrowLeft}/> 
+            </div>
             </div>
 
             <div className="ubication">
                 <h4> Datos de ubicacion alojamiento  </h4>
                 <p> Calificacion </p>
             </div>
-            </header>
+    
 
             <body>
                 <div className="grilla-imagenes">

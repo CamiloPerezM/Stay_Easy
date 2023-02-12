@@ -57,12 +57,12 @@
     height: 2.5rem;
     margin-right: 1%;
     margin-left: -100px;
-    background-color:#8ecae6 ;
+    background-color:rgb(251, 139, 36) ;
     border: none;
     border-radius: 0.3125rem;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
     font-size: 1rem;
-    color:#023047;
+    color:rgb(2, 48, 71);
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
@@ -211,7 +211,7 @@
         border-radius: 0.3125rem;
         box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
         font-size: 0.8rem;
-        color:#023047;
+        color:rgb(2, 48, 71);
         font-family: 'Roboto', sans-serif;
         font-weight: 700;
     }
