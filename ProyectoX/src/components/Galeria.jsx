@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
-import '../Styles/Galeria.module.css'
+import '../Styles/Template.css'
 
 function Galeria() {
 
@@ -26,20 +26,26 @@ console.log(imagenes);
 
   return (
       <div className="galeria">
+
           <div className='imgPrincipal'>
-            <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} />
+            <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" />
           </div>
+
         <div className='img4'>
           { imagenes.imagenes?.slice(1, 5).map((image) => (
           <div className='contenedorImg'>
             <img key={image.id} src={image.urlImagen} alt="Imagen" />
           </div>
-          
           ))}
-        </div>
-        <a href="">
+
+          <div className='botonGrilla'>
+          <a href="">
           <button className='verMas' src='./Carrusel.jsx'>Ver más</button>
-        </a>
+          </a>
+          </div>
+
+        </div>
+        
       </div>
   );
 };

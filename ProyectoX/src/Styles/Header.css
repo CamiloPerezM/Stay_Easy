@@ -10,13 +10,6 @@
     background-color: rgb(255, 252, 249);
 }
 
-/* .headerFijo{
-    max-width: 100%;
-    width: 100vw;
-    position: fixed;
-    z-index: 1;
-} */
-
 .logo{
     margin-left: 2rem; 
 }
@@ -117,6 +110,33 @@
 
 
 @media only screen and (max-width: 768px) {
+
+    .navBar-brand{
+        display: flex;
+        justify-content: space-between;  
+        height: 4rem;
+        
+    }
+
+    .crear {
+        width: 6rem;
+        font-size: 0.7rem;
+        height: 1.8rem;
+    }
+
+    .logo {
+        font-size: 1rem;
+    }
+
+    .go {
+        width: 9rem;
+    }
+
+    .bienvenida{
+        height: 3rem;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
     
 }
 
@@ -154,9 +174,9 @@
     }
 
     .go{
-        font-size: 1.4rem;
+        font-size: 2rem;
         width: 36.6rem;
-        height: 3.0rem;
+        height: 2.0rem;
     }
 
     .search{
@@ -169,6 +189,10 @@
         width: 28.8rem;
         flex-direction: column;
         gap: 1rem;
+    }
+
+    .logo {
+        margin-top: 2rem;
     }
 
     

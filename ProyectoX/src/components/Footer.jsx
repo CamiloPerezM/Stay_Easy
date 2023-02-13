@@ -11,7 +11,7 @@ const Footer = () => {
 
         <div className="icons-final footerFijo">
             <div className="derechos">
-                <p>©2023 Digital Booking</p>
+                <span>©2023 Digital Booking</span>
             </div>
             <div className="icons">
                 <img className="Logos" src={LogoFacebook} alt='Facebook'></img>

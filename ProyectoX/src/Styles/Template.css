@@ -1,49 +1,63 @@
 .categoryProduct {
-    width: 100vw;
     height: 4rem;
-    background-color: rgba(15, 77, 92, 0.692);
-    display: inline-block;
-    
+    background-color: rgb(15, 77, 92);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .envolvent {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;
 }
 
+h3, p, h5, ol {
+    padding-left: 3rem;
+}
 
+.grilla-imagenes {
+    padding-left: 3rem;
+    padding-top: 2rem;
+}
+
+.arrowLeft {
+    padding-right: 4.5rem;
+    font-size: 2rem;
+    color: rgb(236, 227, 227);
+}
 
 .ubication {
-    background-color: rgba(15, 77, 92, 0.164);
-    margin: auto;
-}
-
-header {
-    
-    width: 100vw;
-}
-
-.grilla-imagenes{
+    background-color: rgba(154, 3, 31, 0.103);
+    padding-left: 3rem;
+    padding-right: 3rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
-    width: 100vw;
-    height: 75vh;
-    border: 5px solid red;
-    
-}
-.grilla-imagenes div{
-    display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    color: rgb(251, 139, 36);
+}
+
+.grilla-imagenes div{
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    grid-template-rows: repeat(2, 0fr);
+    grid-column-gap: 3px;
+    grid-row-gap: 3px;
+} 
+
+#imgPrimera {
+    width: 22rem;
+    height: 23rem;
 }
 
 .grilla-imagenes img{
     width: 300px;
-    height: 250px;
+    height: 180px;
+    border-radius: 2rem;
 }
 
-.grilla-imagenes button{
-    background-color: #e7e7e7;
+.verMas{
+    background-color: #942c2c;
     border: none;
     border-radius: 15%;
     color: #fff;
@@ -54,4 +68,25 @@ header {
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     cursor: pointer;
+}
+
+hr {
+    padding: 0;
+    border-color:  rgba(251, 140, 36, 0.822);
+}
+
+.politica-producto {
+    margin-bottom: 2rem;
+}
+
+
+@media only screen and (max-width: 768px) {
+
+
+
+}
+
+
+@media only screen and (max-width: 505px) {
+
 }
