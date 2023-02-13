@@ -35,19 +35,19 @@ const TemplateContenedor = () => {
     return (
 
         <div className="contenedor">
-            <header>
-            <div className="categoryProduct">
-                {/* <p></p> */}
-                <span style={{color:"#000",marginRight:"15px"}}> {datosProducto.tituloDescripcion} </span>
-                <span className="arrowLeft"> <FontAwesomeIcon icon={faArrowLeft}/></span> 
-                
-            </div>
 
-            <div className="ubication">
-                <span> Medellín, Colombia </span>
-                <p> Calificacion: {datosProducto.puntaje} estrellas </p>
-            </div>
-            </header>
+            <div className="envolvent">
+                <div className="categoryProduct">
+                    <span  className="nombreCiudad" style={{color:"rgb(251, 139, 36)",paddingLeft:"3rem"}}> {datosProducto.tituloDescripcion} </span>
+                    <span className="arrowLeft"> <FontAwesomeIcon icon={faArrowLeft}/></span> 
+                    
+                </div>
+
+                <div className="ubication">
+                    <span> Medellín, Colombia </span>
+                    <span> Calificacion: {datosProducto.puntaje} estrellas </span>
+                </div>
+    
 
             <body>
                 <div className="grilla-imagenes">
@@ -62,6 +62,7 @@ const TemplateContenedor = () => {
 
                 <div className="servicios">
                     <h3> ¿Qué ofrece este lugar? </h3>
+                    <hr className="separador"></hr>
                     <p>Libre de Humo,Piscina, Wifi, Desayuno hasta las 10 AM</p>
                     
                     {/* <div className="logos">
@@ -71,7 +72,8 @@ const TemplateContenedor = () => {
 
                 <div className="politica-producto">
                     <h3> Qué tienes que saber </h3>
-                    <span className="normas de la casa">
+                    
+                    <span className="normasDeLaCasa">
                         <h5> Normas: </h5>
                         <ol>
                         <li>No hacer fiestas</li>
@@ -93,7 +95,7 @@ const TemplateContenedor = () => {
                 </div>
             </body>
         </div>
-
+        </div>
     );
 }
 

@@ -3,6 +3,7 @@ import { ContextGlobal } from "./utils/global.context";
 import { List } from "./List";
 import { Card } from "./Card";
 import { useLocation } from "react-router";
+import Buscador from "./Buscador";
 
 
 
@@ -19,6 +20,13 @@ const FiltroCategoria = () => {
     return (
 
     <div>
+
+        <div className="busqueda">
+        <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
+        <div className="botones2">
+            <Buscador />
+        </div>
+        </div>
     
     <List title="Hospedajes Disponibles:" style= "spaceCategory"  background="bgRecomendations">
         {

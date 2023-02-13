@@ -68,7 +68,7 @@ function ifMatch () {
         let account = JSON.stringify(acept);
         localStorage.setItem('account', account);
         setIsLogin(true);
-        document.getElementById('form').style.display = 'none';
+        document.getElementById('botones-inicio').style.display = 'none';
         navigate('/home', { replace: true });
     } else {
         setIsLogin(false);

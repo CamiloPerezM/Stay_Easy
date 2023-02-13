@@ -28,6 +28,7 @@ function Buscador() {
   };
 
   return (
+    
     <Form onSubmit={handleSubmit} className="botones2">
       <Form.Item className="go">
         <Select
