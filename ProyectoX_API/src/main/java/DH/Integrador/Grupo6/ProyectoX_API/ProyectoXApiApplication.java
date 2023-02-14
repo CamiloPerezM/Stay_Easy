@@ -4,7 +4,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProyectoXApiApplication {
+public class
+
+ProyectoXApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(ProyectoXApiApplication.class, args);

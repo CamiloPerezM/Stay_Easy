@@ -2,12 +2,10 @@ package DH.Integrador.Grupo6.ProyectoX_API.service;
 
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
-import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
