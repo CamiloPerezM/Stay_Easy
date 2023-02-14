@@ -1,6 +1,7 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
 import javax.persistence.*;
@@ -17,8 +18,11 @@ public class Imagenes {
     @Column
     private String urlImagen;
 
+
+
     @JsonIncludeProperties(value = {"id"})
     @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @JsonIgnore
     @JoinColumn(name = "producto_id")
     private Producto producto;
 

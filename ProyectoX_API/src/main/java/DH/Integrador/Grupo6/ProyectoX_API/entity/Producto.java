@@ -1,6 +1,7 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
@@ -40,11 +41,8 @@ public class Producto {
     private Set<Politicas> politicas = new HashSet<>();
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(
-            name = "atributos",
-            joinColumns = @JoinColumn(name = "productos_id"),
-            inverseJoinColumns = @JoinColumn(name = "caracteristicas_id")
-    )
+    @JoinTable(name = "atributos", joinColumns = @JoinColumn(name = "productos_id"),
+            inverseJoinColumns = @JoinColumn(name = "caracteristicas_id"))
     private Set<Caracteristicas> caracteristicas = new HashSet<>();
 
     @OneToMany(mappedBy = "producto", fetch = FetchType.EAGER)
@@ -57,6 +55,13 @@ public class Producto {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.MERGE)
     @JoinColumn(name = "categoria_id", nullable = false)
     private Categoria categoria;
+
+
+    @JsonIgnore
+    @OneToMany(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "producto_id")
+    private Set<Reserva> reservas = new HashSet<>();
+
 
     public Producto() {
 
