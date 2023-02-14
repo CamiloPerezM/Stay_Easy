@@ -20,12 +20,21 @@ const onCalendarChange = (dates) => {
 
 function Buscador() {
   const [city, setCity] = useState(null);
-  const {ciudades} =useContext(ContextGlobal);
+  const { ciudades } = useContext(ContextGlobal);
+  
+
 
   const handleSubmit = e => {
     e.preventDefault();
     console.log('Selected City:', city);
   };
+
+
+    const cityFind = ciudades.find(data => data.nombre===city);
+ 
+
+
+
 
   return (
     <Form onSubmit={handleSubmit} className="botones2">
@@ -34,15 +43,17 @@ function Buscador() {
           placeholder="¿A dónde vamos?"
           onChange={value => setCity(value)}
           value={city}
+
+
         >
           {ciudades.map(city => (
-            <Option key={city.id} value={city.nombre}>
+            <Option key={city.id} value={city.nombre} data-id={city.id}>
               {city.nombre}
             </Option>
           ))}
         </Select>
       </Form.Item>
-      
+
       <Form.Item className='go'>
         <RangePicker
           onOpenChange={onOpenChange}
@@ -51,8 +62,10 @@ function Buscador() {
         />
       </Form.Item>
 
+
+
       <Form.Item>
-         {<Link to={`/producto/ciudad/${1}`}> <Button className="search">Buscar</Button></Link>}
+        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> <Button className="search">Buscar</Button></Link>}
       </Form.Item>
     </Form>
   );

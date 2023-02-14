@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
 import { Link} from 'react-router-dom'
-import "../Styles/estilos.css"
+import "../Styles/Register.css"
 
 
 const Registro = () =>{

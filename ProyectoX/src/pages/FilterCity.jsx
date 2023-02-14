@@ -9,6 +9,7 @@ const FilterCity = () => {
     console.log(datos)
     const [productoCiudad, setProductoCiudad] = useState([]);
 
+
     useEffect(() => {
 
         async function getProducts() {
@@ -22,14 +23,24 @@ const FilterCity = () => {
             }
         }
 
+
+       
+
+        
         getProducts();
     }, [datos.id])
 
 
+    
+  
+   
+
     return (
         <>
 
-            <List title={`Hospedajes disponibles en `} background="bgRecomendations" style="spaceCategory">
+
+            <List title={`Hospedajes disponibles:`} background="bgFilter" style="spaceCategory">
+        
 
                 {
                     productoCiudad.length>0?productoCiudad.map((data) => {

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
 import { Link, useNavigate } from 'react-router-dom'
-import "../Styles/estilos.css"
+import "../Styles/Login.css"
 
 
 
@@ -76,8 +76,8 @@ function ifMatch () {
 }
 
     return(
-        <main className='main  backgroundColor'>
-        <h1 className='titulo'>Iniciar sesión</h1>
+        <main className='main1  backgroundColor1'>
+        <h1 className='titulo1'>Iniciar sesión</h1>
             <Formulario action =""onSubmit={onSubmit} id='form'>
 
                 <Input
