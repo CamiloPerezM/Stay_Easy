@@ -4,6 +4,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Template.css"
 import { useParams } from "react-router";
 import Galeria from "../components/Galeria";
+import Calenderio from '../components/Calendario'
 
 
 const TemplateContenedor = () => {
@@ -91,7 +92,10 @@ const TemplateContenedor = () => {
                         <h5> Politica de cancelación </h5>
                     </span> */}
 
+                </div>
 
+                <div>
+                    <Calenderio />
                 </div>
             </body>
         </div>
