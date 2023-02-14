@@ -55,15 +55,15 @@ const TemplateContenedor = () => {
                 </div>
 
                 <div className="descripcion">
-                    <h3> Descripción: </h3>
-                    <p> {datosProducto.contenidoDescripcion}
+                    <h3 className="paddingTemplate"> Descripción: </h3>
+                    <p className="paddingTemplate"> {datosProducto.contenidoDescripcion}
                     </p>
                 </div>
 
                 <div className="servicios">
-                    <h3> ¿Qué ofrece este lugar? </h3>
+                    <h3 className="paddingTemplate"> ¿Qué ofrece este lugar? </h3>
                     <hr className="separador"></hr>
-                    <p>Libre de Humo,Piscina, Wifi, Desayuno hasta las 10 AM</p>
+                    <p className="paddingTemplate">Libre de Humo,Piscina, Wifi, Desayuno hasta las 10 AM</p>
                     
                     {/* <div className="logos">
 
@@ -71,11 +71,11 @@ const TemplateContenedor = () => {
                 </div>
 
                 <div className="politica-producto">
-                    <h3> Qué tienes que saber </h3>
+                    <h3 className="paddingTemplate"> Qué tienes que saber </h3>
                     
                     <span className="normasDeLaCasa">
-                        <h5> Normas: </h5>
-                        <ol>
+                        <h5 className="paddingTemplate"> Normas: </h5>
+                        <ol className="paddingTemplate">
                         <li>No hacer fiestas</li>
                         <li>No brincar en las camas</li>
                         <li>No meter en la habotación más de 10 personas</li>
