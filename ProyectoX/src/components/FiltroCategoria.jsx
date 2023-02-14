@@ -17,6 +17,10 @@ const FiltroCategoria = () => {
 
     console.log('categoria id ===>>>>',categoriaSelecionada);
 
+    const findCategory = productos.length>0?productos.find(data => data.categoria.id===categoriaSelecionada):null  
+    
+
+
     return (
 
     <div>
@@ -28,7 +32,7 @@ const FiltroCategoria = () => {
         </div>
         </div>
     
-    <List title="Hospedajes Disponibles:" style= "spaceCategory"  background="bgRecomendations">
+    <List title={`${findCategory.categoria.titulo} Disponibles:`} style= "spaceCategory"  background="bgRecomendations">
         {
             productos
             .filter((producto) => producto.categoria.id === categoriaSelecionada)

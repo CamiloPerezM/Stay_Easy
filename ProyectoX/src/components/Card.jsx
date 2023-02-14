@@ -9,11 +9,12 @@ import Icons from "./utils/Icons";
 export function Card({ datos }) {
     
     datos.imagenes.sort((a,b)=> a.id-b.id);
+    const prop = datos?.imagenes[0]?.urlImagen
 
     return (
         <div className={Styles.container}>
             <div className={Styles.card}>
-                <img  className={Styles.cardImg} src={datos.imagenes[0].urlImagen} alt="Imagen" />
+                <img  className={Styles.cardImg} src={prop} alt="Imagen" />
                 <div className={Styles.cardContainer}>
                     <h5 className={Styles.cardCategory}>{datos.categoria.titulo.toUpperCase()} <span className={Styles.iconStar}>{Array.from({ length: datos.puntaje }, (_, index) => <Icons key={index} />)}</span></h5>
                     <span className={Styles.cardCalificacion}><span className={Styles.cardPuntajeContainer}>Calificación : </span> <span className={Styles.cardPuntaje}>{datos.puntaje}</span></span> 

@@ -10,10 +10,9 @@
     font-family: 'Roboto', sans-serif;
 }
 
-h3, p, h5, ol {
+.paddingTemplate{
     padding-left: 3rem;
 }
-
 .grilla-imagenes {
     padding-left: 3rem;
     padding-top: 2rem;
