@@ -1,15 +1,19 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { useParams } from 'react-router';
 import '../Styles/Template.css'
 
 function Galeria() {
 
+  const datos = useParams();
   const [imagenes, setImagenes] = useState([])
+  
+
  
   
   useEffect(() => {
     const pedidoImagenes = async() => {
       try {
-      const pedidoFetch = await fetch('http://localhost:8080/producto/1');
+      const pedidoFetch = await fetch(`http://localhost:8080/producto/${datos.id}`);
       const respuesta = await pedidoFetch.json();
       setImagenes(respuesta)
       console.log("Estas son las imagenes");
@@ -19,9 +23,11 @@ function Galeria() {
         console.log(error);
       } 
     }
+
     pedidoImagenes() 
-  },[])
+  },[datos.id])
 console.log(imagenes);
+imagenes?.imagenes?.sort((a,b) => a.id - b.id)
 
 
   return (

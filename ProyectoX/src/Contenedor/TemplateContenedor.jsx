@@ -4,7 +4,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import "../Styles/Template.css"
 import { useParams } from "react-router";
 import Galeria from "../components/Galeria";
-
+import {faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 const TemplateContenedor = () => {
 
@@ -44,9 +44,11 @@ const TemplateContenedor = () => {
                 </div>
 
                 <div className="ubication">
-                    <span> Medellín, Colombia </span>
+                    <span> <FontAwesomeIcon icon={faLocationDot}/> {`${datosProducto?.ciudad?.nombre}, ${datosProducto?.ciudad?.pais}`} </span>
                     <span> Calificacion: {datosProducto.puntaje} estrellas </span>
                 </div>
+
+          
     
 
             <body>
