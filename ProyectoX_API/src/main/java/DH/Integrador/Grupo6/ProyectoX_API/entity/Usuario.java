@@ -2,6 +2,9 @@ package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
 
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -11,8 +14,8 @@ import java.util.Set;
 
 @Entity
 @Table(name="usuarios")
-//public class Usuario implements UserDetails {
-public class Usuario  {
+public class Usuario implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -119,7 +122,7 @@ public class Usuario  {
 
 
     //User autorities
-/*
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         return null;
@@ -155,5 +158,5 @@ public class Usuario  {
         return false;
     }
 
- */
+
 }
