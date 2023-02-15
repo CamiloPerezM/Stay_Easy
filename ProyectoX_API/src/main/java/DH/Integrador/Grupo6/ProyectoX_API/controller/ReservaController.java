@@ -6,6 +6,7 @@ import DH.Integrador.Grupo6.ProyectoX_API.entity.Reserva;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
 import DH.Integrador.Grupo6.ProyectoX_API.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/reservas")
+@RequestMapping("/reserva")
 @CrossOrigin(origins = {"http://localhost:5173","http://127.0.0.1:5173/"})
 public class ReservaController {
 
@@ -51,9 +52,9 @@ public class ReservaController {
 
 //Solo las peticiones con un token válido podrán crear nuevas reservas @PreAuthorize cumplir con el rol de usuario
     // Estatus 201 created
-    @PostMapping
+    @PostMapping("/registrar")
     public ResponseEntity<Reserva> crearReserva(@RequestBody Reserva reserva){
-        return ResponseEntity.ok(reservaService.guardarReserva(reserva));
+        return ResponseEntity.status(HttpStatus.CREATED).body(reservaService.guardarReserva(reserva));
     }
 
 
