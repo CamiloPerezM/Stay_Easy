@@ -2,36 +2,48 @@ package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
+
 import javax.persistence.*;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name="usuarios")
-//public class Usuario implements UserDetails {
-public class Usuario  {
+public class Usuario implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column
+    @NotBlank
     private String nombre;
     @Column
+    @NotBlank
     private String apellido;
-    @Column
+
+    @NotBlank
+    @Email
+    @Column(unique = true)
     private String email;
     @Column
+    @NotBlank
     private String contrasenna;
-    @Column
-    private String ciudad;
-    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    @JoinTable(name = "usuario_rol",
-            joinColumns = @JoinColumn(name = "usuario_id", referencedColumnName = "id"),
-            inverseJoinColumns = @JoinColumn(name = "rol_id", referencedColumnName = "id"))
-    private Set<Rol> roles = new HashSet<>();
+   // @Column
+   // private String ciudad;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "rol_id")
+    @JsonIgnoreProperties("usuarios")
+    private Rol rol ;
 
 
     //Constructor
@@ -40,23 +52,23 @@ public class Usuario  {
     public Usuario() {
     }
 
-    public Usuario(String nombre, String apellido, String email, String contrasenna, String ciudad, Set<Rol> roles) {
+    public Usuario(String nombre, String apellido, String email, String contrasenna, String ciudad, Rol rol) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.contrasenna = contrasenna;
-        this.ciudad = ciudad;
-        this.roles = roles;
+       // this.ciudad = ciudad;
+        this.rol = rol;
     }
 
-    public Usuario(Long id, String nombre, String apellido, String email, String contrasenna, String ciudad, Set<Rol> roles) {
+    public Usuario(Long id, String nombre, String apellido, String email, String contrasenna, String ciudad, Rol rol) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;
         this.email = email;
         this.contrasenna = contrasenna;
-        this.ciudad = ciudad;
-        this.roles = roles;
+       // this.ciudad = ciudad;
+        this.rol = rol;
     }
 
     // Getter y Setter
@@ -101,59 +113,102 @@ public class Usuario  {
         this.contrasenna = contrasenna;
     }
 
-    public String getCiudad() {
+   /* public String getCiudad() {
         return ciudad;
-    }
+    }*/
+    /*
 
     public void setCiudad(String ciudad) {
         this.ciudad = ciudad;
+    }*/
+
+    public Rol getRol() {
+        return rol;
     }
 
-    public Set<Rol> getRoles() {
-        return roles;
+    public void setRol(Rol rol) {
+        this.rol = rol;
     }
 
-    public void setRoles(Set<Rol> roles) {
-        this.roles = roles;
+    @Override
+    public String toString() {
+        return "Usuario{" +
+                "id=" + id +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", email='" + email + '\'' +
+                ", contrasenna='" + contrasenna + '\'' +
+               // ", ciudad='" + ciudad + '\'' +
+                ", rol=" + rol +
+                '}';
     }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result =1;
+        result = prime * result + ((id ==null) ? 0 : id.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Usuario other = (Usuario) obj;
+        if (id == null) {
+            if (other.id != null)
+                return false;
+        } else if (!id.equals(other.id))
+            return false;
+        return true;
+       }
+
 
 
     //User autorities
-/*
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
+        authorities.add(new SimpleGrantedAuthority(this.rol.getNombre()));
+
+        return authorities;
     }
 
     @Override
     public String getPassword() {
-        return null;
+        return contrasenna;
     }
 
     @Override
     public String getUsername() {
-        return null;
+        return email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled() {
-        return false;
+        return true;
     }
 
- */
+
 }
