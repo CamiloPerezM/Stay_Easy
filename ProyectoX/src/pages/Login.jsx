@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import { Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError } from '../components/utils/Form';
+import { Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError } from '../components/Services/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
 import { Link, useNavigate } from 'react-router-dom'
 import "../Styles/Login.css"
 import Buscador from '../components/Buscador';
+import LoginServices from '../components/Services/LoginServices';
+
 
 
 
@@ -15,6 +17,7 @@ const Login = () => {
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
     const [isLogin, setIsLogin] = useState(false);
+    
 
     let navigate = useNavigate();
 
@@ -36,8 +39,12 @@ const Login = () => {
     // 			}
     // 		}
     // 	}
-    const onSubmit = (e) => {
+    const onSubmit = async (e) => {
         e.preventDefault();
+        LoginServices.Login({
+            correo, 
+            password
+        })
 
         // if(
         //     password.valido === 'true' && 
