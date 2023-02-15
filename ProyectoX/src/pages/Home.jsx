@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 // import data from "../api/data.json"
 // import dataCategory from "../api/dataCategory.json"
 import {List} from "../components/List"
@@ -15,16 +15,28 @@ const Home = () => {
 
     const {categorias,productos} = useContext(ContextGlobal);
 
+
+    useEffect(() =>{
+
+        const random = () =>{
+            categorias.sort(()=>{
+                return 0.5 - Math.random();
+            })
+        
+        
+            productos.sort(()=>{
+                return 0.5 - Math.random();
+            })
+        }
+
+        random();
+
+
+
+    },[])
     
 
-        categorias.sort(()=>{
-            return 0.5 - Math.random();
-        })
-    
-    
-        productos.sort(()=>{
-            return 0.5 - Math.random();
-        })
+        
 
     
     

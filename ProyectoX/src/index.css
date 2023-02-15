@@ -3,6 +3,11 @@
     margin-left: 0; 
     margin-right: 0;  
     margin-bottom: 0;
+    
+}
+
+html,body{
+    height: 100%;
 }
 
 .space{
@@ -16,10 +21,19 @@
     justify-content: space-around;
     flex-wrap: wrap;
     gap:15px;  
+    height: 100%;
 }
 
+
+
+
 .bgRecomendations{
+    background-color: #2020201a; 
+}
+
+.bgFilter{
     background-color: #2020201a;
+    height: 100%;
 }
 
 .margin{

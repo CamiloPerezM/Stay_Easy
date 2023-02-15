@@ -18,8 +18,8 @@ return (
     <div className="calendar">
         <Form.Item>
             <RangePicker onOpenChange={onOpenChange} onCalendarChange={onCalendarChange} placeholder={["Check in", "Check out"]}> 
-                <Button>Acceder</Button>
             </RangePicker>
+                <Button>Aplicar</Button>
         </Form.Item>
     </div>
 )
