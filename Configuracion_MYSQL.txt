@@ -1,10 +1,11 @@
 CREATE DATABASE  IF NOT EXISTS `proyectox` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `proyectox`;
--- MySQL dump 10.13  Distrib 8.0.29, for Win64 (x86_64)
+
+-- MySQL dump 10.13  Distrib 8.0.31, for Win64 (x86_64)
 --
--- Host: 127.0.0.1    Database: proyectox
+-- Host: digitalhouse.cluster-cnyqegjgetrv.us-east-2.rds.amazonaws.com    Database: PI_db_GRUPO6
 -- ------------------------------------------------------
--- Server version	8.0.29
+-- Server version	8.0.23
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -142,7 +143,7 @@ CREATE TABLE `imagenes` (
   PRIMARY KEY (`id`),
   KEY `FKhylof04iou23s0pb9ab6pbd4j` (`producto_id`),
   CONSTRAINT `FKhylof04iou23s0pb9ab6pbd4j` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=58 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -151,7 +152,7 @@ CREATE TABLE `imagenes` (
 
 LOCK TABLES `imagenes` WRITE;
 /*!40000 ALTER TABLE `imagenes` DISABLE KEYS */;
-INSERT INTO `imagenes` VALUES (3,'https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg',NULL),(4,'https://media.staticontent.com/media/pictures/f2cf09de-e49f-4dfb-854d-3d26b89006b0/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',6),(5,'https://media.staticontent.com/media/pictures/6aaa17ec-a9e7-40f4-9958-f30e6a145155/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',7),(6,'https://a0.muscache.com/im/pictures/miso/Hosting-53428451/original/5679c305-65e7-46ab-85a1-470781fddcb9.jpeg?im_w=1200',8),(7,'https://a0.muscache.com/im/pictures/miso/Hosting-51978429/original/007bb1f6-d0c1-4e9c-a65d-dc3b9ba22081.jpeg?im_w=1200',9),(8,'https://media.staticontent.com/media/pictures/258af537-0a08-4432-a1c3-e00aecf1ff22/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',10),(9,'https://media.staticontent.com/media/pictures/7a3f9f9d-870d-4b8b-bd71-5637b008d1de/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',11),(10,'https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',1),(11,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784168.jpg?k=1935018747fb80c9920c4c02dc9494d3ab8df3b9736e1dcd71338c26dbf917ae&o=&hp=1',1),(12,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784136.jpg?k=3af0c0981c92133b4c76400d2a621a73ae475444238533f5ef69b17fad2e5696&o=&hp=1',1),(13,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784142.jpg?k=17e253e59184de93912bdfd7d80fd9e9b96581b7d8883c12bb7ef40827add48e&o=&hp=1',1),(14,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784087.jpg?k=cd12a34e678b516683aca7be49f96162bd9f466adefc51f27575311df64ebe30&o=&hp=1',1),(15,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784124.jpg?k=2671b8dd58cad8b685b43bb74f3ee5825c0efd8f5eab6a202994392584ea2b73&o=&hp=1',1),(16,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784060.jpg?k=f012cf699a9964af9c1a09db4a032da43d0aa8ce9f4ca7698009b775e9d3e4c7&o=&hp=1',1),(17,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/w4350h2897x0y0-52642bdd.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(18,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/5be7eebb.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(19,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/9e8bcff5.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(20,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/61132ead.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(21,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/337d59c6.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(22,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/327299710.jpg?k=72b71087a1c2485e6e01d8a13e475b26ffaa21876f21399da20317ce3f914b0a&o=&hp=1',6),(23,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/97961427.jpg?k=df10230311fffb38d3a42027fb64d7307c83e88893e793cd9ce6df960e4a08e5&o=&hp=1',6),(24,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/98748018.jpg?k=00f709e86113c2719abd2f890f76d7ca1e23c9ad10b427e94488da91534de58a&o=&hp=1',6),(25,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/97977643.jpg?k=cf20b4fa8cd16f0f16bb048d0a617abb3f56f3ebbb0936d3fa376c9468906e8e&o=&hp=1',6),(26,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/98482222.jpg?k=a5f03c18dc928df3c381898f35c7a4aa127c31ee0809bfbc518953114c034f6c&o=&hp=1',6),(27,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202202150.jpg?k=707786f5c6cfd494ac6b15e379ee110771750a098ed4bdb4742ff0e500c5c8d6&o=&hp=1',7),(28,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/47563572.jpg?k=d8d2887b3ad8aeab2c16d697be4ad1dd0b0eec3f537ea1a8ca50948e70e6c919&o=&hp=1',7),(29,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202238566.jpg?k=f115da791ee134e2e8d119f100577f9d51ecfdbe373d97168073a9f14ee096c6&o=&hp=1',7),(30,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/422319560.jpg?k=80f8f1f5f6927e20ad4bc57232b086b51671406302e145506838d4716118bef6&o=&hp=1',7),(31,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202238486.jpg?k=df329bd1f80c7d2a194b6ae78bb4c363d56fd58c1a76e2e3d02d29a3d015c4cc&o=&hp=1',7),(32,'https://a0.muscache.com/im/pictures/4ea5832a-07c1-43c6-be95-c00b6caeecce.jpg?im_w=720',8),(33,'https://a0.muscache.com/im/pictures/787c707d-7005-4893-8a73-c7c815aacd8d.jpg?im_w=1200',8),(34,'https://a0.muscache.com/im/pictures/miso/Hosting-53610161/original/7ea93a25-b0cd-4f46-8fcd-35fa4e16ac56.jpeg?im_w=1200',8),(35,'https://a0.muscache.com/im/pictures/miso/Hosting-53610161/original/4210273b-6ef8-43b1-b5c9-c82383634631.jpeg?im_w=1200',8),(36,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509366.jpg?k=451992ad31f2925d82369a19872651047be674c8caf510a82c630eb12f118900&o=&hp=1',9),(37,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509354.jpg?k=0aca1cfd94644dd098b8cc86fdc1bf1ff12c2c0241a781283cc867630d147718&o=&hp=1',9),(38,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509360.jpg?k=238440291b55b520b3da1f31de053eafdcaad7f902e6b2193b541c087000ce3c&o=&hp=1',9),(39,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509358.jpg?k=c22fa0cf08860e369673c4ae840072868fbda3ef940afb476a235d8eb77f46b0&o=&hp=1',9),(40,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509357.jpg?k=88df0dd47fbdd1adb412fc060ac060f22f41bf5f7ebd55f6583639a3f0d2c7f9&o=&hp=1',9),(41,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509355.jpg?k=30e371f3a2002c5649f9c5d8819d69614fd0e3e68ae6466883d8e9a28da8a4dd&o=&hp=1',9),(42,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/131208637.jpg?k=70d26e09646d619eca0e80944b87791d8db2d92367cecf050f3a425a44c469fe&o=&hp=1',10),(43,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/390550438.jpg?k=aac534e15fbc139a402454dae3fae89db223fd996d6b366a63259a7a462aa39a&o=&hp=1',10),(44,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/253572667.jpg?k=734ef0f173b87ecf0e445585cb390fd66b600b10a81d608c4a5794fbf7bbcd1b&o=&hp=1',10),(45,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/390550387.jpg?k=732c6aacb61035924e2770adfecb37db7049d1698a47dbd82b2b91fdeda46789&o=&hp=1',10),(46,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/383648950.jpg?k=64d8f7f7bc3201f5081bc19c3b6ad98fb32c98938ce230345ff28fd67b2b8916&o=&hp=1',10),(47,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/385582993.jpg?k=af1df9a209351e1beda2cc2a8b3d9c7ddd305e4a075b27bda680f05a6a996fee&o=&hp=1',11),(48,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/332955610.jpg?k=f00ac7d83782d567dba24d0127350c23fc53b19612062111a34175eb23e7fc21&o=&hp=1',11),(49,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/346202678.jpg?k=9b2a08221286970561c5d10fc9267f39577bcfa035c48fbfc300522e43646b53&o=&hp=1',11),(50,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/282872885.jpg?k=3207843466566f2da8f2a766944da6ad147314f74152a96a0139bdb866762256&o=&hp=1',11),(51,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/399407193.jpg?k=fcf48acb6eada3ffd52ba77044f3d9544879c635c8bc1bdf699e8e15352848d8&o=&hp=1',11),(53,'https://img.freepik.com/vector-gratis/edificio-hotel-flat_23-2148162501.jpg?w=2000',NULL),(54,'https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg',NULL),(55,'http2000',NULL);
+INSERT INTO `imagenes` VALUES (3,'https://media-cdn.tripadvisor.com/media/photo-s/16/1a/ea/54/hotel-presidente-4s.jpg',NULL),(4,'https://media.staticontent.com/media/pictures/f2cf09de-e49f-4dfb-854d-3d26b89006b0/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',6),(5,'https://media.staticontent.com/media/pictures/6aaa17ec-a9e7-40f4-9958-f30e6a145155/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',7),(6,'https://a0.muscache.com/im/pictures/miso/Hosting-53428451/original/5679c305-65e7-46ab-85a1-470781fddcb9.jpeg?im_w=1200',8),(7,'https://a0.muscache.com/im/pictures/miso/Hosting-51978429/original/007bb1f6-d0c1-4e9c-a65d-dc3b9ba22081.jpeg?im_w=1200',9),(8,'https://media.staticontent.com/media/pictures/258af537-0a08-4432-a1c3-e00aecf1ff22/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',10),(9,'https://media.staticontent.com/media/pictures/7a3f9f9d-870d-4b8b-bd71-5637b008d1de/1120x464?op=TRUNCATE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',11),(10,'https://media.staticontent.com/media/pictures/d09c4c81-97f6-4f9a-a08f-64183e8371bf/300x299?op=NONE&enlarge=false&gravity=ce_0_0&quality=80&dpr=1.5',1),(11,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784168.jpg?k=1935018747fb80c9920c4c02dc9494d3ab8df3b9736e1dcd71338c26dbf917ae&o=&hp=1',1),(12,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784136.jpg?k=3af0c0981c92133b4c76400d2a621a73ae475444238533f5ef69b17fad2e5696&o=&hp=1',1),(13,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784142.jpg?k=17e253e59184de93912bdfd7d80fd9e9b96581b7d8883c12bb7ef40827add48e&o=&hp=1',1),(14,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784087.jpg?k=cd12a34e678b516683aca7be49f96162bd9f466adefc51f27575311df64ebe30&o=&hp=1',1),(15,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784124.jpg?k=2671b8dd58cad8b685b43bb74f3ee5825c0efd8f5eab6a202994392584ea2b73&o=&hp=1',1),(16,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/349784060.jpg?k=f012cf699a9964af9c1a09db4a032da43d0aa8ce9f4ca7698009b775e9d3e4c7&o=&hp=1',1),(17,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/w4350h2897x0y0-52642bdd.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(18,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/5be7eebb.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(19,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/9e8bcff5.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(20,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/61132ead.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(21,'https://images.trvl-media.com/lodging/24000000/23930000/23924300/23924256/337d59c6.jpg?impolicy=resizecrop&rw=1200&ra=fit',2),(22,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/327299710.jpg?k=72b71087a1c2485e6e01d8a13e475b26ffaa21876f21399da20317ce3f914b0a&o=&hp=1',6),(23,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/97961427.jpg?k=df10230311fffb38d3a42027fb64d7307c83e88893e793cd9ce6df960e4a08e5&o=&hp=1',6),(24,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/98748018.jpg?k=00f709e86113c2719abd2f890f76d7ca1e23c9ad10b427e94488da91534de58a&o=&hp=1',6),(25,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/97977643.jpg?k=cf20b4fa8cd16f0f16bb048d0a617abb3f56f3ebbb0936d3fa376c9468906e8e&o=&hp=1',6),(26,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/98482222.jpg?k=a5f03c18dc928df3c381898f35c7a4aa127c31ee0809bfbc518953114c034f6c&o=&hp=1',6),(27,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202202150.jpg?k=707786f5c6cfd494ac6b15e379ee110771750a098ed4bdb4742ff0e500c5c8d6&o=&hp=1',7),(28,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/47563572.jpg?k=d8d2887b3ad8aeab2c16d697be4ad1dd0b0eec3f537ea1a8ca50948e70e6c919&o=&hp=1',7),(29,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202238566.jpg?k=f115da791ee134e2e8d119f100577f9d51ecfdbe373d97168073a9f14ee096c6&o=&hp=1',7),(30,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/422319560.jpg?k=80f8f1f5f6927e20ad4bc57232b086b51671406302e145506838d4716118bef6&o=&hp=1',7),(31,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/202238486.jpg?k=df329bd1f80c7d2a194b6ae78bb4c363d56fd58c1a76e2e3d02d29a3d015c4cc&o=&hp=1',7),(32,'https://a0.muscache.com/im/pictures/4ea5832a-07c1-43c6-be95-c00b6caeecce.jpg?im_w=720',8),(33,'https://a0.muscache.com/im/pictures/787c707d-7005-4893-8a73-c7c815aacd8d.jpg?im_w=1200',8),(34,'https://a0.muscache.com/im/pictures/miso/Hosting-53610161/original/7ea93a25-b0cd-4f46-8fcd-35fa4e16ac56.jpeg?im_w=1200',8),(35,'https://a0.muscache.com/im/pictures/miso/Hosting-53610161/original/4210273b-6ef8-43b1-b5c9-c82383634631.jpeg?im_w=1200',8),(36,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509366.jpg?k=451992ad31f2925d82369a19872651047be674c8caf510a82c630eb12f118900&o=&hp=1',9),(37,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509354.jpg?k=0aca1cfd94644dd098b8cc86fdc1bf1ff12c2c0241a781283cc867630d147718&o=&hp=1',9),(38,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509360.jpg?k=238440291b55b520b3da1f31de053eafdcaad7f902e6b2193b541c087000ce3c&o=&hp=1',9),(39,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509358.jpg?k=c22fa0cf08860e369673c4ae840072868fbda3ef940afb476a235d8eb77f46b0&o=&hp=1',9),(40,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509357.jpg?k=88df0dd47fbdd1adb412fc060ac060f22f41bf5f7ebd55f6583639a3f0d2c7f9&o=&hp=1',9),(41,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/319509355.jpg?k=30e371f3a2002c5649f9c5d8819d69614fd0e3e68ae6466883d8e9a28da8a4dd&o=&hp=1',9),(42,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/131208637.jpg?k=70d26e09646d619eca0e80944b87791d8db2d92367cecf050f3a425a44c469fe&o=&hp=1',10),(43,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/390550438.jpg?k=aac534e15fbc139a402454dae3fae89db223fd996d6b366a63259a7a462aa39a&o=&hp=1',10),(44,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/253572667.jpg?k=734ef0f173b87ecf0e445585cb390fd66b600b10a81d608c4a5794fbf7bbcd1b&o=&hp=1',10),(45,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/390550387.jpg?k=732c6aacb61035924e2770adfecb37db7049d1698a47dbd82b2b91fdeda46789&o=&hp=1',10),(46,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/383648950.jpg?k=64d8f7f7bc3201f5081bc19c3b6ad98fb32c98938ce230345ff28fd67b2b8916&o=&hp=1',10),(47,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/385582993.jpg?k=af1df9a209351e1beda2cc2a8b3d9c7ddd305e4a075b27bda680f05a6a996fee&o=&hp=1',11),(48,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/332955610.jpg?k=f00ac7d83782d567dba24d0127350c23fc53b19612062111a34175eb23e7fc21&o=&hp=1',11),(49,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/346202678.jpg?k=9b2a08221286970561c5d10fc9267f39577bcfa035c48fbfc300522e43646b53&o=&hp=1',11),(50,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/282872885.jpg?k=3207843466566f2da8f2a766944da6ad147314f74152a96a0139bdb866762256&o=&hp=1',11),(51,'https://cf.bstatic.com/xdata/images/hotel/max1280x900/399407193.jpg?k=fcf48acb6eada3ffd52ba77044f3d9544879c635c8bc1bdf699e8e15352848d8&o=&hp=1',11);
 /*!40000 ALTER TABLE `imagenes` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -202,7 +203,7 @@ CREATE TABLE `productos` (
   KEY `FK2n66ase94bg4q6j56jdm4nj17` (`ciudad_id`),
   CONSTRAINT `FK2fwq10nwymfv7fumctxt9vpgb` FOREIGN KEY (`categoria_id`) REFERENCES `categorias` (`id`),
   CONSTRAINT `FK2n66ase94bg4q6j56jdm4nj17` FOREIGN KEY (`ciudad_id`) REFERENCES `ciudades` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -213,6 +214,58 @@ LOCK TABLES `productos` WRITE;
 /*!40000 ALTER TABLE `productos` DISABLE KEYS */;
 INSERT INTO `productos` VALUES (1,'Cerca de Roca de Guatapé, Con una conveniente ubicación en Guatapé, esta cabaña se encuentra a 15 minutos en auto de Peñol-Guatapé Reservoir','CabañaVacacional',3,'Cabaña Vacacional','https://goo.gl/maps/AVoofNGHSNMDus8M8',3,9,NULL),(2,'Ubicación del establecimiento En Guatapé, Luxe by The Charlee te permite llegar cómodamente a Rock of Guatapé y La Piedra Del Peñol.','Luxe_by_The_Charlee',3,'Luxe by The Charlee','https://goo.gl/maps/zy4sw8SyMT8GSCyt5',3,1,NULL),(6,'El Four Points by Sheraton se encuentra ubicado en la zona del Poblado, a 10 minutos en coche del Aeropuerto Internacional Olaya Herrera y del Parque Lleras. Cuenta con servicio de spa y gimnasio, además ofrece desayuno incluido.','FourPointsbySheraton',4,'Four Points by Sheraton','https://goo.gl/maps/Mhq8bG8gNHz5aBfv5',4,1,NULL),(7,'Park 10 se encuentra en Medellín. Ofrece wi-fi gratis en zonas comunes, servicio de spa y sauna, además de estacionamiento gratis.','Park10',3,'Park 10','https://goo.gl/maps/i4QVvukRWX2bnycP7',4,1,NULL),(8,'Molinos se ubica en una de las zonas más céntricas de Medellín, Cómoda y 24/7 Check In, ubicada desde las escaleras al Mall Molinos, lo que lo convierte en un lugar perfecto para visitar Medellín y ver los lugares más turísticos de la ciudad ','ApartamentMolinos',3,'Apartament Molinos','https://goo.gl/maps/7aMSknjxU9LuwmSy9',5,1,NULL),(9,'Hermoso alojamiento con vistas espectaculares a la ciudad y las montañas, acabados de excelente calidad, staff preparado par brindarte la mejor experiencia durante tu estadía.','LoftMedellín',4,'Loft Medellín','https://goo.gl/maps/ofE1fQfDHtt2BR4cA',5,1,NULL),(10,'Star Hostal - Club de Tenis se encuentra ubicado en Rionegro, Antioquia, a 5 minutos en coche del Aeropuerto Internacional Jose Maria Cordova, a 25 minutos de Medellín y a 10 minutos de Rionegro. Cuenta con Wi-Fi gratuito.','StarHostal',3,'Star Hostal','https://goo.gl/maps/RNnKV17Kjz2ZsyNF9',6,1,NULL),(11,'Ubicación del establecimiento Casa Encuentro se sitúa en Guatapé, a poca distancia de Rock of Guatapé y de La Piedra Del Penol.Habitaciones Te sentirás como en tu propia casa en una de las 8 habitaciones.','CasaEncuentro',3,'Casa Encuentro','https://goo.gl/maps/puVstYWwsHMLAgLe8',6,1,NULL);
 /*!40000 ALTER TABLE `productos` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `reserva`
+--
+
+DROP TABLE IF EXISTS `reserva`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `reserva` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `check_in` date DEFAULT NULL,
+  `check_out` date DEFAULT NULL,
+  `hora_reserva` time DEFAULT NULL,
+  `producto_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `FKkcbud9xhej8t4avype5imc4pk` (`producto_id`),
+  CONSTRAINT `FKkcbud9xhej8t4avype5imc4pk` FOREIGN KEY (`producto_id`) REFERENCES `productos` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `reserva`
+--
+
+LOCK TABLES `reserva` WRITE;
+/*!40000 ALTER TABLE `reserva` DISABLE KEYS */;
+/*!40000 ALTER TABLE `reserva` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `roles`
+--
+
+DROP TABLE IF EXISTS `roles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `roles` (
+  `id` bigint NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `roles`
+--
+
+LOCK TABLES `roles` WRITE;
+/*!40000 ALTER TABLE `roles` DISABLE KEYS */;
+INSERT INTO `roles` VALUES (1,'USER'),(2,'ADMIN');
+/*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -238,6 +291,7 @@ CREATE TABLE `tipo_politica` (
 
 LOCK TABLES `tipo_politica` WRITE;
 /*!40000 ALTER TABLE `tipo_politica` DISABLE KEYS */;
+INSERT INTO `tipo_politica` VALUES (1,1),(1,3),(1,4),(1,5),(1,9);
 /*!40000 ALTER TABLE `tipo_politica` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -250,10 +304,16 @@ DROP TABLE IF EXISTS `usuarios`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `usuarios` (
   `id` bigint NOT NULL AUTO_INCREMENT,
+  `apellido` varchar(255) DEFAULT NULL,
   `contrasenna` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   `nombre` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `rol_id` bigint DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `UK_kfsp0s1tflm1cwlj8idhqsad0` (`email`),
+  KEY `FKqf5elo4jcq7qrt83oi0qmenjo` (`rol_id`),
+  CONSTRAINT `FKqf5elo4jcq7qrt83oi0qmenjo` FOREIGN KEY (`rol_id`) REFERENCES `roles` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -262,7 +322,7 @@ CREATE TABLE `usuarios` (
 
 LOCK TABLES `usuarios` WRITE;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
-INSERT INTO `usuarios` VALUES (1,'gfgdoi98sd','Silvia');
+INSERT INTO `usuarios` VALUES (4,'N','$2a$10$NXlo2swiXxr/4.Nehh9K7.zHojY8kVTPOFHWmkCzrWkxfhLNdHqnO','pablon@gmail.com','Pablo',2);
 /*!40000 ALTER TABLE `usuarios` ENABLE KEYS */;
 UNLOCK TABLES;
 SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
@@ -275,6 +335,9 @@ SET @@SESSION.SQL_LOG_BIN = @MYSQLDUMP_TEMP_LOG_BIN;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2023-02-15 17:40:40
+
 
 
 create user 'springuser'@'%' identified by 'ThePassword' ;
