@@ -42,3 +42,17 @@ post
 }
 
 ------------------------
+
+http://localhost:8080/reserva/registrar
+
+
+post
+{
+    "horaReserva": "",
+    "checkIn":""  FORMATO = "yyyy-MM-dd" ,
+    "checkOut":"" FORMATO = "yyyy-MM-dd",
+    "producto":"",
+    "usuario":""
+}
+
+
