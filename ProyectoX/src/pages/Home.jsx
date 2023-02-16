@@ -5,7 +5,7 @@ import {List} from "../components/List"
 import {CardCategory} from "../components/CardCategory"
 import {Card} from "../components/Card"
 import { useContext } from 'react'
-import { ContextGlobal } from '../components/utils/global.context'
+import { ContextGlobal } from '../components/Services/global.context'
 import Buscador from '../components/Buscador'
 
 

@@ -17,6 +17,7 @@ const Login = () => {
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
     const [isLogin, setIsLogin] = useState(false);
+    const [user,  setUser] = useState (null);
     
 
     let navigate = useNavigate();
@@ -41,10 +42,30 @@ const Login = () => {
     // 	}
     const onSubmit = async (e) => {
         e.preventDefault();
-        LoginServices.Login({
-            correo, 
-            password
-        })
+        
+        try {
+
+            const user =  await LoginServices.Login ({
+                email: correo.campo, 
+                contrasenna: password.campo
+            })
+
+            localStorage.setItem('user', JSON.stringify(user));
+            navigate('/home', { replace: true });
+            
+            console.log(user);
+            setUser(user);
+            cambiarCorreo('');
+            cambiarPassword('')
+
+        } catch (error) {
+
+            console.log(error);
+            // console.log(e);
+
+        }
+        
+        
 
         // if(
         //     password.valido === 'true' && 
@@ -62,26 +83,18 @@ const Login = () => {
         //     }
     }
 
-
-    function handleSubmit() {
-        let account = { correo, password }
-        if (account) {
-            ifMatch(account);
-        }
-    }
-
-    function ifMatch() {
-        if (correo.valido === 'true' && password.valido === 'true') {
-            let acept = { correo, password }
-            let account = JSON.stringify(acept);
-            localStorage.setItem('account', account);
-            setIsLogin(true);
-            document.getElementById('botones-inicio').style.display = 'none';
-            navigate('/home', { replace: true });
-        } else {
-            setIsLogin(false);
-        }
-    }
+    // function ifMatch() {
+    //     if (correo.valido === 'true' && password.valido === 'true') {
+    //         let acept = { correo, password }
+    //         // let account = JSON.stringify(acept);
+    //         // localStorage.setItem('account', account);
+    //         setIsLogin(true);
+    //         
+    //         
+    //     } else {
+    //         setIsLogin(false);
+    //     }
+    // }
 
     return (
         <>
@@ -93,8 +106,11 @@ const Login = () => {
                     </div>
                 </div>
             </header>
+
+
             <main className='main1  backgroundColor1'>
                 <h1 className='titulo1'>Iniciar sesión</h1>
+
                 <Formulario action="" onSubmit={onSubmit} id='form'>
 
                     <Input
@@ -142,7 +158,7 @@ const Login = () => {
                         </p>
                     </MensajeError>}
                     <ContenedorBotonCentrado>
-                        <Boton type='submit' onClick={handleSubmit}>Login</Boton>
+                        <Boton type='submit' >Login</Boton>
                         <p>¿Aun no te has registrado? <Link to={`/registro`}>Registrate</Link></p>
                         {formularioValido === true && <MensajeExito>Iniciando sesión!</MensajeExito>}
                     </ContenedorBotonCentrado>

@@ -6,8 +6,13 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => {
-    let user = localStorage.getItem('account');
+    let user = JSON.parse(localStorage.getItem('user'));
     console.log('user,', user);
+
+    if (user.token){
+        // document.getElementById('botones-inicio').style.display = 'none';
+        
+    }
 
     return (
     
