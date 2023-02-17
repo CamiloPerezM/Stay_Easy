@@ -1,8 +1,10 @@
 package DH.Integrador.Grupo6.ProyectoX_API.service;
 
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
+import DH.Integrador.Grupo6.ProyectoX_API.repository.RolRepository;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -11,31 +13,38 @@ import java.util.Optional;
 @Service
 public class UsuarioService {
 
-    private UsuarioRepository usuarioRepository;
+    private static final String ROL_STANDARD = "USER";
 
     @Autowired
-    public UsuarioService(UsuarioRepository usuarioRepository) {
-        this.usuarioRepository = usuarioRepository;
-    }
+    private UsuarioRepository usuarioRepository;
 
-    // get
+   @Autowired
+    private RolRepository rolRepository;
 
-    public List<Usuario> buscarusUarios(){
-        return usuarioRepository.findAll();
-    }
 
-    public Optional<Usuario> buscarUsuario(Long id){
-        return usuarioRepository.findById(id);
-    }
 
-    public List<Usuario> buscarUsuarioPorNombre(String nombre){
-        return usuarioRepository.findByNombre(nombre);
-    }
+
 
     // post
 
     public Usuario guardarUsuario(Usuario usuario){
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+
+        String contrasennaEncoder = encoder.encode(usuario.getContrasenna());
+
+        usuario.setContrasenna(contrasennaEncoder);
+
+        usuario.setRol(usuario.getRol() == null ? rolRepository.findByNombre(ROL_STANDARD) : rolRepository.findByNombre(usuario.getRol().getNombre()));
+
         return usuarioRepository.save(usuario);
+    }
+
+    // get
+
+
+
+    public Usuario buscarUsuario(Long id){
+        return usuarioRepository.findById(id).orElse(null);
     }
 
 
