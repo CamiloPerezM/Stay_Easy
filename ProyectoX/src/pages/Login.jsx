@@ -16,7 +16,6 @@ const Login = () => {
     const [password2, cambiarPassword2] = useState({ campo: '', valido: null });
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
-    const [isLogin, setIsLogin] = useState(false);
     const [user,  setUser] = useState (null);
     
 
@@ -64,6 +63,8 @@ const Login = () => {
             // console.log(e);
 
         }
+
+        
         
         
 
@@ -83,28 +84,19 @@ const Login = () => {
         //     }
     }
 
-    // function ifMatch() {
-    //     if (correo.valido === 'true' && password.valido === 'true') {
-    //         let acept = { correo, password }
-    //         // let account = JSON.stringify(acept);
-    //         // localStorage.setItem('account', account);
-    //         setIsLogin(true);
-    //         
-    //         
-    //     } else {
-    //         setIsLogin(false);
-    //     }
-    // }
 
     return (
         <>
             <header>
+
                 <div className="busqueda">
                     <h2 className="bienvenida">Busca oferta en hoteles, casas y mucho mas</h2>
                     <div className="botones2">
                         <Buscador></Buscador>
                     </div>
                 </div>
+
+                
             </header>
 
 

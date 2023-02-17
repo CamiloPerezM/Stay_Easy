@@ -6,13 +6,22 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => {
-    let user = JSON.parse(localStorage.getItem('user'));
+    let user = JSON.parse(localStorage.getItem('user') ?? '{}');
     console.log('user,', user);
 
-    if (user.token){
-        // document.getElementById('botones-inicio').style.display = 'none';
-        
-    }
+    
+
+    const actions = user.token
+        ? <div className="usuario botones">
+            <p> Bienvenido: {user.usuarioDTO.nombre} </p>
+            <button className="crear"> Cerrar sesion </button>
+            
+            </div>
+        : <div className="botones" id="botones-inicio">
+            <Link to={"/registro"}><button className="crear">Crear cuenta</button></Link>
+            <Link to={`/login`}><button className="crear">Iniciar sesión</button></Link>
+        </div>;
+
 
     return (
     
@@ -21,11 +30,7 @@ const Header = () => {
                <Link to={"/home"}> <img className="logo" src={Logo} alt='Logo Booking'></img></Link>
                 <img className="menu" src={Menu} alt='Menu'></img>
                 
-                <div className="botones" id="botones-inicio">
-                    <Link to={"/registro"}><button className="crear">Crear cuenta</button></Link>
-                    <Link to={`/login`}><button className="crear">Iniciar sesión</button></Link>
-                    
-                </div>
+                {actions}
 
             </div>
 

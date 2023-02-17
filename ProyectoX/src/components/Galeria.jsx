@@ -25,9 +25,9 @@ function Galeria() {
     }
 
     pedidoImagenes() 
-  },[datos.id])
-console.log(imagenes);
-imagenes?.imagenes?.sort((a,b) => a.id - b.id)
+     },[datos.id])
+      console.log(imagenes);
+      imagenes?.imagenes?.sort((a,b) => a.id - b.id)
 
 
   return (
