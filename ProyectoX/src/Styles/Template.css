@@ -92,13 +92,19 @@ hr {
 
 .calendar{
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: space-around;
+    
 }
 
-.calendar button{
+.seleccion{
+    font-family: 'Roboto', sans-serif;
+}
+
+.aplicar{
     background-color: rgb(251, 139, 36);
     color: #fff;
+    border-radius: 0%;
 }
 
 @media only screen and (max-width: 768px) {
