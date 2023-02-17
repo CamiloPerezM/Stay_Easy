@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 import '../Styles/Template.css'
 
 function Galeria() {
@@ -45,9 +46,9 @@ imagenes?.imagenes?.sort((a,b) => a.id - b.id)
           ))}
 
           <div className='botonGrilla'>
-          <a href="">
-          <button className='verMas' src='./Carrusel.jsx'>Ver más</button>
-          </a>
+            <Link to="/carrusel">
+              <button className="verMas">Ver más</button>
+            </Link>
           </div>
 
         </div>
