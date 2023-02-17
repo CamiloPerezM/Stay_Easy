@@ -28,6 +28,18 @@ function Calendario() {
     <div className='calendar'>
       <div className='seleccion'>
         <h2>Selecciona un rango de fechas:</h2>
+
+        {/* <input
+          type="text"
+          value={`${dateRange[0]?.toLocaleDateString() || ''} - ${dateRange[1]?.toLocaleDateString() || ''}`}
+          onChange={(e) => {
+            const [startDateString, endDateString] = e.target.value.split(' - ');
+            const startDate = new Date(startDateString);
+            const endDate = new Date(endDateString);
+            setDateRange([startDate, endDate]);
+          }}
+        /> */}
+
         <p>
           {dateRange[0]?.toLocaleDateString() || ''} - {dateRange[1]?.toLocaleDateString() || ''}
         </p>
@@ -39,7 +51,7 @@ function Calendario() {
           value={dateRange}
           onChange={handleDateChange}
           allowPartialRange={true}
-        />
+          />
       </div>
       <Button onClick={handleApplyButtonClick} className='aplicar'>Aplicar</Button>
     </div>
@@ -47,6 +59,7 @@ function Calendario() {
 }
 
 export default Calendario;
+
 
 
 

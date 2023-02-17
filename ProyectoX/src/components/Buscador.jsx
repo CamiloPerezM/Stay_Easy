@@ -10,19 +10,19 @@ const { Option } = Select;
 
 const { RangePicker } = DatePicker;
 
-const onOpenChange = (open) => {
-  console.log("onOpenChange", open);
-};
-
-const onCalendarChange = (dates) => {
-  console.log("onCalendarChange", dates);
-};
-
 function Buscador() {
   const [city, setCity] = useState(null);
   const { ciudades } = useContext(ContextGlobal);
-  
+  const [selectedDates, setSelectedDates] = useState([]);
 
+  const onOpenChange = (open) => {
+    console.log("onOpenChange", open);
+  };
+  
+  const onCalendarChange = (dates) => {
+    console.log("onCalendarChange", dates);
+    setSelectedDates(dates);
+  };
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -31,6 +31,11 @@ function Buscador() {
 
 
     const cityFind = ciudades.find(data => data.nombre===city);
+
+  const handleApplyButtonClick = () => {
+    console.log('Selected dates:', selectedDates);
+    // Aquí puedes hacer lo que necesites con las fechas seleccionadas
+  };
  
 
 
@@ -66,7 +71,7 @@ function Buscador() {
 
 
       <Form.Item>
-        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> <Button className="search">Buscar</Button></Link>}
+        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> <Button onClick={handleApplyButtonClick} className="search">Buscar</Button></Link>}
       </Form.Item>
     </Form>
   );
