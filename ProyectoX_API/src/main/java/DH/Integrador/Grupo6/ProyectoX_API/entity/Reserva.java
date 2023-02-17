@@ -2,6 +2,7 @@ package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIncludeProperties;
 
 import javax.persistence.*;
@@ -15,28 +16,29 @@ public class Reserva {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-
-
     @Column
     private Long id;
+
     @Column
     private LocalTime horaReserva;
     @Column
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate checkIn;
     @Column
+    @JsonFormat(pattern="yyyy-MM-dd")
     private LocalDate checkOut;
 
-    @JsonIncludeProperties(value = {"id"})
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+
+
+    @ManyToOne
     @JoinColumn(name = "producto_id")
     private Producto producto;
 
-    /*
-        @JsonIncludeProperties(value = "id")
-    @ManyToOne(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
-    @JoinColumn(name = "usuario_id")
+
+    @ManyToOne
+    @JoinColumn(name = "usuarios_id")
     private Usuario usuario;
-     */
+
 
 
     public Reserva(){}
@@ -46,7 +48,7 @@ public class Reserva {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.producto = producto;
-        /*this.usuario = usuario;*/
+        this.usuario = usuario;
     }
 
     public Reserva(Long id, LocalTime horaReserva, LocalDate checkIn, LocalDate checkOut, Producto producto, Usuario usuario) {
@@ -55,7 +57,7 @@ public class Reserva {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.producto = producto;
-       /* this.usuario = usuario;*/
+        this.usuario = usuario;
     }
 
     public Long getId() {
@@ -97,11 +99,11 @@ public class Reserva {
     public void setProducto(Producto producto) {
         this.producto = producto;
     }
-   /* public Usuario getUsuario() {
+    public Usuario getUsuario() {
         return usuario;
     }
 
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
-    } */
+    }
 }
