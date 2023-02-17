@@ -35,6 +35,16 @@
     align-items: center;
     color: rgb(251, 139, 36);
 }
+.galaria{
+    position: relative;
+}
+
+.botonGrilla{
+    width: 30px;
+    position: absolute;
+    top: 59%;
+    left: 53.5%;
+}
 
 .grilla-imagenes div{
     display: grid;
@@ -56,13 +66,15 @@
 }
 
 .verMas{
+    width: 69px;
     background-color: #942c2c;
     border: none;
-    border-radius: 15%;
+    border-radius: 20%;
     color: #fff;
     padding: 10px 10px;
     text-align: center;
     display: inline-block;
+    position: static;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
@@ -78,6 +90,22 @@ hr {
     margin-bottom: 2rem;
 }
 
+.calendar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.seleccion{
+    font-family: 'Roboto', sans-serif;
+}
+
+.aplicar{
+    background-color: rgb(251, 139, 36);
+    color: #fff;
+    border-radius: 0%;
+}
 
 @media only screen and (max-width: 768px) {
 
