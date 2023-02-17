@@ -30,8 +30,7 @@ function App() {
           <Route path="/producto/:id" element={<TemplateContenedor />} />
           <Route path='/producto/ciudad/:id' element={<FilterCity/>}/>
           <Route path="/reserve" element={<ReserveTemplate/>}/>
-          <Route path="/carrusel" component={Carrusel} />
-
+          <Route path="/carrusel/:id" element={<Carrusel/>} />
         </Routes>
       <Footer />
     

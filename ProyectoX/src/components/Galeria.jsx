@@ -17,8 +17,8 @@ function Galeria() {
       const pedidoFetch = await fetch(`http://localhost:8080/producto/${datos.id}`);
       const respuesta = await pedidoFetch.json();
       setImagenes(respuesta)
-      console.log("Estas son las imagenes");
-      console.log(imagenes);
+      // console.log("Estas son las imagenes");
+      // console.log(imagenes);
         
       } catch (error) {
         console.log(error);
@@ -46,7 +46,7 @@ imagenes?.imagenes?.sort((a,b) => a.id - b.id)
           ))}
 
           <div className='botonGrilla'>
-            <Link to="/carrusel">
+            <Link to={`/carrusel/${datos.id}`}>
               <button className="verMas">Ver más</button>
             </Link>
           </div>

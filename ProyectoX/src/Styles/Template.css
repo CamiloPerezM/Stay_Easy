@@ -35,6 +35,16 @@
     align-items: center;
     color: rgb(251, 139, 36);
 }
+.galaria{
+    position: relative;
+}
+
+.botonGrilla{
+    width: 30px;
+    position: absolute;
+    top: 59%;
+    left: 53.5%;
+}
 
 .grilla-imagenes div{
     display: grid;
@@ -56,6 +66,7 @@
 }
 
 .verMas{
+    width: 69px;
     background-color: #942c2c;
     border: none;
     border-radius: 20%;
