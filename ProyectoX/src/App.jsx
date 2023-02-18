@@ -8,9 +8,8 @@ import Home from './pages/Home'
 import FiltroCategoria from './components/FiltroCategoria'
 import TemplateContenedor from './Contenedor/TemplateContenedor'
 import FilterCity from './pages/FilterCity'
-import ReserveTemplate from './pages/ReserveTemplate'
+import ReserveTemplate from './Contenedor/ReserveTemplate'
 import Carrusel from './components/Carrusel';
-// import Logout from './pages/Logout'
 
 
 function App() {
