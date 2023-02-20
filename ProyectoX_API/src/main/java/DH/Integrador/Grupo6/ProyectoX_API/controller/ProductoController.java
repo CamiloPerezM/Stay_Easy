@@ -47,11 +47,8 @@ public class ProductoController {
 
     @GetMapping("/ciudad/{id}")
     public ResponseEntity<List<Producto>> buscarProductoPorCiudad(@PathVariable Long id){
-
         Optional<Ciudad> ciudadBuscada=ciudadService.buscarCiudad(id);
         if (ciudadBuscada.isPresent()){
-
-
             List<Producto> productoBuscado= productoService.buscarPorCiudad(ciudadBuscada);
             if (!productoBuscado.isEmpty()){
                 return ResponseEntity.ok(productoBuscado);
@@ -59,7 +56,6 @@ public class ProductoController {
             else{
                 return ResponseEntity.notFound().build();
             }
-
         }
         else{
             return ResponseEntity.notFound().build();

@@ -10,14 +10,13 @@ import TemplateContenedor from './Contenedor/TemplateContenedor'
 import FilterCity from './pages/FilterCity'
 import ReserveTemplate from './pages/ReserveTemplate'
 import TemplateReserva from './pages/TemplateReserva'
+import Carrusel from './components/Carrusel';
 
 
 function App() {
 
 
   return (
-
-    // ""
 
     <>
     
@@ -34,6 +33,7 @@ function App() {
           <Route path="/reserve" element={<ReserveTemplate/>}/>
           <Route path="/reserva" element={<TemplateReserva/>}/>
 
+          <Route path="/carrusel/:id" element={<Carrusel/>} />
         </Routes>
       <Footer />
     
