@@ -4,56 +4,45 @@ import { Button } from 'antd';
 import 'react-calendar/dist/Calendar.css';
 
 function Calendario() {
-  const [dateRange, setDateRange] = useState([new Date(), new Date()]);
+  // const [fechaInicial, setFechaInicial] = useState([]);
+  // const [fechaFinal, setFechaFinal] = useState();
 
   const handleDateChange = (date) => {
-    setDateRange((prevRange) => {
-      if (prevRange[0] && !prevRange[1]) {
-        // Si se ha seleccionado la primera fecha, pero no la segunda
-        // establecer la segunda fecha a la fecha seleccionada y devolver el nuevo rango de fechas
-        return [prevRange[0], date];
-      } else {
-        // Si se han seleccionado ambas fechas, restablecer el rango a la nueva fecha seleccionada
-        return [date, null];
-      }
-    });
+    console.log(date[0]);
+    const perroCalendario = date[0]; 
+    setFechaInicial(perroCalendario);
   };
 
-  const handleApplyButtonClick = () => {
-    console.log('Selected dates:', dateRange);
-    // Aquí puedes hacer lo que necesites con las fechas seleccionadas
-  };
+
 
   return (
     <div className='calendar'>
       <div className='seleccion'>
         <h2>Selecciona un rango de fechas:</h2>
+        {/* <h1>
+          {fechaInicial}
+        </h1> */}
 
         {/* <input
           type="text"
-          value={`${dateRange[0]?.toLocaleDateString() || ''} - ${dateRange[1]?.toLocaleDateString() || ''}`}
-          onChange={(e) => {
-            const [startDateString, endDateString] = e.target.value.split(' - ');
-            const startDate = new Date(startDateString);
-            const endDate = new Date(endDateString);
-            setDateRange([startDate, endDate]);
-          }}
+          defaultValue={dateRange}
         /> */}
 
-        <p>
+        {/* <p>
           {dateRange[0]?.toLocaleDateString() || ''} - {dateRange[1]?.toLocaleDateString() || ''}
-        </p>
+        </p> */}
       </div>
       <div>
         <Calendar
           showDoubleView={true}
           selectRange={true}
-          value={dateRange}
-          onChange={handleDateChange}
-          allowPartialRange={true}
+          minDate={new Date(Date.now())}
+          goToRangeStartOnSelect={false}
+          // onChange={handleDateChange}
+          // allowPartialRange={true}
           />
       </div>
-      <Button onClick={handleApplyButtonClick} className='aplicar'>Aplicar</Button>
+      <Button className='aplicar'>Aplicar</Button>
     </div>
   );
 }
