@@ -36,6 +36,9 @@ function Galeria() {
 
           <div className='imgPrincipal'>
             <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" />
+            <Link to={`/carrusel/${datos.id}`}>
+              <button className="verMas">Ver más</button>
+            </Link>
           </div>
 
         <div className='img4'>
@@ -46,9 +49,7 @@ function Galeria() {
           ))}
 
           <div className='botonGrilla'>
-            <Link to={`/carrusel/${datos.id}`}>
-              <button className="verMas">Ver más</button>
-            </Link>
+            
           </div>
 
         </div>

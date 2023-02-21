@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, MensajeExito, MensajeError } from '../components/Services/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';

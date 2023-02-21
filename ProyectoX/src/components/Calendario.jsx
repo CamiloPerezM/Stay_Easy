@@ -27,12 +27,12 @@ function Calendario() {
   return (
     <div className='calendar'>
       <div className='seleccion'>
-        <h2>Selecciona un rango de fechas:</h2>
+        <h3> Fechas disponibles </h3>
         <p>
           {dateRange[0]?.toLocaleDateString() || ''} - {dateRange[1]?.toLocaleDateString() || ''}
         </p>
       </div>
-      <div>
+      <div className='calendario'>
         <Calendar
           showDoubleView={true}
           selectRange={true}
