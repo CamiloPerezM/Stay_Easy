@@ -25,9 +25,9 @@ function Calendario() {
       <div className='seleccion'>
         <h2>Selecciona un rango de fechas:</h2>
         {fechaInicial && fechaFinal ? (
-          <h1>
+          <p>
             {fechaInicial.toLocaleDateString()} - {fechaFinal.toLocaleDateString()}
-          </h1>
+          </p>
         ) : (
           <p>Selecciona un rango de fechas</p>
         )}

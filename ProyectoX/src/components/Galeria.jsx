@@ -58,3 +58,51 @@ imagenes?.imagenes?.sort((a,b) => a.id - b.id)
 };
 
 export default Galeria;
+
+
+// import React, { useContext, useEffect, useState } from 'react';
+// import { useHistory } from 'history'; 
+// import { useParams } from 'react-router';
+// import '../Styles/Template.css'
+
+// function Galeria() {
+//   const datos = useParams();
+//   const [imagenes, setImagenes] = useState([]);
+//   const history = useHistory();
+
+//   useEffect(() => {
+//     const pedidoImagenes = async () => {
+//       try {
+//         const pedidoFetch = await fetch(`http://localhost:8080/producto/${datos.id}`);
+//         const respuesta = await pedidoFetch.json();
+//         setImagenes(respuesta);
+//       } catch (error) {
+//         console.log(error);
+//       }
+//     };
+
+//     pedidoImagenes();
+//   }, [datos.id]);
+
+//   return (
+//     <div className="galeria">
+//       <div className="imgPrincipal">
+//         <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" />
+//       </div>
+
+//       <div className="img4">
+//         {imagenes.imagenes?.slice(1, 5).map((image) => (
+//           <div className="contenedorImg" key={image.id}>
+//             <img src={image.urlImagen} alt="Imagen" />
+//           </div>
+//         ))}
+
+//         <div className="botonGrilla">
+//           <button className="verMas" onClick={() => history.push(`/carrusel/${datos.id}`)}>Ver más</button>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Galeria;
