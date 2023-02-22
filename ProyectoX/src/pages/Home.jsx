@@ -53,7 +53,7 @@ const Home = () => {
             </header>
             <List title="Buscar por tipo de alojamiento" style="spaceCategory">
                 {
-                     categorias.map((data,i) => {
+                    categorias.map((data,i) => {
                         return (
                             
                             i<=3 ? <CardCategory datos={data} id={data.id} key={data.id} /> : null

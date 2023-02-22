@@ -1,13 +1,15 @@
 package DH.Integrador.Grupo6.ProyectoX_API.controller;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
-import DH.Integrador.Grupo6.ProyectoX_API.entity.Usuario;
 import DH.Integrador.Grupo6.ProyectoX_API.service.CiudadService;
 import DH.Integrador.Grupo6.ProyectoX_API.service.ProductoService;
+import DH.Integrador.Grupo6.ProyectoX_API.service.ReservaService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,19 +23,31 @@ public class ProductoController {
 
     private ProductoService productoService;
 
+    private ReservaService reservaService;
+
     @Autowired
-    public ProductoController(CiudadService ciudadService, ProductoService productoService) {
+    public ProductoController(CiudadService ciudadService, ProductoService productoService,ReservaService reservaService ) {
         this.ciudadService = ciudadService;
         this.productoService = productoService;
+        this.reservaService = reservaService;
     }
-
-
-
 
     @GetMapping
-    public ResponseEntity<List<Producto>> listProductos (){
-        return  ResponseEntity.ok(productoService.buscarProducto());
-    }
+    public ResponseEntity<List<Producto>> listProductos (@RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkIn ,
+                                                         @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkOut) {
+
+            return  ResponseEntity.ok(productoService.buscarProducto(checkIn, checkOut));
+        }
+
+
+
+    @GetMapping("fecha/ciudad/{id}")
+    public ResponseEntity<List<Producto>> buscarPoriductoPorFechaYciudad(
+                @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkIn,
+                @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkOut,
+                @PathVariable Long id){
+        return ResponseEntity.ok(productoService.buscarPorFechasYCiudad(checkIn, checkOut, id));
+        }
     
     @GetMapping("/{id}")
     public  ResponseEntity<Producto> buscarProducto(@PathVariable Long id) {
@@ -47,11 +61,8 @@ public class ProductoController {
 
     @GetMapping("/ciudad/{id}")
     public ResponseEntity<List<Producto>> buscarProductoPorCiudad(@PathVariable Long id){
-
         Optional<Ciudad> ciudadBuscada=ciudadService.buscarCiudad(id);
         if (ciudadBuscada.isPresent()){
-
-
             List<Producto> productoBuscado= productoService.buscarPorCiudad(ciudadBuscada);
             if (!productoBuscado.isEmpty()){
                 return ResponseEntity.ok(productoBuscado);
@@ -59,16 +70,12 @@ public class ProductoController {
             else{
                 return ResponseEntity.notFound().build();
             }
-
         }
         else{
             return ResponseEntity.notFound().build();
         }
-
-
     }
-    
-        
+
     @PostMapping
     public ResponseEntity<Producto> registrarProducto(@RequestBody Producto producto){
         return  ResponseEntity.ok(productoService.guardarProducto(producto));

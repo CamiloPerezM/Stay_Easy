@@ -6,6 +6,7 @@ import DH.Integrador.Grupo6.ProyectoX_API.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,7 +22,7 @@ public class ProductoService {
     }
 
     // get
-    public List<Producto> buscarProducto() {
+    public List<Producto> buscarProducto(LocalDate checkIn, LocalDate checkOut) {
         return  productoRepository.findAll();
     }
     public Optional<Producto> buscarProducto(Long id){
@@ -30,7 +31,18 @@ public class ProductoService {
     }
 
     public List<Producto> buscarPorCiudad(Optional<Ciudad> ciudad){
+
         return productoRepository.findByCiudad(ciudad);
+    }
+        public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
+            System.out.println(checkIn);
+            System.out.println(checkOut);
+        return productoRepository.findByDate(checkIn,checkOut);
+    }
+
+
+    public List<Producto> buscarPorFechasYCiudad(LocalDate checkIn, LocalDate checkOut, Long id){
+        return productoRepository.findByDateAndCity(checkIn, checkOut, id);
     }
 
 

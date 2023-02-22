@@ -2,6 +2,7 @@ package DH.Integrador.Grupo6.ProyectoX_API.service;
 
 
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
+import DH.Integrador.Grupo6.ProyectoX_API.entity.Imagenes;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Reserva;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ReservasRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,17 +25,23 @@ public class ReservaService {
     // get
     public List<Reserva> buscarReserva(){ return reservasRepository.findAll();}
 
+
     public Optional<Reserva> buscarReserva(Long id){
         return reservasRepository.findById(id);
     }
 
     //BuscarPorProducto
     //get
-    public List<Reserva> buscarReservaPorProducto(Long id) { return reservasRepository.findByProductoId(id);}
+    public List<Reserva> buscarReservaPorProducto(Long id) {
+        return reservasRepository.findByProductoId(id);
+    }
 
 
     // post
-    public Reserva guardarReserva (Reserva reserva){ return reservasRepository.save(reserva);}
+    public Reserva guardarReserva (Reserva reserva){
+        System.out.println(reserva.getProducto());
+        return reservasRepository.save(reserva);
+    }
 
 
     // put

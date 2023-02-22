@@ -1,0 +1,275 @@
+
+/* ----- Estilos del header ----- */
+
+.div-header {
+    width: auto;
+    background-color: #0f4c5c;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.tipo-hospedaje-header {
+    position: relative;
+    top: -8px;
+    left: 43px;
+    color:#fb8b24;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.nombre-hospedaje-header {
+    position: relative;
+    top: -38px;
+    left: 43px;
+    font-size: 1.7rem;
+    color:#fb8b24;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+/* ----- Estilos del main ----- */
+
+.titulos-main {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color : #383B58;
+}
+
+.marginCalendar{
+    margin-top: 10px;
+}
+
+.containerDisplay{
+    display: flex;
+    justify-content: space-between;
+}
+/* ----- Estilos del formulario de reserva ----- */
+
+.formulario-reserva {
+    width: 847px;
+    height: 217px;
+    box-shadow: 0px 4px 4px #00000040;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.top-row, .bottom-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 5px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+
+.nombre {
+    position: relative;
+    top: 30px;
+    left: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #383B58;
+}
+
+.nombre-input {
+    position: relative;
+    width: 380px;
+    height: 40px;
+    top: 35px;
+    left: 30px;
+    background: #DFE4EA;
+    opacity: 0.8;
+    box-shadow: 0px 1px 5px #00000026;
+    border-radius: 6px;
+}
+
+
+.apellido {
+    position: relative;
+    top: 30px;
+    left: -20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #383B58;
+}
+
+.apellido-input {
+    position: relative;
+    width: 380px;
+    height: 40px;
+    top: 35px;
+    left: -20px;
+    background: #DFE4EA;
+    opacity: 0.8;
+    box-shadow: 0px 1px 5px #00000026;
+    border-radius: 6px;
+}
+
+
+.email {
+    position: relative;
+    top: 45px;
+    left: 30px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #383B58;
+}
+
+.email-input {
+    position: relative;
+    position: relative;
+    width: 380px;
+    height: 40px;
+    top: 50px;
+    left: 30px;
+    background: #DFE4EA;
+    opacity: 0.8;
+    box-shadow: 0px 1px 5px #00000026;
+    border-radius: 6px;
+}
+
+.ciudad {
+    position: relative;
+    top: 45px;
+    left: -20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 14px;
+    color: #383B58;
+}
+
+.ciudad-input {
+    position: relative;
+    width: 380px;
+    height: 40px;
+    top: 50px;
+    left: -20px;
+    background: #FFFFFF;
+    opacity: 0.8;
+    box-shadow: 0px 1px 5px #00000026;
+    border-radius: 6px;
+}
+
+/* ----- Estilos del formulario de hora de llegada ----- */
+
+.Formulario-Hora-llegada {
+    width: 847px;
+    height: 117px;
+    box-shadow: 0px 4px 4px #00000040;
+    border-radius: 8px;
+    background-color: #FFFFFF;
+}
+
+.Texto-Check-in{
+    position: relative;
+    top: 20px;
+    left: 20px;
+    color: #383B58;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.texto-Select-Formulario{
+    position: relative;
+    top: 30px;
+    left: 23px;
+    color: #383B58;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+
+.select-hora-llegada{
+    position: relative;
+    height: 35px;
+    width: 400px;
+    top: 35px;
+    left: 23px;
+    border-radius: 8px;
+    color: #383B58;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    bottom: -19.01%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 28px;
+    padding: 5px;
+}
+
+/* ----- Estilos del footer ----- */
+
+.titulo-principal-footer {
+    position: relative;
+    top: 25px;
+    left: 43px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    color : #383B58;
+}
+
+.line{
+    position: relative;
+    top: 15px;
+    border: none;
+    height: 2px;
+    background-color: #0f4c5c;
+    margin: 20px 0;
+}
+
+.container-footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.columna {
+    position: relative;
+    left: 23px;
+    margin-bottom: 100px;
+    padding: 20px;
+}
+
+.titulos-footer {
+    position: relative;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    color : #383B58;
+}
+
+.textos-footer {
+    position: relative;
+    top: 25px;
+    font-family: 'Roboto';
+    font-style: normal;
+}

@@ -4,88 +4,60 @@ import { Button } from 'antd';
 import 'react-calendar/dist/Calendar.css';
 
 function Calendario() {
-  const [dateRange, setDateRange] = useState([new Date(), new Date()]);
+  const [fechaInicial, setFechaInicial] = useState(null);
+  const [fechaFinal, setFechaFinal] = useState(null);
+  const [rangoFechas, setRangoFechas] = useState([]);
 
   const handleDateChange = (date) => {
-    setDateRange((prevRange) => {
-      if (prevRange[0] && !prevRange[1]) {
-        // Si se ha seleccionado la primera fecha, pero no la segunda
-        // establecer la segunda fecha a la fecha seleccionada y devolver el nuevo rango de fechas
-        return [prevRange[0], date];
-      } else {
-        // Si se han seleccionado ambas fechas, restablecer el rango a la nueva fecha seleccionada
-        return [date, null];
-      }
-    });
+    setFechaInicial(date[0]);
+    setFechaFinal(date[1]);
+    setRangoFechas(date);
   };
 
-  const handleApplyButtonClick = () => {
-    console.log('Selected dates:', dateRange);
-    // Aquí puedes hacer lo que necesites con las fechas seleccionadas
+  const resetSelección = () => {
+    setFechaInicial(null);
+    setFechaFinal(null);
+    setRangoFechas([]);
   };
 
   return (
     <div className='calendar'>
       <div className='seleccion'>
+<<<<<<< HEAD
         <h3> Fechas disponibles </h3>
         <p>
           {dateRange[0]?.toLocaleDateString() || ''} - {dateRange[1]?.toLocaleDateString() || ''}
         </p>
+=======
+        <h2>Selecciona un rango de fechas:</h2>
+        {fechaInicial && fechaFinal ? (
+          <h1>
+            {fechaInicial.toLocaleDateString()} - {fechaFinal.toLocaleDateString()}
+          </h1>
+        ) : (
+          <p>Selecciona un rango de fechas</p>
+        )}
+>>>>>>> 4aa420b18bcbdc1dda5ea30e32b280f36ac52e10
       </div>
       <div className='calendario'>
         <Calendar
           showDoubleView={true}
           selectRange={true}
-          value={dateRange}
+          minDate={new Date(Date.now())}
+          goToRangeStartOnSelect={false}
           onChange={handleDateChange}
-          allowPartialRange={true}
         />
       </div>
-      <Button onClick={handleApplyButtonClick} className='aplicar'>Aplicar</Button>
+      <div className='botonesCalendario'>
+        <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
+          Aplicar
+        </Button>
+        <Button className='borrar' onClick={resetSelección}>
+          Borrar selección
+        </Button>
+      </div>
     </div>
   );
 }
 
 export default Calendario;
-
-
-
-
-
-
-
-
-// import React, { useState } from "react";
-// import { Button, Form, DatePicker } from 'antd';
-
-// const { RangePicker } = DatePicker
-
-// function Calendario() {
-//   const [selectedDates, setSelectedDates] = useState([]);
-
-//   const onOpenChange = (open) => {
-//     console.log("onOpenChange", open);
-//   };
-  
-//   const onCalendarChange = (dates) => {
-//     console.log("onCalendarChange", dates);
-//     setSelectedDates(dates);
-//   };
-
-//   const handleApplyButtonClick = () => {
-//     console.log('Selected dates:', selectedDates);
-//     // Aquí puedes hacer lo que necesites con las fechas seleccionadas
-//   };
-
-//   return (
-//     <div className="calendar">
-//       <Form.Item>
-//         <RangePicker onOpenChange={onOpenChange} onCalendarChange={onCalendarChange} placeholder={["Check in", "Check out"]} />
-//       </Form.Item>
-        
-//       <Button onClick={handleApplyButtonClick}>Aplicar</Button>
-//     </div>
-//   )
-// }
-
-// export default Calendario;
