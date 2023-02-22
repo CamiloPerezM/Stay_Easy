@@ -101,10 +101,25 @@ hr {
     font-family: 'Roboto', sans-serif;
 }
 
+.botones{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+
 .aplicar{
     background-color: rgb(251, 139, 36);
     color: #fff;
     border-radius: 0%;
+}
+
+.borrar{
+    background-color: rgb(251, 139, 36);
+    color: #fff;
+    border-radius: 0%;
+    opacity: 0.9;
 }
 
 @media only screen and (max-width: 768px) {
