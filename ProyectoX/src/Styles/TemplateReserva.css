@@ -40,6 +40,14 @@
     color : #383B58;
 }
 
+.marginCalendar{
+    margin-top: 10px;
+}
+
+.containerDisplay{
+    display: flex;
+    justify-content: space-between;
+}
 /* ----- Estilos del formulario de reserva ----- */
 
 .formulario-reserva {
@@ -180,7 +188,7 @@ label {
 .Texto-Check-in{
     position: relative;
     top: 20px;
-    left: 43px;
+    left: 20px;
     color: #383B58;
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -228,7 +236,7 @@ label {
     color : #383B58;
 }
 
-hr{
+.line{
     position: relative;
     top: 15px;
     border: none;
