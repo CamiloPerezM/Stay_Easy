@@ -26,9 +26,9 @@ function Galeria() {
     }
 
     pedidoImagenes() 
-  },[datos.id])
-console.log(imagenes);
-imagenes?.imagenes?.sort((a,b) => a.id - b.id)
+     },[datos.id])
+      console.log(imagenes);
+      imagenes?.imagenes?.sort((a,b) => a.id - b.id)
 
 
   return (
@@ -36,6 +36,9 @@ imagenes?.imagenes?.sort((a,b) => a.id - b.id)
 
           <div className='imgPrincipal'>
             <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" />
+            <Link to={`/carrusel/${datos.id}`}>
+              <button className="verMas">Ver más</button>
+            </Link>
           </div>
 
         <div className='img4'>
@@ -46,9 +49,7 @@ imagenes?.imagenes?.sort((a,b) => a.id - b.id)
           ))}
 
           <div className='botonGrilla'>
-            <Link to={`/carrusel/${datos.id}`}>
-              <button className="verMas">Ver más</button>
-            </Link>
+            
           </div>
 
         </div>
