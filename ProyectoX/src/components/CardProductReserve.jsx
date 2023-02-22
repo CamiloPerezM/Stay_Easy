@@ -3,6 +3,7 @@ import "../Styles/CardProductReserve.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Icons from "./utils/Icons";
+import { Link } from "react-router-dom";
 
 const CardProductReserve = () => {
 
@@ -23,7 +24,7 @@ const CardProductReserve = () => {
                 <hr />
                 <p className="datesSeparate"><span className="checks">Check-Out:</span><span className="dates">25/11/2023</span></p>
                 <hr />
-                <button className="buttonReserve">Confirmar Reserva</button>
+                <Link to={"/reserve"}><button className="buttonReserve">Confirmar Reserva</button></Link>
             </div>
         </div>
 
