@@ -2,7 +2,6 @@ package DH.Integrador.Grupo6.ProyectoX_API.service;
 
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Ciudad;
 import DH.Integrador.Grupo6.ProyectoX_API.entity.Producto;
-import DH.Integrador.Grupo6.ProyectoX_API.entity.Reserva;
 import DH.Integrador.Grupo6.ProyectoX_API.repository.ProductoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +22,7 @@ public class ProductoService {
     }
 
     // get
-    public List<Producto> buscarProducto() {
+    public List<Producto> buscarProducto(LocalDate checkIn, LocalDate checkOut) {
         return  productoRepository.findAll();
     }
     public Optional<Producto> buscarProducto(Long id){
@@ -35,14 +34,13 @@ public class ProductoService {
 
         return productoRepository.findByCiudad(ciudad);
     }
-
-    /*public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
-        System.out.println(checkIn);
-        System.out.println(checkOut);
+        public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
+            System.out.println(checkIn);
+            System.out.println(checkOut);
         return productoRepository.findByDate(checkIn,checkOut);
     }
 
-     */
+
     public List<Producto> buscarPorFechasYCiudad(LocalDate checkIn, LocalDate checkOut, Long id){
         return productoRepository.findByDateAndCity(checkIn, checkOut, id);
     }
