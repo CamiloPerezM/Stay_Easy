@@ -13,7 +13,6 @@ import LoginServices from '../components/Services/LoginServices';
 
 const Login = () => {
     const [password, cambiarPassword] = useState({ campo: '', valido: null });
-    const [password2, cambiarPassword2] = useState({ campo: '', valido: null });
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
     const [user,  setUser] = useState (null);
@@ -26,19 +25,6 @@ const Login = () => {
         correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/
     }
 
-    // const validarPassword2 = () => {
-    // 		if(password.campo.length > 0){
-    // 			if(password.campo !== password2.campo){
-    // 				cambiarPassword2((prevState) => {
-    // 					return {...prevState, valido: 'false'}
-    // 				});
-    // 			} else {
-    // 				cambiarPassword2((prevState) => {
-    // 					return {...prevState, valido: 'true'}
-    // 				});
-    // 			}
-    // 		}
-    // 	}
     const onSubmit = async (e) => {
         e.preventDefault();
         
@@ -50,7 +36,7 @@ const Login = () => {
             })
 
             localStorage.setItem('user', JSON.stringify(user));
-            navigate('/home', { replace: true });
+            navigate('/', { replace: true });
             
             console.log(user);
             setUser(user);
@@ -64,24 +50,6 @@ const Login = () => {
 
         }
 
-        
-        
-        
-
-        // if(
-        //     password.valido === 'true' && 
-        //     password2.valido === 'true' && 
-        //     correo.valido === 'true'
-        //     ){
-        //     cambiarFormularioValido(true);
-
-
-        //     cambiarCorreo({campo: '', valido: null});
-        //     cambiarPassword({campo: '', valido: null});
-        //     cambiarPassword2({campo: '', valido: null});
-        //     }else{
-        //     cambiarFormularioValido(false)
-        //     }
     }
 
 
@@ -126,19 +94,6 @@ const Login = () => {
                         leyendaError="La contraseña debe tener 6 o mas digitos."
                         expresionRegular={expresiones.password}
                     />
-
-
-                    {/* <Input
-                estado={password2}
-                cambiarEstado={cambiarPassword2}
-                tipo="password"
-                label="Repetir Contraseña"
-                placeholder="Repite la contraseña"
-                name="password2"
-                leyendaError="La contraseña no es igual"
-                funcion={validarPassword2}
-            /> */}
-
 
 
                     <ContenedorTerminos>
