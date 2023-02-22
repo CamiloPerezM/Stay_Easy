@@ -41,7 +41,7 @@ function Calendario() {
           onChange={handleDateChange}
         />
       </div>
-      <div className='botones'>
+      <div className='botonesCalendario'>
         <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
           Aplicar
         </Button>
