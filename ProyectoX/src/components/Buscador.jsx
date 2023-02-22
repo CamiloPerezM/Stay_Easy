@@ -71,7 +71,9 @@ function Buscador() {
 
 
       <Form.Item>
-        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> <Button onClick={handleApplyButtonClick} className="search">Buscar</Button></Link>}
+        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> 
+          <Button onClick={handleApplyButtonClick} className="search">Buscar</Button>
+        </Link>}
       </Form.Item>
     </Form>
   );
