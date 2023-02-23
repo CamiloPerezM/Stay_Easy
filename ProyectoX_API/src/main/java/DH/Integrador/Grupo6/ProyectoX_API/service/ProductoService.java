@@ -34,15 +34,21 @@ public class ProductoService {
 
         return productoRepository.findByCiudad(ciudad);
     }
-        public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
+       /* public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
             System.out.println(checkIn);
             System.out.println(checkOut);
         return productoRepository.findByDate(checkIn,checkOut);
     }
 
+        */
+
 
     public List<Producto> buscarPorFechasYCiudad(LocalDate checkIn, LocalDate checkOut, Long id){
         return productoRepository.findByDateAndCity(checkIn, checkOut, id);
+    }
+
+    public List<Producto> buscarPorFechas(LocalDate checkIn, LocalDate checkOut){
+        return productoRepository.findByDate(checkIn, checkOut);
     }
 
 
