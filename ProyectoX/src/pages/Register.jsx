@@ -3,7 +3,7 @@ import { Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, Mensaje
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "../Styles/Register.css"
 import Buscador from '../components/Buscador';
 import RegisterServices from '../components/Services/RegisterServices';
@@ -16,6 +16,9 @@ const Registro = () => {
     const [password2, cambiarPassword2] = useState({ campo: '', valido: null });
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
+    const [user,  setUser] = useState (null);
+
+    let navigate = useNavigate();
 
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -44,16 +47,18 @@ const Registro = () => {
 
             RegisterServices.Register ({
                 email: correo.campo, 
-                contrasenna: password.campo
+                contrasenna: password.campo,
+                nombre: nombre.campo,
+                apellido: apellido.campo
             })
 
             localStorage.setItem('user', JSON.stringify(user));
-            // navigate('/', { replace: true });
+            navigate('/', { replace: true });
             
             console.log(user);
             setUser(user);
-            cambiarCorreo('');
-            cambiarPassword('')
+            // cambiarCorreo('');
+            // cambiarPassword('')
 
         } catch (error) {
 
