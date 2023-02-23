@@ -20,7 +20,7 @@ const Header = () => {
         return Navigate ('/') 
     }
 
-    const actions = user.token
+    const actions = user?.token
         ? <div className="usuario botones">
             <p> Bienvenido: {user.usuarioDTO.nombre} </p>
             <button onClick={handleClick} className="crear"> Cerrar sesion </button>
