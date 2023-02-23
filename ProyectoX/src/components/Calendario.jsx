@@ -51,7 +51,7 @@ function Calendario({id}) {
     </div>
     <div className='botonesCalendario'>
       <Link to={`/producto/${id}/reserva`}> <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
-        Aplicar
+        Reservar
       </Button></Link>
       <Button className='borrar' onClick={resetSelección}>
         Borrar selección
