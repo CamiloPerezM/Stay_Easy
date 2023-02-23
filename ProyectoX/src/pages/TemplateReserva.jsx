@@ -7,7 +7,7 @@ import CardProductReserve from '../components/CardProductReserve';
 import { useParams } from 'react-router';
 
 
-function Formulario() {
+function TemplateReserva() {
 
 
 
@@ -98,4 +98,4 @@ function Formulario() {
 
 }
 
-export default Formulario;
+export default TemplateReserva;

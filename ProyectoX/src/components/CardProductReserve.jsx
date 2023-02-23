@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "../Styles/CardProductReserve.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import Icons from "./utils/Icons";
+import Icons from "./Services/Icons";
 import { Link, useParams } from "react-router-dom";
 
 const CardProductReserve = ({fechaInicial,fechaFinal}) => {
