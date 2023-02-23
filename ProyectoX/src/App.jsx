@@ -10,6 +10,7 @@ import TemplateContenedor from './Contenedor/TemplateContenedor'
 import FilterCity from './pages/FilterCity'
 import ReserveTemplate from './Contenedor/ReserveTemplate'
 import Carrusel from './components/Carrusel';
+import TemplateReserva from './pages/TemplateReserva'
 
 
 function App() {

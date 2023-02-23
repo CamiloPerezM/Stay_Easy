@@ -45,7 +45,7 @@ const TemplateContenedor = () => {
                 </div>
 
                 <div className="ubication">
-                    <span> <FontAwesomeIcon icon={faLocationDot}/> {`${datosProducto?.ciudad?.nombre}, ${datosProducto?.ciudad?.pais}`} </span>
+                    <span> <FontAwesomeIcon icon={faLocationDot}/> {`${datosProducto?.ciudad?.nombre??"Cargando"}, ${datosProducto?.ciudad?.pais ??"Cargando"}`} </span>
                     <span> Calificacion: {datosProducto.puntaje} estrellas </span>
                 </div>
 
