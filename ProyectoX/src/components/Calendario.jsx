@@ -23,18 +23,14 @@ function Calendario() {
   return (
     <div className='calendar'>
     <div className='seleccion'>
-      <h3> Fechas disponibles </h3>
-      <p>
-        {dateRange[0]?.toLocaleDateString() || ''} - {dateRange[1]?.toLocaleDateString() || ''}
-      </p>
-      <h2>Selecciona un rango de fechas:</h2>
-      {fechaInicial && fechaFinal ? (
-        <h1>
-          {fechaInicial.toLocaleDateString()} - {fechaFinal.toLocaleDateString()}
-        </h1>
-      ) : (
-        <p>Selecciona un rango de fechas</p>
-      )}
+         <h2>Selecciona un rango de fechas:</h2>
+         {fechaInicial && fechaFinal ? (
+           <p>
+             {fechaInicial.toLocaleDateString()} - {fechaFinal.toLocaleDateString()}
+           </p>
+         ) : (
+           <p>Selecciona un rango de fechas</p>
+         )}
     </div>
     <div className='calendario'>
       <Calendar
