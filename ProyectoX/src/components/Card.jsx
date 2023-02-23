@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Styles from "../Styles/Card.module.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import Icons from "./utils/Icons";
+import Icons from "./Services/Icons";
 
 
 export function Card({ datos }) {

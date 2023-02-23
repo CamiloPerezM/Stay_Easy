@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { ContextGlobal } from "./utils/global.context";
+import { ContextGlobal } from "./Services/global.context";
 import { List } from "./List";
 import { Card } from "./Card";
 import { useLocation } from "react-router";

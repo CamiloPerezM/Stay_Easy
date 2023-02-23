@@ -52,6 +52,8 @@ export const ContextProvider = ({children}) =>{
         }
       }
 
+      
+
       getData();
       getCiudades();
       getProductos();

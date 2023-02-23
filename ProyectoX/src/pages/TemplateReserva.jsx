@@ -1,53 +1,34 @@
-import React, { useState } from 'react';
-import Calendario from '../components/Calendario';
-import CardReserve from '../components/CardReserve';
+import React, { useEffect, useState } from 'react';
 import InputBlock from '../components/InputBlock';
 import "../Styles/TemplateReserva.css"
 import Calendar from 'react-calendar';
 import HourInput from '../components/HourInput';
 import CardProductReserve from '../components/CardProductReserve';
+import { useParams } from 'react-router';
 
 
-function Formulario() {
-    const [formulario, setFormulario] = useState({
-        nombre: '',
-        apellido: '',
-        correoElectronico: '',
-        ciudad: ''
-    });
+function TemplateReserva() {
 
-    const handleChange = e => {
-        setFormulario({
-            ...formulario,
-            [e.target.name]: e.target.value
-        });
-    };
 
-    const handleSubmit = e => {
-        e.preventDefault();
-        console.log(formulario);
-        // envíe los datos del formulario a su servidor aquí
-    };
 
-    const [dateRange, setDateRange] = useState([new Date(), new Date()]);
+
+    const [fechaInicial, setFechaInicial] = useState(null);
+    const [fechaFinal, setFechaFinal] = useState(null);
+    const [rangoFechas, setRangoFechas] = useState([]);
 
     const handleDateChange = (date) => {
-        setDateRange((prevRange) => {
-            if (prevRange[0] && !prevRange[1]) {
-                // Si se ha seleccionado la primera fecha, pero no la segunda
-                // establecer la segunda fecha a la fecha seleccionada y devolver el nuevo rango de fechas
-                return [prevRange[0], date];
-            } else {
-                // Si se han seleccionado ambas fechas, restablecer el rango a la nueva fecha seleccionada
-                return [date, null];
-            }
-        });
+        setFechaInicial(date[0]);
+        setFechaFinal(date[1]);
+        setRangoFechas(date);
     };
 
-    const handleApplyButtonClick = () => {
-        console.log('Selected dates:', dateRange);
-        // Aquí puedes hacer lo que necesites con las fechas seleccionadas
+    const resetSelección = () => {
+        setFechaInicial(null);
+        setFechaFinal(null);
+        setRangoFechas([]);
     };
+
+
 
     return (
         <>
@@ -59,7 +40,7 @@ function Formulario() {
             </header>
 
             <main className='containerDisplay backgroundColor'>
-           
+
                 <div className='main'>
 
                     <InputBlock />
@@ -70,9 +51,9 @@ function Formulario() {
                         <Calendar
                             showDoubleView={true}
                             selectRange={true}
-                            value={dateRange}
+                            minDate={new Date(Date.now())}
+                            goToRangeStartOnSelect={false}
                             onChange={handleDateChange}
-                            allowPartialRange={true}
                         />
 
                     </div>
@@ -81,12 +62,12 @@ function Formulario() {
 
                 </div>
 
-                <CardProductReserve/>
+                <CardProductReserve fechaInicial={fechaInicial} fechaFinal={fechaFinal}/>
             </main>
 
             <article>
                 <h3 className='titulo-principal-footer'>Que tenes que saber</h3>
-                <hr className='line'/>
+                <hr className='line' />
                 <div className='container-footer'>
                     <div className='columna'>
                         <h3 className='titulos-footer'>Normas de la casa</h3>
@@ -117,4 +98,4 @@ function Formulario() {
 
 }
 
-export default Formulario;
+export default TemplateReserva;

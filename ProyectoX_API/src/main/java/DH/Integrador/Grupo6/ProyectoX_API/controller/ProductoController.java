@@ -36,8 +36,10 @@ public class ProductoController {
     public ResponseEntity<List<Producto>> listProductos (@RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkIn ,
                                                          @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkOut) {
 
-            return  ResponseEntity.ok(productoService.buscarProducto());
+            return  ResponseEntity.ok(productoService.buscarPorFechas(checkIn, checkOut));
         }
+
+
 
     @GetMapping("fecha/ciudad/{id}")
     public ResponseEntity<List<Producto>> buscarPoriductoPorFechaYciudad(

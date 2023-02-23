@@ -8,9 +8,9 @@ import Home from './pages/Home'
 import FiltroCategoria from './components/FiltroCategoria'
 import TemplateContenedor from './Contenedor/TemplateContenedor'
 import FilterCity from './pages/FilterCity'
-import ReserveTemplate from './pages/ReserveTemplate'
-import TemplateReserva from './pages/TemplateReserva'
+import ReserveTemplate from './Contenedor/ReserveTemplate'
 import Carrusel from './components/Carrusel';
+import TemplateReserva from './pages/TemplateReserva'
 
 
 function App() {
@@ -27,6 +27,7 @@ function App() {
           <Route index path="/home" element={<Home/>} />
           <Route path="/registro" element={<Registro/>} />
           <Route path="/login" element={<Login />} /> 
+          {/* <Route path="/logout" element={<Logout />} /> */}
           <Route path="/filtroCategoria" element={<FiltroCategoria />} />
           <Route path="/producto/:id" element={<TemplateContenedor />} />
           <Route path='/producto/ciudad/:id' element={<FilterCity/>}/>

@@ -8,6 +8,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/effect-flip";
 import "swiper/css/effect-fade";
+import '../Styles/Template.css'
 
 
 function Carrusel() {
