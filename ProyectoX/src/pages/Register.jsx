@@ -52,8 +52,11 @@ const Registro = () => {
                 apellido: apellido.campo
             })
 
-            localStorage.setItem('user', JSON.stringify(user));
-            navigate('/', { replace: true });
+            JSON.parse(localStorage.getItem('user') ?? '{}');
+            navigate('/');
+
+
+            
             
             console.log(user);
             setUser(user);
@@ -85,9 +88,6 @@ const Registro = () => {
             cambiarFormularioValido(false)
         }
     }
-
-
-
 
 
     return (
@@ -154,7 +154,6 @@ const Registro = () => {
                         leyendaError="La contraseña no es igual"
                         funcion={validarPassword2}
                     />
-
 
 
                     <ContenedorTerminos>
