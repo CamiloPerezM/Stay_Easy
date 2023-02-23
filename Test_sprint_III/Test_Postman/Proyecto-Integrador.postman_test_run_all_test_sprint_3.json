@@ -1,0 +1,250 @@
+{
+	"id": "e2755fb4-13fc-4120-a2a4-45132a9a3e7f",
+	"name": "Proyecto-Integrador",
+	"timestamp": "2023-02-18T05:07:33.160Z",
+	"collection_id": "23250829-4e147cac-8d98-415e-a92f-fbf757030a48",
+	"folder_id": "23250829-29e1f70c-62d7-4ab7-936b-3f5fa3dde551",
+	"environment_id": "0",
+	"totalPass": 13,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-18T05:07:31.733Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5eda53b1-420d-4539-be02-adcc7afbd223",
+			"name": "Buscar_Usuario_X_Id",
+			"url": "localhost:8080/usuario/1",
+			"time": 24,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true,
+				"Body matches NAME": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches NAME": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				24
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true,
+					"Body matches NAME": true
+				}
+			]
+		},
+		{
+			"id": "d29135fb-186c-41d7-9735-6b85fc426786",
+			"name": "Agregar_Usuario",
+			"url": "localhost:8080/usuario/registrar",
+			"time": 178,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Body matches ID": true,
+				"Body matches EMAIL": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches EMAIL": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				178
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Body matches ID": true,
+					"Body matches EMAIL": true
+				}
+			]
+		},
+		{
+			"id": "e91f6252-860a-4d1f-b141-8bbbfb4e9709",
+			"name": "Crear_Token",
+			"url": "localhost:8080/auth",
+			"time": 196,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				196
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "719e222a-4cfa-40a9-a591-9d342f5b544b",
+			"name": "Agregar_Reserva",
+			"url": "localhost:8080/reserva/registrar",
+			"time": 75,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				75
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Body matches ID": true
+				}
+			]
+		},
+		{
+			"id": "5cf84ae9-0dc3-4f21-8a83-bb02a498c00d",
+			"name": "Listar_Reservas",
+			"url": "localhost:8080/reserva",
+			"time": 30,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"LENGTH": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"LENGTH": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				30
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"LENGTH": true
+				}
+			]
+		},
+		{
+			"id": "a24a0c3e-9170-429d-b258-21413875efd8",
+			"name": "Buscar_Reserva_X_ID",
+			"url": "localhost:8080/reserva/2",
+			"time": 22,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				22
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 525,
+	"collection": {
+		"requests": [
+			{
+				"id": "5eda53b1-420d-4539-be02-adcc7afbd223",
+				"method": "GET"
+			},
+			{
+				"id": "d29135fb-186c-41d7-9735-6b85fc426786",
+				"method": "POST"
+			},
+			{
+				"id": "e91f6252-860a-4d1f-b141-8bbbfb4e9709",
+				"method": "POST"
+			},
+			{
+				"id": "719e222a-4cfa-40a9-a591-9d342f5b544b",
+				"method": "POST"
+			},
+			{
+				"id": "5cf84ae9-0dc3-4f21-8a83-bb02a498c00d",
+				"method": "GET"
+			},
+			{
+				"id": "a24a0c3e-9170-429d-b258-21413875efd8",
+				"method": "GET"
+			}
+		]
+	}
+}
