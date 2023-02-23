@@ -1,0 +1,53 @@
+{
+	"id": "61e4535e-310d-4a55-aff9-f7151edfc20b",
+	"name": "Proyecto-Integrador",
+	"timestamp": "2023-02-18T04:37:17.569Z",
+	"collection_id": "23250829-4e147cac-8d98-415e-a92f-fbf757030a48",
+	"folder_id": "23250829-9a586d77-df67-4a84-b244-4e2fc62787e7",
+	"environment_id": "0",
+	"totalPass": 1,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-18T04:37:16.082Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e91f6252-860a-4d1f-b141-8bbbfb4e9709",
+			"name": "Crear_Token",
+			"url": "localhost:8080/auth",
+			"time": 255,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				255
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 255,
+	"collection": {
+		"requests": [
+			{
+				"id": "e91f6252-860a-4d1f-b141-8bbbfb4e9709",
+				"method": "POST"
+			}
+		]
+	}
+}

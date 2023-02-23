@@ -13,11 +13,11 @@ const InputBlock = () => {
                     <div className="divForm">
                         <span className="spanMargin">
                             <label className="label" htmlFor="fName">Nombre</label>
-                            <input className="inputBlock marginInput" type="text" value={"Hola"} id="fName" name="fName" disabled />
+                            <input className="inputBlock marginInput" type="text" value={"Pablo"} id="fName" name="fName" disabled />
                         </span>
                         <span>
                             <label className="label" htmlFor="fApellido">Apellido</label>
-                            <input className="inputBlock marginInput" type="text" value={"Hola"} id="fApellido" name="fApellido" disabled />
+                            <input className="inputBlock marginInput" type="text" value={"Novoa"} id="fApellido" name="fApellido" disabled />
                         </span>
                     </div>
                     <div className="divForm">
@@ -25,7 +25,7 @@ const InputBlock = () => {
 
                         <span className="spanMargin">
                             <label className="label" htmlFor="fEmail">Email</label>
-                            <input className="inputBlock"type="text" value={"Hola"} id="fEmail" name="fEmail" disabled />
+                            <input className="inputBlock"type="text" value={"pablonn@gmail.com"} id="fEmail" name="fEmail" disabled />
                         </span>
 
                         <span>

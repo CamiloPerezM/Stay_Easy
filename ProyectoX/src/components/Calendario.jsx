@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Calendar from 'react-calendar';
 import { Button } from 'antd';
 import 'react-calendar/dist/Calendar.css';
+import { Link } from 'react-router-dom';
 
-function Calendario() {
+function Calendario({id}) {
   const [fechaInicial, setFechaInicial] = useState(null);
   const [fechaFinal, setFechaFinal] = useState(null);
   const [rangoFechas, setRangoFechas] = useState([]);
+  
 
   const handleDateChange = (date) => {
     setFechaInicial(date[0]);
@@ -19,6 +21,8 @@ function Calendario() {
     setFechaFinal(null);
     setRangoFechas([]);
   };
+
+  
 
   return (
     <div className='calendar'>
@@ -42,9 +46,9 @@ function Calendario() {
       />
     </div>
     <div className='botonesCalendario'>
-      <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
-        Aplicar
-      </Button>
+      <Link to={`/producto/${id}/reserva`}> <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
+        Reservar
+      </Button></Link>
       <Button className='borrar' onClick={resetSelección}>
         Borrar selección
       </Button>

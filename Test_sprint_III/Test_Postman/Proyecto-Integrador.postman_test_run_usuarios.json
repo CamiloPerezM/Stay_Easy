@@ -1,0 +1,108 @@
+{
+	"id": "db3e30bc-b659-4462-92b8-6279488431df",
+	"name": "Proyecto-Integrador",
+	"timestamp": "2023-02-18T04:31:36.325Z",
+	"collection_id": "23250829-4e147cac-8d98-415e-a92f-fbf757030a48",
+	"folder_id": "23250829-f5f0eb19-1ae2-407e-ad6f-f5f9843b4299",
+	"environment_id": "0",
+	"totalPass": 6,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-18T04:31:34.968Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5eda53b1-420d-4539-be02-adcc7afbd223",
+			"name": "Buscar_Usuario_X_Id",
+			"url": "localhost:8080/usuario/1",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true,
+				"Body matches NAME": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches NAME": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				48
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true,
+					"Body matches NAME": true
+				}
+			]
+		},
+		{
+			"id": "d29135fb-186c-41d7-9735-6b85fc426786",
+			"name": "Agregar_Usuario",
+			"url": "localhost:8080/usuario/registrar",
+			"time": 276,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Body matches ID": true,
+				"Body matches EMAIL": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches EMAIL": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				276
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Body matches ID": true,
+					"Body matches EMAIL": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 324,
+	"collection": {
+		"requests": [
+			{
+				"id": "5eda53b1-420d-4539-be02-adcc7afbd223",
+				"method": "GET"
+			},
+			{
+				"id": "d29135fb-186c-41d7-9735-6b85fc426786",
+				"method": "POST"
+			}
+		]
+	}
+}

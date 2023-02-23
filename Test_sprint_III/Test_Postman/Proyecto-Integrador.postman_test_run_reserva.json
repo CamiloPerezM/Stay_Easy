@@ -1,0 +1,133 @@
+{
+	"id": "228ea3b0-e218-4f3f-a4ee-f8132f12f6a8",
+	"name": "Proyecto-Integrador",
+	"timestamp": "2023-02-18T04:54:49.452Z",
+	"collection_id": "23250829-4e147cac-8d98-415e-a92f-fbf757030a48",
+	"folder_id": "23250829-10b83d48-d8bd-49c4-a2e3-2c554acb4859",
+	"environment_id": "0",
+	"totalPass": 6,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-02-18T04:54:48.685Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "719e222a-4cfa-40a9-a591-9d342f5b544b",
+			"name": "Agregar_Reserva",
+			"url": "localhost:8080/reserva/registrar",
+			"time": 102,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 201": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				102
+			],
+			"allTests": [
+				{
+					"Status code is 201": true,
+					"Body matches ID": true
+				}
+			]
+		},
+		{
+			"id": "5cf84ae9-0dc3-4f21-8a83-bb02a498c00d",
+			"name": "Listar_Reservas",
+			"url": "localhost:8080/reserva",
+			"time": 26,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"LENGTH": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"LENGTH": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				26
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"LENGTH": true
+				}
+			]
+		},
+		{
+			"id": "a24a0c3e-9170-429d-b258-21413875efd8",
+			"name": "Buscar_Reserva_X_ID",
+			"url": "localhost:8080/reserva/2",
+			"time": 18,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				18
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 146,
+	"collection": {
+		"requests": [
+			{
+				"id": "719e222a-4cfa-40a9-a591-9d342f5b544b",
+				"method": "POST"
+			},
+			{
+				"id": "5cf84ae9-0dc3-4f21-8a83-bb02a498c00d",
+				"method": "GET"
+			},
+			{
+				"id": "a24a0c3e-9170-429d-b258-21413875efd8",
+				"method": "GET"
+			}
+		]
+	}
+}

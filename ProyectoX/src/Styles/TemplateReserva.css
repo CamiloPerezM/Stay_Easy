@@ -1,6 +1,24 @@
 
 /* ----- Estilos del header ----- */
 
+
+
+.displayflex{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0f4c5c;
+    max-width: 100vw;
+}
+
+.iconArrow{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    margin-top: 25px;
+    font-size: 2rem;
+    color: rgb(236, 227, 227);
+
+}
 .div-header {
     width: auto;
     background-color: #0f4c5c;

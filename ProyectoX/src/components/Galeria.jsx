@@ -30,7 +30,7 @@ function Galeria() {
   return (
     <div className="galeria">
       <div className="imgPrincipal">
-        <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" alt="Imagen principal" />
+        <img src={imagenes.imagenes && imagenes.imagenes[0].urlImagen} id="imgPrimera" />
       </div>
 
       <div className="img4">
