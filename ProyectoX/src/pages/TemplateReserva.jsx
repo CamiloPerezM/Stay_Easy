@@ -5,6 +5,9 @@ import Calendar from 'react-calendar';
 import HourInput from '../components/HourInput';
 import CardProductReserve from '../components/CardProductReserve';
 import { useParams } from 'react-router';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 
 function TemplateReserva() {
@@ -29,14 +32,40 @@ function TemplateReserva() {
     };
 
 
+    const datos = useParams();
+    console.log(datos)
+
+    const [productoCiudad, setProductoCiudad] = useState([]);
+    useEffect(() => {
+
+        async function getProducts() {
+
+            try {
+                const response = await fetch(`http://localhost:8080/producto/${datos.id}`);
+                const data = await response.json();
+                setProductoCiudad(data);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+
+       
+
+        
+        getProducts();
+    }, [datos.id])
+
+
 
     return (
         <>
-            <header>
+            <header className='displayflex'>
                 <div className="div-header">
-                    <h2 className="tipo-hospedaje-header">Hotel</h2>
-                    <h2 className="nombre-hospedaje-header">Hermitage Hotel</h2>
-                </div>
+                    <h2 className="tipo-hospedaje-header">{productoCiudad?.categoria?.titulo?? ""}</h2>
+                    <h2 className="nombre-hospedaje-header">{productoCiudad?.tituloDescripcion??"Cargando"}</h2>
+                </div>   
+                <Link to={`/producto/${datos.id}`}> <span className='iconArrow'> <FontAwesomeIcon icon={faArrowLeft}/></span> </Link>   
             </header>
 
             <main className='containerDisplay backgroundColor'>
