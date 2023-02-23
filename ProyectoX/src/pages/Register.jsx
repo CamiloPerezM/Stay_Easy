@@ -3,9 +3,10 @@ import { Formulario, ContenedorTerminos, ContenedorBotonCentrado, Boton, Mensaje
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
 import Input from '../components/Input';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import "../Styles/Register.css"
 import Buscador from '../components/Buscador';
+import RegisterServices from '../components/Services/RegisterServices';
 
 
 const Registro = () => {
@@ -15,6 +16,9 @@ const Registro = () => {
     const [password2, cambiarPassword2] = useState({ campo: '', valido: null });
     const [correo, cambiarCorreo] = useState({ campo: '', valido: null });
     const [formularioValido, cambiarFormularioValido] = useState(null);
+    const [user,  setUser] = useState (null);
+
+    let navigate = useNavigate();
 
     const expresiones = {
         nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/,
@@ -39,6 +43,33 @@ const Registro = () => {
     const onSubmit = (e) => {
         e.preventDefault();
 
+        try {
+
+            RegisterServices.Register ({
+                email: correo.campo, 
+                contrasenna: password.campo,
+                nombre: nombre.campo,
+                apellido: apellido.campo
+            })
+
+            JSON.parse(localStorage.getItem('user') ?? '{}');
+            navigate('/');
+
+
+            
+            
+            console.log(user);
+            setUser(user);
+            // cambiarCorreo('');
+            // cambiarPassword('')
+
+        } catch (error) {
+
+            console.log(error);
+            // console.log(e);
+
+        }
+
         if (
             nombre.valido === 'true' &&
             apellido.valido === 'true' &&
@@ -57,9 +88,6 @@ const Registro = () => {
             cambiarFormularioValido(false)
         }
     }
-
-
-
 
 
     return (
@@ -126,7 +154,6 @@ const Registro = () => {
                         leyendaError="La contraseña no es igual"
                         funcion={validarPassword2}
                     />
-
 
 
                     <ContenedorTerminos>
