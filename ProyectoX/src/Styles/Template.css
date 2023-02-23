@@ -122,6 +122,20 @@ hr {
     opacity: 0.9;
 }
 
+/* .container{
+    display: flex;
+}
+
+.Atras{
+    border-radius: 3px solid red;
+}
+
+.modal{
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+} */
+
 @media only screen and (max-width: 768px) {
 
 
