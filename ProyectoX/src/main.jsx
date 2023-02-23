@@ -4,7 +4,7 @@ import App from './App'
 import './index.css'
 // import"./Styles/estilos.css"
 import { BrowserRouter } from "react-router-dom";
-import { ContextProvider } from './components/utils/global.context';
+import { ContextProvider } from './components/Services/global.context';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
