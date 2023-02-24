@@ -23,7 +23,9 @@ public class ReservaService {
 
 
     // get
-    public List<Reserva> buscarReserva(){ return reservasRepository.findAll();}
+    public List<Reserva> buscarReserva(){
+        return reservasRepository.findAll();
+    }
 
 
     public Optional<Reserva> buscarReserva(Long id){
