@@ -1,5 +1,6 @@
 package DH.Integrador.Grupo6.ProyectoX_API.entity;
 
+
 import javax.persistence.Entity;
 
 @Entity
