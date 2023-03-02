@@ -55,4 +55,10 @@ post
     "usuario":""
 }
 
+filtrar producto por ciudad y fecha 
+
+http://localhost:8080/producto/fecha/ciudad/9?checkIn=2024-01-18&checkOut=2024-10-20
+
+
+
 
