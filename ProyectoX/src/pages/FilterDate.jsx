@@ -1,5 +1,5 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useHref, useParams } from "react-router";
+import React, {useEffect, useState } from "react";
+import { useParams } from "react-router";
 import { Card } from "../components/Card";
 import { List } from "../components/List";
 
@@ -7,7 +7,11 @@ const FilterDate = () => {
 
     const datos = useParams();
     console.log("filterDate",datos)
-    const [productoCiudad, setProductoCiudad] = useState([]);
+    const [informacion, setInformacion] = useState([]);
+    const paramGet = location.href;
+    console.log(paramGet);
+    const params = paramGet.slice(44,84);
+    console.log(params);
 
 
     useEffect(() => {
@@ -15,9 +19,9 @@ const FilterDate = () => {
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${datos.params}`);
+                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${params}`);
                 const data = await response.json();
-                setProductoCiudad(data);
+                setInformacion(data);
             } catch (error) {
                 console.log(error);
             }
@@ -43,7 +47,7 @@ const FilterDate = () => {
         
 
                 {
-                    productoCiudad.length>0?productoCiudad.map((data) => {
+                    informacion.length>0?informacion.map((data) => {
                         return (
                             <Card datos={data} key={data.id} />
                         )
