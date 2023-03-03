@@ -1,12 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useHref, useParams } from "react-router";
 import { Card } from "../components/Card";
 import { List } from "../components/List";
 
-const FilterCity = () => {
+const FilterDate = () => {
 
     const datos = useParams();
-    console.log("datos del filtro",datos)
+    console.log("filterDate",datos)
     const [productoCiudad, setProductoCiudad] = useState([]);
 
 
@@ -15,7 +15,7 @@ const FilterCity = () => {
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/ciudad/${datos.id}`);
+                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${datos}`);
                 const data = await response.json();
                 setProductoCiudad(data);
             } catch (error) {
@@ -56,6 +56,6 @@ const FilterCity = () => {
 
 }
 
-export default FilterCity;
+export default FilterDate;
 
 

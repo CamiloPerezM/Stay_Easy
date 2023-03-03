@@ -11,10 +11,14 @@ const { Option } = Select;
 
 const { RangePicker } = DatePicker;
 
+
+
+
 function Buscador() {
   const [city, setCity] = useState(null);
   const { ciudades } = useContext(ContextGlobal);
   const [selectedDates, setSelectedDates] = useState([]);
+   let ruta
 
   const onOpenChange = (open) => {
     console.log("onOpenChange", open);
@@ -31,10 +35,95 @@ function Buscador() {
   };
 
 
+
+  
+
+
     const cityFind = ciudades.find(data => data.nombre===city);
 
-  const handleApplyButtonClick = () => {
+
+
+    if (city===null) {
+      ruta = `/home`;
+    }
+    else if(selectedDates.length === 0){
+      ruta = `/producto/ciudad/${city===null?"": cityFind.id}`;
+
+    }
+    else
+    {
+      if(selectedDates[1]!=null && selectedDates[0]!=null){
+
+    let annoIn;
+    let mesIn;
+    let diaIn;
+
+    let annoOut;
+    let mesOut;
+    let diaOut;
+
+    annoIn = selectedDates[0].$y
+    mesIn = selectedDates[0].$M +1
+    diaIn = selectedDates[0].$D
+
+    annoOut = selectedDates[1].$y
+    mesOut = selectedDates[1].$M+1
+    diaOut = selectedDates[1].$D
+
+
+    ////
+
+    mesIn = mesIn.toString().padStart(2, '0');
+    diaIn = diaIn.toString().padStart(2, '0');
+
+    mesOut = mesOut.toString().padStart(2, '0');
+    diaOut = diaOut.toString().padStart(2, '0');
+
+
+
+    //console.log("Año checkin",annoIn);
+    //console.log("mes checkin",mesIn);
+    //console.log("dia checkin",diaIn);
+
+    //console.log("Año checkin",annoOut);
+    //console.log("Año checkin",mesOut);
+    //console.log("Año checkin",diaOut);
+
+
+    
+
+    let stringCheckIn = annoIn+"-"+mesIn+"-"+diaIn;
+    let stringCheckOut = annoOut+"-"+mesOut+"-"+diaOut;
+
+    
+
+    //console.log(stringCheckIn);
+   // console.log(stringCheckOut);
+
+    // ?checkIn=2022-01-18&checkOut=2024-10-20
+
+    const stringPostman = "?checkIn="+stringCheckIn+"&checkOut="+stringCheckOut;
+
+    console.log("string postman",stringPostman );
+
+    let params = cityFind.id+stringPostman;
+
+    ruta = `/producto/fecha/ciudad/${params}`;
+
+
+      }
+
+
+
+
+
+     
+    }
+
+  const handleApplyButtonClick = () => {    
+    
     console.log('Selected dates:', selectedDates);
+        
     // Aquí puedes hacer lo que necesites con las fechas seleccionadas
   };
  
@@ -69,12 +158,20 @@ function Buscador() {
         />
       </Form.Item>
 
-
+      
 
       <Form.Item>
-        {<Link to={`/producto/ciudad/${city===null?"": cityFind.id}`}> 
+
+        
+
+
+
+        {<Link to={ruta}  > 
           <Button onClick={handleApplyButtonClick} className="search">Buscar</Button>
         </Link>}
+
+
+
       </Form.Item>
     </Form>
   );
