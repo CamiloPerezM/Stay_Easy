@@ -81,14 +81,15 @@
 
 
 .galeria{
+    width: 70%;
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+    align-items: flex-end;
 }
 
 .botonGrilla{
-    width: 30px;
-    top: 59%;
-    left: 53.5%;
+    display: grid;
 }
 
 .img4{
@@ -97,14 +98,15 @@
     grid-template-rows: repeat(2, 0fr);
     grid-column-gap: 3px;
     grid-row-gap: 3px;
+    gap: 10px;
 } 
 
 #imgPrimera {
-    width: 22rem;
-    height: 23rem;
+    width: 37rem;
+    height: 23.4rem;
 }
 
-.grilla-imagenes img{
+.galeria img{
     width: 300px;
     height: 180px;
     border-radius: 2rem;
@@ -112,17 +114,58 @@
 
 .verMas{
     width: 69px;
-    background-color: #942c2c;
-    border: none;
-    border-radius: 20%;
-    color: #fff;
-    padding: 10px 10px;
+     background-color: white;
+    border: none;    
+    color:rgb(2, 48, 71);
     text-align: center;
     font-size: 13px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
     cursor: pointer;
+    /*#942c2c; 
+    border-radius: 40%;
+    padding: 10px 10px; */
 }
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .swiper-wrapper{
+    max-width: 800px;
+    max-height: 800px;
+  }
+
+  .swiper-wrapper img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
 
 hr {
     padding: 0;
@@ -224,7 +267,12 @@ h3 {
 .borrar{
     background-color: rgb(251, 139, 36);
     color: #fff;
-    border-radius: 0%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 10rem;
+    height: 2.2rem;
+    border-radius: 0.3125rem;
     opacity: 0.9;
 }
 
