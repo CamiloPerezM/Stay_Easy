@@ -234,11 +234,9 @@ h3 {
 }
 
 .botonesCalendario{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .aplicar{
@@ -257,13 +255,6 @@ h3 {
     margin: 1.5rem;
 }
 
-.carrusel {
-    
-    width: 40rem;
-    height: 38rem;
-    margin: 3rem;
-}
-
 .borrar{
     background-color: rgb(251, 139, 36);
     color: #fff;
@@ -275,20 +266,6 @@ h3 {
     border-radius: 0.3125rem;
     opacity: 0.9;
 }
-
-/* .container{
-    display: flex;
-}
-
-.Atras{
-    border-radius: 3px solid red;
-}
-
-.modal{
-    display: grid;
-    grid-column-gap: 20px;
-    grid-row-gap: 20px;
-} */
 
 @media only screen and (max-width: 768px) {
 
