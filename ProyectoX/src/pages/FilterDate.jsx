@@ -15,7 +15,7 @@ const FilterDate = () => {
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${datos}`);
+                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${datos.params}`);
                 const data = await response.json();
                 setProductoCiudad(data);
             } catch (error) {
