@@ -9,7 +9,6 @@ import FiltroCategoria from './components/FiltroCategoria'
 import TemplateContenedor from './Contenedor/TemplateContenedor'
 import FilterCity from './pages/FilterCity'
 import ReserveTemplate from './Contenedor/ReserveTemplate'
-import Carrusel from './components/Carrusel';
 import TemplateReserva from './pages/TemplateReserva'
 import AddProduct from './Contenedor/AddProduct'
 
@@ -35,8 +34,6 @@ function App() {
           <Route path="/reserve" element={<ReserveTemplate/>}/>
           <Route path="/producto/:id/reserva" element={<TemplateReserva/>}/>
           <Route path="/addedProduct"element={<AddProduct/>}/>
-
-          <Route path="/carrusel/:id" element={<Carrusel/>} />
         </Routes>
       <Footer />
     
