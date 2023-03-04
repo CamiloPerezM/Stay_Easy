@@ -39,6 +39,15 @@ public class ProductoController {
             return  ResponseEntity.ok(productoService.buscarPorFechas(checkIn, checkOut));
         }
 
+    @GetMapping("fech/")
+    public ResponseEntity<List<Producto>> listProductosFecha (@RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkIn ,
+                                                         @RequestParam(required = false) @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate checkOut) {
+
+        return  ResponseEntity.ok(productoService.buscarPorFechas(checkIn, checkOut));
+    }
+
+
+
 
 
     @GetMapping("fecha/ciudad/{id}")

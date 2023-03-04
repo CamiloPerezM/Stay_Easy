@@ -11,6 +11,9 @@ import FilterCity from './pages/FilterCity'
 import ReserveTemplate from './Contenedor/ReserveTemplate'
 import TemplateReserva from './pages/TemplateReserva'
 import AddProduct from './Contenedor/AddProduct'
+import FilterDateC from './pages/FilterDateC'
+import FilterDate from './pages/FilterDate'
+
 
 
 function App() {
@@ -31,9 +34,13 @@ function App() {
           <Route path="/filtroCategoria" element={<FiltroCategoria />} />
           <Route path="/producto/:id" element={<TemplateContenedor />} />
           <Route path='/producto/ciudad/:id' element={<FilterCity/>}/>
-          <Route path="/reserve" element={<ReserveTemplate/>}/>
+          <Route path="/reserve" element={<ReserveTemplate/>}/>          
           <Route path="/producto/:id/reserva" element={<TemplateReserva/>}/>
           <Route path="/addedProduct"element={<AddProduct/>}/>
+          <Route path='/producto/fecha/ciudad/:params' element={<FilterDateC/>}/>
+          <Route path='/producto/fech/' element={<FilterDate/>}/>
+          
+          
         </Routes>
       <Footer />
     
