@@ -1,25 +1,25 @@
 import React, {useEffect, useState } from "react";
-
+import { useParams } from "react-router";
 import { Card } from "../components/Card";
 import { List } from "../components/List";
-import { useLocation } from "react-router-dom";
 
-const FD = () => {
+const FilterDateC = () => {
 
-    const location = useLocation();
-
-    
-    console.log("LOG FilterDate",location)
+    const datos = useParams();
+    console.log("filterDate",datos)
     const [informacion, setInformacion] = useState([]);
-    
-    
+    const paramGet = location.href;
+    console.log(paramGet);
+    const params = paramGet.slice(44,84);
+    console.log(params);
+
 
     useEffect(() => {
 
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/fech/${location.search}`);
+                const response = await fetch(`http://localhost:8080/producto/fecha/ciudad/${params}`);
                 const data = await response.json();
                 setInformacion(data);
             } catch (error) {
@@ -32,7 +32,7 @@ const FD = () => {
 
         
         getProducts();
-    }, [])
+    }, [datos.id])
 
 
     
@@ -60,6 +60,6 @@ const FD = () => {
 
 }
 
-export default FD;
+export default FilterDateC;
 
 
