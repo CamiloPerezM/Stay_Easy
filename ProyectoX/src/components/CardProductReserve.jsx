@@ -3,11 +3,13 @@ import "../Styles/CardProductReserve.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import Icons from "./Services/Icons";
-import { Link, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
-const CardProductReserve = ({fechaInicial,fechaFinal}) => {
+const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
     console.log(fechaInicial);
     console.log(fechaFinal);
+
+    const navigate = useNavigate();
 
     const datos = useParams();
     console.log(datos)
@@ -37,8 +39,13 @@ const CardProductReserve = ({fechaInicial,fechaFinal}) => {
 
     productoCiudad?.imagenes?.sort((a,b)=> a.id-b.id);
 
-
-
+    const handleReserva = () => {
+        if (fechaInicial && fechaInicial && hora && ciudad) {
+            navigate("/reserva")                        
+        } else{
+            alert("Lamentablemente la reserva no ha podido realizarse. Por favor, intente más tarde.");
+        }
+    }
     return (
 
         <div className="containerProductReserve">
@@ -56,7 +63,12 @@ const CardProductReserve = ({fechaInicial,fechaFinal}) => {
                 <hr />
                 <p className="datesSeparate"><span className="checks">Check-Out:</span><span className="dates">{fechaFinal?.toLocaleDateString()??"22/03/2023"}</span></p>
                 <hr />
-                <Link to={"/reserve"}><button className="buttonReserve">Confirmar Reserva</button></Link>
+                {/* <Link to={"/reserve"}></Link> */}
+                    <button 
+                        className="buttonReserve" 
+                        onClick={handleReserva} 
+                        type="submit"
+                    > Confirmar Reserva </button>
             </div>
         </div>
 
