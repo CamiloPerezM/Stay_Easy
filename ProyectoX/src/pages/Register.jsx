@@ -40,17 +40,17 @@ const Registro = () => {
             }
         }
     }
-    const onSubmit = (e) => {
+    const onSubmit =  async (e) => {
         e.preventDefault();
 
         try {
 
-            RegisterServices.Register ({
+            await RegisterServices.Register ({
                 email: correo.campo, 
                 contrasenna: password.campo,
                 nombre: nombre.campo,
                 apellido: apellido.campo
-            })
+            });
 
             JSON.parse(localStorage.getItem('user') ?? '{}');
             navigate('/');

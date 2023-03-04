@@ -5,6 +5,7 @@ import 'react-calendar/dist/Calendar.css';
 import { Link } from 'react-router-dom';
 
 function Calendario({id}) {
+  const user = JSON.parse(localStorage.getItem('user') ?? '{}');
   const [fechaInicial, setFechaInicial] = useState(null);
   const [fechaFinal, setFechaFinal] = useState(null);
   const [rangoFechas, setRangoFechas] = useState([]);
@@ -46,7 +47,7 @@ function Calendario({id}) {
       />
     </div>
     <div className='botonesCalendario'>
-      <Link to={`/producto/${id}/reserva`}> <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
+      <Link to={user?.token ?`/producto/${id}/reserva`: '/login'}> <Button className='aplicar' onClick={() => console.log(rangoFechas)}>
         Reservar
       </Button></Link>
       <Button className='borrar' onClick={resetSelección}>
