@@ -3,14 +3,19 @@ import React from "react";
 import "../Styles/TemplateReserva.css"
 
 
-const HourInput = () =>{
+const HourInput = ({change}) =>{
+    
+    const handleHora = (e) => {
+        change(e.target.value)
+    }
+
 
     return(
         <form className='Formulario-Hora-llegada'>
         <p className='Texto-Check-in'>Tu habitacion va a estar lista para el check-in entre las 10:00 AM y 11:00 PM</p>
         <label className='texto-Select-Formulario'>Indica tu horario estimado de llegada</label>
         <br />
-        <select defaultValue={""} className='select-hora-llegada'>
+        <select defaultValue={""} className='select-hora-llegada' onChange={handleHora}>
             <option value="" disabled >Selecciona una hora</option>
             <option value="00:00">12:00 AM</option>
             <option value="01:00">01:00 AM</option>
