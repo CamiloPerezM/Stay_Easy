@@ -52,7 +52,7 @@ function TemplateReserva() {
             hora: hora,
             rangoFechas: rangoFechas
         };
-        fetch('http://localhost:8080/swagger-ui/index.html#/', {
+        fetch('http://localhost:8080/reserva/registrar', {
             method: 'POST',
             body: JSON.stringify(reservaData),
             headers: {
