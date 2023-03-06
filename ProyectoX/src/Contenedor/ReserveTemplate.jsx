@@ -10,4 +10,4 @@ return(
 
 }
 
-export default ReserveTemplate
+export default ReserveTemplate;

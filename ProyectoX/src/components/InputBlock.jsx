@@ -1,7 +1,21 @@
 import React from "react";
 import "../Styles/InputBlock.css"
 
-const InputBlock = () => {
+
+const InputBlock = ({change}) => {
+
+    const handleCiudad = (e) => {
+        const city = /^[a-zA-Z]+$/;
+        const input = e.target.value;
+      
+        if (!input.match(city)) {
+          alert("El campo de ciudad debe contener solo letras");
+          return;
+        }
+      
+        change(input);
+      };
+      
 
     return (
 
@@ -31,7 +45,15 @@ const InputBlock = () => {
                         <span>
 
                             <label className="label" htmlFor="fCiudad">Ciudad</label>
-                            <input  className="inputBlockCity" placeholder="Ciudad" type="text" id="fCiudad" name="fCiudad" />
+                            <input className="inputBlockCity" 
+                                placeholder="Ciudad" 
+                                type="text"
+                                pattern="^[a-zA-Z]+$" 
+                                id="fCiudad" 
+                                name="fCiudad" 
+                                onChange={handleCiudad} 
+                                required
+                            />
                         </span>
 
                     </div>
