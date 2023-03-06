@@ -15,8 +15,8 @@ const HourInput = ({change}) =>{
         <p className='Texto-Check-in'>Tu habitacion va a estar lista para el check-in entre las 10:00 AM y 11:00 PM</p>
         <label className='texto-Select-Formulario'>Indica tu horario estimado de llegada</label>
         <br />
-        <select className='select-hora-llegada' onChange={handleHora}>
-            <option value="" disabled selected>Selecciona una hora</option>
+        <select defaultValue={""} className='select-hora-llegada' onChange={handleHora}>
+            <option value="" disabled >Selecciona una hora</option>
             <option value="00:00">12:00 AM</option>
             <option value="01:00">01:00 AM</option>
             <option value="02:00">02:00 AM</option>

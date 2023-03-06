@@ -59,7 +59,7 @@ const TemplateContenedor = () => {
 
 
 
-                <body>
+                <div>
                     <div className="grilla-imagenes">
                         <Galeria />
                     </div>
@@ -147,7 +147,7 @@ const TemplateContenedor = () => {
                     <div>
                         <Calenderio id={datos.id} />
                     </div>
-                </body>
+                </div>
             </div>
         </div>
     );

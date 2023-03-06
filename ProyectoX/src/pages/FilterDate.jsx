@@ -1,23 +1,27 @@
-import React, { useContext, useEffect, useState } from "react";
-import { useParams } from "react-router";
+import React, {useEffect, useState } from "react";
+
 import { Card } from "../components/Card";
 import { List } from "../components/List";
+import { useLocation } from "react-router-dom";
 
-const FilterCity = () => {
+const FD = () => {
 
-    const datos = useParams();
-    console.log("datos del filtro",datos)
-    const [productoCiudad, setProductoCiudad] = useState([]);
+    const location = useLocation();
 
+    
+    console.log("LOG FilterDate",location)
+    const [informacion, setInformacion] = useState([]);
+    
+    
 
     useEffect(() => {
 
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/ciudad/${datos.id}`);
+                const response = await fetch(`http://localhost:8080/producto/fech/${location.search}`);
                 const data = await response.json();
-                setProductoCiudad(data);
+                setInformacion(data);
             } catch (error) {
                 console.log(error);
             }
@@ -28,7 +32,7 @@ const FilterCity = () => {
 
         
         getProducts();
-    }, [datos.id])
+    }, [])
 
 
     
@@ -43,7 +47,7 @@ const FilterCity = () => {
         
 
                 {
-                    productoCiudad.length>0?productoCiudad.map((data) => {
+                    informacion.length>0?informacion.map((data) => {
                         return (
                             <Card datos={data} key={data.id} />
                         )
@@ -56,6 +60,6 @@ const FilterCity = () => {
 
 }
 
-export default FilterCity;
+export default FD;
 
 
