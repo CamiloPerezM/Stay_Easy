@@ -15,6 +15,7 @@ function TemplateReserva() {
     const [rangoFechas, setRangoFechas] = useState([]);
     const [ciudad, setCiudad] = useState('');
     const [hora, setHora] = useState(null);
+    console.log(hora, 'esta es la hora');
 
     const handleDateChange = (date) => {
         setFechaInicial(date[0]);
