@@ -36,9 +36,7 @@ public class AutenticacionController {
 
     @PostMapping
     public ResponseEntity<TokenResponse> autenticar(@RequestBody UsuarioLogin usuarioLogin) {
-        System.out.println(usuarioLogin);
-        System.out.println(usuarioLogin.getContrasenna());
-        System.out.println(usuarioLogin.getEmail());
+
         UsernamePasswordAuthenticationToken datosLogin = usuarioLogin.converter();
 
         try {
