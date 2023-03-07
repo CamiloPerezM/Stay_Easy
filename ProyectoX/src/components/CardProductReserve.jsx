@@ -41,7 +41,7 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
 
     const handleReserva = () => {
         if (fechaInicial && fechaInicial && hora && ciudad) {
-            navigate("/reserva")                        
+            navigate("/addedProduct")                        
         } else{
             alert("Lamentablemente la reserva no ha podido realizarse. Por favor, intente más tarde.");
         }
@@ -63,7 +63,6 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
                 <hr />
                 <p className="datesSeparate"><span className="checks">Check-Out:</span><span className="dates">{fechaFinal?.toLocaleDateString()??"22/03/2023"}</span></p>
                 <hr />
-                {/* <Link to={"/reserve"}></Link> */}
                     <button 
                         className="buttonReserve" 
                         onClick={handleReserva} 
