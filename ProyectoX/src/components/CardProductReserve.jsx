@@ -24,6 +24,10 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
     }, [id]);
 
     const handleReserva = async () => {
+        if (!fechaInicial || !fechaFinal || !hora) {
+            alert("Debe seleccionar una fecha de check-in, check-out y hora de llegada.");
+            return;            
+        }
         try {
             const token2 = JSON.parse(localStorage.getItem('user'));
             console.log(token2.usuarioDTO, 'aqui es el token2');
