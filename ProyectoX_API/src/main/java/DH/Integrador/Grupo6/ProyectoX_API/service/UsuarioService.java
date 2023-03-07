@@ -47,6 +47,12 @@ public class UsuarioService {
         return usuarioRepository.findById(id).orElse(null);
     }
 
+    public Usuario buscarUsuarioMail(String email){
+        return usuarioRepository.findByEmail(email).orElse(null);
+    }
+
+
+
 
 
 }
