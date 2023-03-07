@@ -122,6 +122,7 @@ function TemplateReserva() {
                     hora={hora} 
                     ciudad={ciudad}
                     onSubmit={handleSubmit}
+                    required
                 />
             </main>
 
