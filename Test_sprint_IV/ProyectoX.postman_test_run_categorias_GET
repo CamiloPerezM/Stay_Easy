@@ -1,0 +1,136 @@
+{
+	"id": "0b9df460-16a8-4f0b-ab0a-6a78517b2275",
+	"name": "ProyectoX",
+	"timestamp": "2023-03-04T01:50:06.635Z",
+	"collection_id": "23357051-0d5a4af1-774b-4e7c-bd35-58a6c01a73eb",
+	"folder_id": "23357051-516ce1dd-a2f2-4856-b998-824d0364d59a",
+	"environment_id": "0",
+	"totalPass": 20,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-04T01:49:28.616Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5d5ae43c-22d8-4e1e-942c-45bc30493101",
+			"name": "Get Categorias",
+			"url": "http://localhost:8080/categorias",
+			"time": 3757,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Length": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Length": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				3888,
+				3724,
+				3727,
+				3709,
+				3757
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Length": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true
+				}
+			]
+		},
+		{
+			"id": "4306412b-89bd-4918-90b2-bf6c8b4b73e9",
+			"name": "Get_Categorias_id",
+			"url": "http://localhost:8080/categorias/3",
+			"time": 3588,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Body matches ID": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches ID": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				3706,
+				3724,
+				3616,
+				3677,
+				3588
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				},
+				{
+					"Status code is 200": true,
+					"Body matches ID": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 37116,
+	"collection": {
+		"requests": [
+			{
+				"id": "5d5ae43c-22d8-4e1e-942c-45bc30493101",
+				"method": "GET"
+			},
+			{
+				"id": "4306412b-89bd-4918-90b2-bf6c8b4b73e9",
+				"method": "GET"
+			}
+		]
+	}
+}
