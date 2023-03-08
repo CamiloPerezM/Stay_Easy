@@ -1,0 +1,358 @@
+{
+	"id": "91660a8e-4669-434f-875e-aca79eb9f198",
+	"name": "ProyectoX",
+	"timestamp": "2023-03-04T03:07:26.399Z",
+	"collection_id": "23357051-0d5a4af1-774b-4e7c-bd35-58a6c01a73eb",
+	"folder_id": "23357051-6c95ca44-8a45-4ea5-907b-eae0b0815e3d",
+	"environment_id": "0",
+	"totalPass": 120,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-04T03:06:03.244Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "64b7a892-d03f-4e52-abd9-5f22854930c1",
+			"name": "Get Productos",
+			"url": "http://localhost:8080/producto",
+			"time": 1196,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Length": true,
+				"Body matches urlImagen": true,
+				"value not null": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Length": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches urlImagen": {
+					"pass": 10,
+					"fail": 0
+				},
+				"value not null": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				1422,
+				1170,
+				1178,
+				1183,
+				1191,
+				1218,
+				1225,
+				1179,
+				1191,
+				1196
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				}
+			]
+		},
+		{
+			"id": "6c0a012c-91f3-49dc-a77d-4d9b7a6a521e",
+			"name": "Get Productos_id",
+			"url": "http://localhost:8080/producto/11",
+			"time": 3455,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Expected id": true,
+				"Body matches ": true,
+				"value not null": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Expected id": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches ": {
+					"pass": 10,
+					"fail": 0
+				},
+				"value not null": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				3472,
+				3521,
+				3578,
+				3503,
+				3541,
+				3450,
+				3502,
+				3537,
+				3515,
+				3455
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Expected id": true,
+					"Body matches ": true,
+					"value not null": true
+				}
+			]
+		},
+		{
+			"id": "6f089261-6dab-487e-8c84-c5c063027e8f",
+			"name": "Get Productos Fecha/Ciudad",
+			"url": "http://localhost:8080/producto/fecha/ciudad/9?checkIn=2024-01-18&checkOut=2024-10-20",
+			"time": 3316,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"City equal ": true,
+				"Body matches ": true,
+				"value not null": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 10,
+					"fail": 0
+				},
+				"City equal ": {
+					"pass": 10,
+					"fail": 0
+				},
+				"Body matches ": {
+					"pass": 10,
+					"fail": 0
+				},
+				"value not null": {
+					"pass": 10,
+					"fail": 0
+				}
+			},
+			"times": [
+				3354,
+				3308,
+				3318,
+				3345,
+				3303,
+				3259,
+				3376,
+				3375,
+				3407,
+				3316
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"City equal ": true,
+					"Body matches ": true,
+					"value not null": true
+				}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 80588,
+	"collection": {
+		"requests": [
+			{
+				"id": "64b7a892-d03f-4e52-abd9-5f22854930c1",
+				"method": "GET"
+			},
+			{
+				"id": "6c0a012c-91f3-49dc-a77d-4d9b7a6a521e",
+				"method": "GET"
+			},
+			{
+				"id": "6f089261-6dab-487e-8c84-c5c063027e8f",
+				"method": "GET"
+			}
+		]
+	}
+}
