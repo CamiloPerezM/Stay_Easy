@@ -36,6 +36,7 @@ public class AutenticacionController {
 
     @PostMapping
     public ResponseEntity<TokenResponse> autenticar(@RequestBody UsuarioLogin usuarioLogin) {
+
         UsernamePasswordAuthenticationToken datosLogin = usuarioLogin.converter();
 
         try {

@@ -15,6 +15,7 @@ function TemplateReserva() {
     const [rangoFechas, setRangoFechas] = useState([]);
     const [ciudad, setCiudad] = useState('');
     const [hora, setHora] = useState(null);
+    console.log(hora, 'esta es la hora');
 
     const handleDateChange = (date) => {
         setFechaInicial(date[0]);
@@ -52,7 +53,7 @@ function TemplateReserva() {
             hora: hora,
             rangoFechas: rangoFechas
         };
-        fetch('http://localhost:8080/swagger-ui/index.html#/', {
+        fetch('http://localhost:8080/reserva/registrar', {
             method: 'POST',
             body: JSON.stringify(reservaData),
             headers: {
@@ -121,6 +122,7 @@ function TemplateReserva() {
                     hora={hora} 
                     ciudad={ciudad}
                     onSubmit={handleSubmit}
+                    required
                 />
             </main>
 
