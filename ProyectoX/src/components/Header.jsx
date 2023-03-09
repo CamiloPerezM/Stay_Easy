@@ -4,6 +4,8 @@ import Logo from "../assets/img/Logotipo.png"
 import Menu from "../assets/img/menú.svg"
 import { Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGear} from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -23,7 +25,7 @@ const Header = () => {
     const actions = user?.token
         ? <div className="usuario botones">
             <div>
-                <p> Bienvenido: {user.usuarioDTO.nombre} </p>
+           <p> <span>{user.usuarioDTO.rol.nombre==="ADMIN"?<FontAwesomeIcon icon={faGear}/>:""}</span> Bienvenido/a: {user.usuarioDTO.nombre} </p>
                 {
                     user.usuarioDTO.rol.authority === 'ADMIN' &&
                     <Link to={"/administracion"}>Administracion</Link>
