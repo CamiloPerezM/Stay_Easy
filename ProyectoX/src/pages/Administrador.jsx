@@ -5,6 +5,7 @@ import {useForm} from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faWifi, faCar, faWater, faHotTub, faPaw, faUtensils, faSwimmer, faSmokingBan, faUser, faChildReaching } from "@fortawesome/free-solid-svg-icons";
 import { ContextGlobal } from '../components/Services/global.context';
+import InputImg from '../components/InputImg';
 
 
 
@@ -141,6 +142,8 @@ const Administrador = () => {
                         }
                     </ul>
                 </div>
+
+                <InputImg ></InputImg>
                 <div>
                     <label> Normas de la casa </label>
                     <input type="textarea" {...register('Normas de la casa')} />

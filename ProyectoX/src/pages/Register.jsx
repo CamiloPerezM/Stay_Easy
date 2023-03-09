@@ -54,6 +54,7 @@ const Registro = () => {
 
             JSON.parse(localStorage.getItem('user') ?? '{}');
             navigate('/');
+            alert("Usuario registrado con exito");
 
 
             
