@@ -151,6 +151,13 @@ function Buscador() {
     }
   }
 
+
+
+
+
+
+
+
   const handleApplyButtonClick = () => {
     console.log("Selected dates:", selectedDates);
 

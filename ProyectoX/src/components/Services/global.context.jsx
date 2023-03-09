@@ -13,7 +13,7 @@ export const ContextProvider = ({children}) =>{
     React.useEffect(() => {  
       async function getData(){
         try{
-          const response = await fetch('http://localhost:8080/categorias/');
+          const response = await fetch('http://3.139.69.10:8080/categorias/');
           const data = await response.json();
           console.log(data);
           setCategorias(data);
@@ -27,7 +27,7 @@ export const ContextProvider = ({children}) =>{
 
       async function getCiudades(){
         try{
-          const response = await fetch('http://localhost:8080/ciudades/');
+          const response = await fetch('http://3.139.69.10:8080/ciudades/');
           const data = await response.json();
           console.log(data);
           setCiudades(data);
@@ -41,7 +41,7 @@ export const ContextProvider = ({children}) =>{
 
       async function getProductos(){
         try{
-          const response = await fetch('http://localhost:8080/producto/');
+          const response = await fetch('http://3.139.69.10:8080/producto/');
           const data = await response.json();
           console.log(data);
           setProductos(data);

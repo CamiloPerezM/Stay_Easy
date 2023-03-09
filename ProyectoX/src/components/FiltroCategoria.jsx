@@ -32,7 +32,7 @@ const FiltroCategoria = () => {
         </div>
         </div>
     
-    <List title={`${findCategory.categoria.titulo} Disponibles:`} style= "spaceCategory"  background="bgRecomendations">
+    <List title={`${findCategory.categoria.titulo} Disponibles:`} style= "spaceCategoryProduct"  background="bgRecomendations">
         {
             productos
             .filter((producto) => producto.categoria.id === categoriaSelecionada)

@@ -24,6 +24,16 @@ html,body{
     height: 100%;
 }
 
+.spaceCategoryProduct{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:15px;  
+    height: 100%;
+}
+
 
 
 
