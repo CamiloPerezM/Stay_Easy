@@ -19,7 +19,7 @@ const FD = () => {
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://localhost:8080/producto/fech/${location.search}`);
+                const response = await fetch(`http://3.139.69.10:8080/producto/fech/${location.search}`);
                 const data = await response.json();
                 setInformacion(data);
             } catch (error) {

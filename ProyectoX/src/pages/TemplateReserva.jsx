@@ -36,7 +36,7 @@ function TemplateReserva() {
     useEffect(() => {
         async function getProducts() {
             try {
-                const response = await fetch(`http://localhost:8080/producto/${datos.id}`);
+                const response = await fetch(`http://3.139.69.10:8080/producto/${datos.id}`);
                 const data = await response.json();
                 setProductoCiudad(data);
             } catch (error) {
@@ -53,7 +53,7 @@ function TemplateReserva() {
             hora: hora,
             rangoFechas: rangoFechas
         };
-        fetch('http://localhost:8080/reserva/registrar', {
+        fetch('http://3.139.69.10:8080/reserva/registrar', {
             method: 'POST',
             body: JSON.stringify(reservaData),
             headers: {

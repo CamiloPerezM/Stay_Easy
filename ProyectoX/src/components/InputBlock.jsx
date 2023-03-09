@@ -15,6 +15,8 @@ const InputBlock = ({change}) => {
       
         change(input);
       };
+
+      const usuario = JSON.parse(localStorage.getItem('user'));
       
 
     return (
@@ -27,11 +29,11 @@ const InputBlock = ({change}) => {
                     <div className="divForm">
                         <span className="spanMargin">
                             <label className="label" htmlFor="fName">Nombre</label>
-                            <input className="inputBlock marginInput" type="text" value={"Pablo"} id="fName" name="fName" disabled />
+                            <input className="inputBlock marginInput" type="text" value={usuario?.usuarioDTO?.nombre} id="fName" name="fName" disabled />
                         </span>
                         <span>
                             <label className="label" htmlFor="fApellido">Apellido</label>
-                            <input className="inputBlock marginInput" type="text" value={"Novoa"} id="fApellido" name="fApellido" disabled />
+                            <input className="inputBlock marginInput" type="text" value={usuario?.usuarioDTO?.apellido} id="fApellido" name="fApellido" disabled />
                         </span>
                     </div>
                     <div className="divForm">
@@ -39,7 +41,7 @@ const InputBlock = ({change}) => {
 
                         <span className="spanMargin">
                             <label className="label" htmlFor="fEmail">Email</label>
-                            <input className="inputBlock"type="text" value={"pablonn@gmail.com"} id="fEmail" name="fEmail" disabled />
+                            <input className="inputBlock"type="text" value={usuario?.usuarioDTO?.email} id="fEmail" name="fEmail" disabled />
                         </span>
 
                         <span>

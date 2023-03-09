@@ -21,7 +21,7 @@ const TemplateContenedor = () => {
     useEffect(() => {
         async function getProduct() {
             try {
-                const response = await fetch(`http://localhost:8080/producto/${datos.id}`);
+                const response = await fetch(`http://3.139.69.10:8080/producto/${datos.id}`);
                 const data = await response.json();
                 console.log(data);
                 setDatosProducto(data);
