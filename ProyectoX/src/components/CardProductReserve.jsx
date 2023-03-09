@@ -72,7 +72,7 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
                 <span className="iconStarReserve">{Array.from({ length: productoCiudad.puntaje }, (_, index) => <Icons key={index} size="xs" />)}</span>
                 <p className="locationReserve"><FontAwesomeIcon icon={faLocationDot}/> {`${productoCiudad?.ciudad?.nombre ?? "Cargando"}, ${productoCiudad?.ciudad?.pais??"Cargando"} `}</p>
                 <hr />
-                <p className="datesSeparate"><span className="checks">Check-In: </span><span className="dates">{fechaInicial?.toLocaleDateString()??"22/02/2023"}</span></p>
+                <p className="datesSeparate"><span className="checks">Check-In: </span><span className="dates">{fechaInicial?.toLocaleDateString()??"09/03/2023"}</span></p>
                 <hr />
                 <p className="datesSeparate"><span className="checks">Check-Out:</span><span className="dates">{fechaFinal?.toLocaleDateString()??"22/03/2023"}</span></p>
                 <hr />
