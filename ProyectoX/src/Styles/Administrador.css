@@ -1,0 +1,103 @@
+
+section {
+    width: 56.3rem;
+    margin: 0.36rem;
+    border-radius: 16px;
+    width: 56.3rem;
+    border-radius: 12px;
+    background-color: rgba(154, 3, 31, 0.103);
+    padding-left: 2rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    
+    
+}
+
+h3 {
+    padding: 1.3rem;
+}
+
+.primerBloque {
+    padding: 2.5rem;
+    color:rgb(2, 48, 71);
+    border-radius: 0.3125rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+
+}
+
+.inputStyle {
+    
+    width: 22rem;
+    height: 1.7rem;
+    border-radius: 0.3125rem;
+    opacity: 0.9;
+    background-color: rgb(255, 252, 249);
+    border-color: rgb(255, 183, 3);
+    color:rgb(2, 48, 71);
+    margin: 0.6rem;
+    display: flex;
+
+}
+
+.inputStylearea {
+    width: 39rem;
+    height: 8rem;
+    border-radius: 0.3125rem;
+    opacity: 0.9;
+    background-color: rgb(255, 252, 249);
+    border-color: rgb(255, 183, 3);
+    color:rgb(2, 48, 71);
+    margin: 0.6rem;
+    display: flex;
+}
+
+.caracteristicas {
+    padding-bottom: 2rem;
+    
+}
+
+li {
+    width: 100%;
+    gap: 1rem;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.titulo1 {
+    color: rgb(255, 183, 3);
+    padding: 3rem;
+}
+
+.adicionales {
+    color:rgb(2, 48, 71);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2.5rem;
+}
+
+.envioForm {
+    width: 10.6875rem;
+    height: 2.2rem;
+    border-radius: 0.3125rem;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.12);
+    color:rgb(255, 252, 249);
+    font-weight: 700;
+    border-color: rgb(255, 183, 3);
+    background-color: rgb(2, 48, 71);
+    margin-top: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
