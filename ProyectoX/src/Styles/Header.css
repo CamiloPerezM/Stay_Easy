@@ -1,13 +1,12 @@
-
 .navBar-brand{
     display: flex;
     justify-content: space-between;  
-    height: 4rem;
+    height: 4.5rem;
     background-color: rgb(255, 252, 249);
 }
 
 .logo{
-    margin-left: 2rem; 
+    margin-left: 2rem;
 }
 
 .menu{
@@ -15,11 +14,11 @@
 }
 
 .botones{
-    margin-right: 20px;
     display: flex;
     align-items: center;
     justify-content: flex-end;
     gap: 7.5rem;
+    margin-right: 20px;
 }
 
 .botones2{
