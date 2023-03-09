@@ -13,6 +13,7 @@ import TemplateReserva from './pages/TemplateReserva'
 import AddProduct from './Contenedor/AddProduct'
 import FilterDateC from './pages/FilterDateC'
 import FilterDate from './pages/FilterDate'
+import Administrador from './pages/Administrador'
 
 
 
@@ -30,7 +31,7 @@ function App() {
           <Route index path="/home" element={<Home/>} />
           <Route path="/registro" element={<Registro/>} />
           <Route path="/login" element={<Login />} /> 
-          {/* <Route path="/logout" element={<Logout />} /> */}
+          <Route path='/administracion' element={<Administrador/>}/>
           <Route path="/filtroCategoria" element={<FiltroCategoria />} />
           <Route path="/producto/:id" element={<TemplateContenedor />} />
           <Route path='/producto/ciudad/:id' element={<FilterCity/>}/>
@@ -39,6 +40,7 @@ function App() {
           <Route path="/addedProduct"element={<AddProduct/>}/>
           <Route path='/producto/fecha/ciudad/:params' element={<FilterDateC/>}/>
           <Route path='/producto/fech/' element={<FilterDate/>}/>
+          
           
           
         </Routes>
