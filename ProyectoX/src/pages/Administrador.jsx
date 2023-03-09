@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import '../Styles/Template.css'
+import '../Styles/Administrador.css'
 import { Link  } from 'react-router-dom';
 import {useForm} from 'react-hook-form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -86,18 +87,22 @@ const Administrador = () => {
         
 
         <section>
+            
             <h3> Crear propiedad </h3>
-
+            
+            <div>
+        
             <form onSubmit={handleSubmit (onSubmit)}>
+                <div className='primerBloque'>
                 <div>
                     <label> Nombre de la propiedad </label>
-                    <input type="text" {...register('nombrePropiedad', {
-                    require: true, })} />
+                    <input type="text"  {...register('nombrePropiedad', {
+                    require: true, })} className='inputStyle'/>
                     {errors.nombrePropiedad?.type === 'required' && <p> Este campo no puede estar vacío </p>}
                 </div>
                 <div>
                     <label> Categoria </label>
-                    <select {...register('Categoria')}>
+                    <select  {...register('Categoria')} className='inputStyle'>
                         {categorias.map(categoria => (
                             <option key={categoria.id} value={categoria.id}> {categoria.titulo} </option>
                         ))}
@@ -105,7 +110,7 @@ const Administrador = () => {
                 </div>
                 <div>
                     <label> Ciudad </label>
-                    <select {...register('Ciudad')}>
+                    <select className='inputStyle' {...register('Ciudad')}>
                         {ciudades.map(ciudad => (
                             <option key={ciudad.id} value={ciudad.id}> {ciudad.nombre} </option>
                         ))}
@@ -113,56 +118,60 @@ const Administrador = () => {
                 </div>
                 <div>
                     <label> Dirección </label>
-                    <input type="text" {...register('Dirección')} />
-                </div>
-                <div>
-                    <label> Descripción </label>
-                    <input type="textarea" {...register('Descripción')} />
+                    <input type="text" className='inputStyle' {...register('Dirección')} />
                 </div>
                 <div>
                     <label> Latitud </label>
-                    <input type="text" {...register('Latitud')} />
+                    <input type="text" className='inputStyle' {...register('Latitud')} />
                 </div>
                 <div>
                     <label> Longitud </label>
-                    <input type="text" {...register('Longitud')} />
+                    <input type="text" className='inputStyle' {...register('Longitud')} />
                 </div>
                 <div>
-                    <label> Caracteristicas </label>
+                    <label> Descripción </label>
+                    <input type="textarea" className='inputStylearea' {...register('Descripción')} />
+                </div>
+                </div>
+                <div className='caracteristicas'>
+                <div>
+                    <label className='titulo1'> Caracteristicas </label>
                     <ul>
                         {
                             atributos.map(atributo =>(
                                 <li className="caracteristicasProductosDetail" key={atributo.id}>
                                     <FontAwesomeIcon icon={atributo.idIcono} />
                                     <span>{atributo.descripcion}</span>
-                                    <input type="checkbox" name="" id="" />
+                                    <input type="checkbox" name="" id="" className='chequear'/>
                                 </li>
                             ))
                         }
                     </ul>
                 </div>
+                </div>
+                <div className='adicionales'>
                 <div>
                     <label> Normas de la casa </label>
-                    <input type="textarea" {...register('Normas de la casa')} />
+                    <input type="textarea" className='inputStylearea' {...register('Normas de la casa')} />
                 </div>
                 <div>
                     <label> Salud y seguridad </label>
-                    <input type="textarea" {...register('Salud y seguridad')} />
+                    <input type="textarea" className='inputStylearea' {...register('Salud y seguridad')} />
                 </div>
                 <div>
                     <label> Politicas de cancelación </label>
-                    <input type="textarea" {...register('Politicas de cancelación')} />
+                    <input type="textarea" className='inputStylearea' {...register('Politicas de cancelación')} />
                 </div>
-                
+                </div>
+                <div className='boton'>
+                <input type= 'submit' value= 'Crear' className='envioForm' />
+                </div>
 
-                <input type= 'submit' value= 'Crear' />
-
-                
             </form>
-           
 
-
+            </div>
         </section>
+        
         </>
     )
 
