@@ -74,16 +74,18 @@ const Administrador = () => {
         console.log(data);
     }
 
+    let user = JSON.parse(localStorage.getItem('user') ?? '{}');
 
     return (
 
         <>
             <div className='categoryProduct'>
                 <div className="displayFlexColumn">
-
+                <span style={{ color: "rgb(251, 139, 36)", paddingLeft: "3rem", paddingBottom: "1.2rem", fontSize: "1.5rem", fontWeight: "700" }}>{user.usuarioDTO.rol.authority === 'ADMIN' &&
+                    <p>Administración</p>} </span>
                 </div>
-
                 <Link to="/home"> <span className="arrowLeft"> <FontAwesomeIcon icon={faArrowLeft} /></span> </Link>
+                
             </div>
 
 

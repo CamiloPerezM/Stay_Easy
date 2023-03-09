@@ -25,13 +25,19 @@ const Header = () => {
     const actions = user?.token
         ? <div className="usuario botones">
             <div>
-           <p> <span>{user.usuarioDTO.rol.nombre==="ADMIN"?<FontAwesomeIcon icon={faGear}/>:""}</span> Bienvenido/a: {user.usuarioDTO.nombre} </p>
+           <p> 
+                <span>{
+                    user.usuarioDTO.rol.nombre==="ADMIN"?
+                    <FontAwesomeIcon icon={faGear}/>:""}
+                </span> 
+                    Bienvenido/a: {user.usuarioDTO.nombre} 
+            </p>
                 {
                     user.usuarioDTO.rol.authority === 'ADMIN' &&
-                    <Link to={"/administracion"}>Administracion</Link>
+                    <Link to={"/administracion"}>Administración</Link>
                 }
             </div>
-            <button onClick={handleClick} className="crear"> Cerrar sesion </button>
+            <button onClick={handleClick} className="crear"> Cerrar sesión </button>
             
             </div>
         : <div className="botones" id="botones-inicio">
