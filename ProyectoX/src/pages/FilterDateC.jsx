@@ -10,7 +10,7 @@ const FilterDateC = () => {
     const [informacion, setInformacion] = useState([]);
     const paramGet = location.href;
     console.log(paramGet);
-    const params = paramGet.slice(44,84);
+    const params = paramGet.slice(77,130);
     console.log(params);
 
 
