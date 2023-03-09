@@ -87,7 +87,7 @@ const Administrador = () => {
         </div>
         
 
-        <section>
+        <section className='fondoCard'>
             
             <h3> Crear propiedad </h3>
             
