@@ -22,7 +22,13 @@ const Header = () => {
 
     const actions = user?.token
         ? <div className="usuario botones">
-            <p> Bienvenido: {user.usuarioDTO.nombre} </p>
+            <div>
+                <p> Bienvenido: {user.usuarioDTO.nombre} </p>
+                {
+                    user.usuarioDTO.rol.authority === 'ADMIN' &&
+                    <Link to={"/administracion"}>Administracion</Link>
+                }
+            </div>
             <button onClick={handleClick} className="crear"> Cerrar sesion </button>
             
             </div>

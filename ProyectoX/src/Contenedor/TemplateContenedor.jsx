@@ -73,7 +73,7 @@ const TemplateContenedor = () => {
                     <div className="servicios">
                         <h3 className="paddingTemplate titulosProduct"> ¿Qué ofrece este lugar? </h3>
                         <hr className="separador"></hr>
-                        {/* <p className="paddingTemplate">Libre de Humo,Piscina, Wifi, Desayuno hasta la<FontAwesomeIcon icon={faSmokingBan} />s 10 AM</p> */}
+                        
                         <ul className="caracteristicasProductos">
                             <li className="caracteristicasProductosDetail"><FontAwesomeIcon className="iconsProducts" icon={faSmokingBan} /> <span>Libre de Humo</span></li>
                             <li className="caracteristicasProductosDetail"><FontAwesomeIcon className="iconsProducts" icon={faWifi} /><span>Wifi</span></li>
@@ -87,33 +87,9 @@ const TemplateContenedor = () => {
                             <li className="caracteristicasProductosDetail"><FontAwesomeIcon className="iconsProducts" icon={faChildReaching} /><span>Parque Infantil </span></li>
                         </ul>
 
-                        {/* <div className="logos">
-
-                    </div> */}
                     </div>
 
-                    {/* <div className="politica-producto">
-                        <h3 className="paddingTemplate titulosProduct"> Qué tienes que saber </h3><hr />
-
-                        <span className="normasDeLaCasa">
-                            <h5 className="paddingTemplate"> Normas: </h5>
-                            <ol className="paddingTemplate descriptionText">
-                                <li>No hacer fiestas</li>
-                                <li>No brincar en las camas</li>
-                                <li>No meter en la habotación más de 10 personas</li>
-                            </ol>
-                        </span>
-                        <span className="seguridad-salud">
-                        <h5> Seguridad y salud</h5>
-                        <li>Lorem Ipsum</li>
-                        <li>Lorem Ipsum</li>
-                        <li>Lorem Ipsum</li>
-                    </span>
-                        <span>
-                        <h5> Politica de cancelación </h5>
-                    </span>
-
-                    </div> */}
+                   
 
                     <article>
                         <h3 className='titulo-principal-footer-product'>Que tenes que saber</h3>
