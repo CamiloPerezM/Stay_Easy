@@ -10,6 +10,7 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 700;
     font-size: 1.2rem;
+    margin:5px auto;
     
     
 }
@@ -19,7 +20,7 @@ h3 {
 }
 
 .primerBloque {
-    padding: 2.5rem;
+    padding: 1rem 2.5rem;
     color:rgb(2, 48, 71);
     border-radius: 0.3125rem;
     display: flex;
@@ -40,6 +41,41 @@ h3 {
     margin: 0.6rem;
     display: flex;
 
+}
+
+.buttonCancel{
+    background-color: rgb(179, 100, 100);
+    border: transparent;
+    border-radius: 2px;
+    margin-left: 5px;
+}
+
+.buttonAdd{
+    background-color: rgb(125, 207, 143);
+    border: transparent;
+    border-radius: 2px;
+    margin-left: 50px;
+}
+
+
+
+.spaceBlocks{
+    margin-right: 5px;
+}
+.divImg{
+    margin-left: 45px;
+}
+
+.inputStyleImg {
+    
+    width: 22rem;
+    height: 1.7rem;
+    border-radius: 0.3125rem;
+    opacity: 0.9;
+    background-color: rgb(255, 252, 249);
+    border-color: rgb(255, 183, 3);
+    color:rgb(2, 48, 71);
+    margin-top: 10px;
 }
 
 .inputStylearea {
