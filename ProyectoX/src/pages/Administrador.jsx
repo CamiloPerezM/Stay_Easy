@@ -152,7 +152,7 @@ const Administrador = () => {
                             </div>
                         </div>
                         <div>
-                        <label className='titulo1'> Imagenes </label>
+                        <label className='titulo5'> Imagenes </label>
                             <InputImg/>
                         </div>
 
