@@ -21,7 +21,7 @@ function Galeria() {
   useEffect(() => {
     const pedidoImagenes = async () => {
       try {
-        const pedidoFetch = await fetch(`http://localhost:8080/producto/${id}`);
+        const pedidoFetch = await fetch(`http://3.139.69.10:8080/producto/${id}`);
         const respuesta = await pedidoFetch.json();
         setImagenes(respuesta);
       } catch (error) {

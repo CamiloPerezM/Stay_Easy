@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const baseUrl = 'http://localhost:8080/usuario/registrar';
+const baseUrl = 'http://3.139.69.10:8080/usuario/registrar';
 
 const Register = async credentials => {
     try {
