@@ -1,0 +1,99 @@
+{
+	"id": "a1b7a6ca-0465-420c-af2a-af2c6484047c",
+	"name": "ProyectoX",
+	"timestamp": "2023-03-04T02:32:15.354Z",
+	"collection_id": "23357051-0d5a4af1-774b-4e7c-bd35-58a6c01a73eb",
+	"folder_id": "23357051-b9473a95-0573-4508-9c0d-2ed1d2894637",
+	"environment_id": "0",
+	"totalPass": 20,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-03-04T02:32:09.220Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "4e1678b4-fca0-4ef3-93f2-a67801568a44",
+			"name": "Get Imagenes",
+			"url": "http://localhost:8080/imagenes",
+			"time": 1079,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Length": true,
+				"Body matches urlImagen": true,
+				"value not null": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Length": {
+					"pass": 5,
+					"fail": 0
+				},
+				"Body matches urlImagen": {
+					"pass": 5,
+					"fail": 0
+				},
+				"value not null": {
+					"pass": 5,
+					"fail": 0
+				}
+			},
+			"times": [
+				1203,
+				1039,
+				1095,
+				1054,
+				1079
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				},
+				{
+					"Status code is 200": true,
+					"Length": true,
+					"Body matches urlImagen": true,
+					"value not null": true
+				}
+			]
+		}
+	],
+	"count": 5,
+	"totalTime": 5470,
+	"collection": {
+		"requests": [
+			{
+				"id": "4e1678b4-fca0-4ef3-93f2-a67801568a44",
+				"method": "GET"
+			}
+		]
+	}
+}
