@@ -1,6 +1,6 @@
 import React from "react";
 import "../Styles/Header.css"
-import Logo from "../assets/img/logo-booking.svg"
+import Logo from "../assets/img/Logotipo.png"
 import Menu from "../assets/img/menú.svg"
 import { Link } from "react-router-dom";
 import {useNavigate} from 'react-router-dom';
