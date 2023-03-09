@@ -135,7 +135,7 @@ const Administrador = () => {
                 </div>
                 <div className='caracteristicas'>
                 <div>
-                    <label className='titulo1'> Caracteristicas </label>
+                    <label className='titulo5'> Caracteristicas </label>
                     <ul>
                         {
                             atributos.map(atributo =>(
