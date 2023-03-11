@@ -1,0 +1,86 @@
+{
+  "id": "7e571c1d-9b09-48a2-aaa8-d19ff4402792",
+  "version": "2.0",
+  "name": "Test_Sprint_III_v2",
+  "url": "http://127.0.0.1:5173",
+  "tests": [{
+    "id": "99912eb7-30a6-4628-ad49-2a4527868399",
+    "name": "Iniciar sesion",
+    "commands": [{
+      "id": "943bab87-04d3-4803-976e-2ae9870c7790",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fdb8919d-d5d6-44b7-a8b6-9e4221e6edec",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1936x1096",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e04cb925-409c-4c10-9990-722229cf1299",
+      "comment": "",
+      "command": "click",
+      "target": "css=a:nth-child(2) > .crear",
+      "targets": [
+        ["css=a:nth-child(2) > .crear", "css:finder"],
+        ["xpath=//div[@id='botones-inicio']/a[2]/button", "xpath:idRelative"],
+        ["xpath=//a[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Iniciar sesión')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d86d2626-2c2f-4489-8844-03231d255446",
+      "comment": "",
+      "command": "type",
+      "target": "id=correo",
+      "targets": [
+        ["id=correo", "id"],
+        ["css=#correo", "css:finder"],
+        ["xpath=//input[@id='correo']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div/div/input", "xpath:idRelative"],
+        ["xpath=//form/div/div/input", "xpath:position"]
+      ],
+      "value": "carlo@mail.com"
+    }, {
+      "id": "214af17b-00ba-4303-80a4-6e91c58a83a1",
+      "comment": "",
+      "command": "type",
+      "target": "id=password1",
+      "targets": [
+        ["id=password1", "id"],
+        ["css=#password1", "css:finder"],
+        ["xpath=//input[@id='password1']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "123456"
+    }, {
+      "id": "02adefda-9bfb-4637-b43f-282bf03eb918",
+      "comment": "",
+      "command": "click",
+      "target": "css=.sc-fsYeqs",
+      "targets": [
+        ["css=.sc-fsYeqs", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='form']/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9a7dd968-c67d-4728-8603-815c2e4f29b6",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["99912eb7-30a6-4628-ad49-2a4527868399"]
+  }],
+  "urls": ["http://127.0.0.1:5173/"],
+  "plugins": []
+}
