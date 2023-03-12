@@ -93,7 +93,7 @@ h3 {
     
 }
 
-li {
+.liAdmin {
     width: 100%;
     gap: 1rem;
     list-style: none;

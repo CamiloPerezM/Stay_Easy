@@ -143,7 +143,7 @@ const Administrador = () => {
                                 <ul>
                                     {
                                         atributos.map(atributo => (
-                                            <li className="caracteristicasProductosDetail" key={atributo.id}>
+                                            <li className="caracteristicasProductosDetail liAdmin" key={atributo.id}>
                                                 <FontAwesomeIcon icon={atributo.idIcono} />
                                                 <span>{atributo.descripcion}</span>
                                                 <input type="checkbox" name="" id="" className='chequear' />
