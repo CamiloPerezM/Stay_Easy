@@ -2,9 +2,15 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import "../Styles/AddProduct.css"
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CardProductAdd = () => {
+
+    const navigate = useNavigate();
+
+    const handleClick = () =>{
+        return navigate("/")
+    }
 
     return (
 
@@ -18,7 +24,7 @@ const CardProductAdd = () => {
 
                     <p className='paragraphAdd'>Tu propiedad se ha creado con éxito</p>
                 </div>
-               <Link to={"/home"}><button className='button'>GO HOME</button></Link>
+              <button className='button' onClick={handleClick}>GO HOME</button>
             </div>
         </section>
 

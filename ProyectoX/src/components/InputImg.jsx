@@ -45,10 +45,11 @@ function InputImg() {
   const addButton = <button type="button" className="buttonAdd" onClick={handleAddImage}><FontAwesomeIcon icon={faPlus}/></button>;
 
   return (
-    <form>
+    <>
       {imageInputs}
       {addButton}
-    </form>
+    
+    </>
   );
 }
 

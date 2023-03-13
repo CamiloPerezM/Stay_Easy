@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState} from 'react';
 import '../Styles/Template.css'
 import '../Styles/Administrador.css'
-import { Link } from 'react-router-dom';
-import { useForm } from 'react-hook-form'
+import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faWifi, faCar, faWater, faHotTub, faPaw, faUtensils, faSwimmer, faSmokingBan, faUser, faChildReaching } from "@fortawesome/free-solid-svg-icons";
 import { ContextGlobal } from '../components/Services/global.context';
@@ -14,6 +13,7 @@ import InputImg from '../components/InputImg';
 const Administrador = () => {
 
     const { ciudades, categorias } = useContext(ContextGlobal);
+    const navigate = useNavigate();
 
     const atributos = [
         {
@@ -68,13 +68,119 @@ const Administrador = () => {
         },
     ];
 
-    const { register, formState: { errors }, handleSubmit } = useForm();
 
-    const onSubmit = (data) => {
-        console.log(data);
-    }
+
+  
 
     let user = JSON.parse(localStorage.getItem('user') ?? '{}');
+
+
+
+
+
+    const [nombrePropiedad, setNombrePropiedad] = useState('');
+    const [descripcion, setDescripcion] = useState('');
+    const [categoria, setCategoria] = useState({});
+    const [ciudad, setCiudad] = useState({});
+
+    const handleNombrePropiedadChange = (event) => {
+        setNombrePropiedad(event.target.value);
+    };
+
+    const handleDescripcionChange = (event) => {
+        setDescripcion(event.target.value);
+    }
+
+
+    const handleCategoriaChange = (event) => {
+        const selectedCategoria = categorias.find(c => c?.id === parseInt(event.target.value));
+        setCategoria(selectedCategoria);
+    };
+
+    const handleCiudadChange = (event) => {
+        const selectedCiudad = ciudades.find(c => c.id === parseInt(event.target.value));
+        setCiudad(selectedCiudad);
+    };
+
+
+    const handleClick = async () => {
+
+        if (!ciudad || !categoria || !nombrePropiedad || !descripcion) {
+            alert("Debe seleccionar una categoria, ciudad y demás datos.");
+            return;
+        };
+
+        try {
+
+
+            // URL de la API y token Bearer
+            const url = "http://3.139.69.10:8080/producto/";
+            const tokenAbuscar = JSON.parse(localStorage.getItem('user'));
+            const token = tokenAbuscar?.token;
+
+            const body = JSON.stringify({
+                nombre: nombrePropiedad,
+                puntaje: 5,
+                tituloDescripcion: nombrePropiedad,
+                contenidoDescripcion: descripcion,
+                ubicacionMaps: "https://www.google.com/maps",
+                caracteristicas: [
+                ],
+                imagenes: [
+                    {
+                        id: 150,
+                        urlImagen: "https://grupo6-imagenes.s3.us-east-2.amazonaws.com/Img/12.jpg"
+                    }
+                ],
+                ciudad: {
+                  id: ciudad?.id,
+                  nombre: ciudad?.nombre,
+                  pais: ciudad?.pais
+                },
+                categoria: {
+                id: categoria?.id,
+                    titulo: categoria?.titulo,
+                    descripcion: categoria?.descripcion,
+                    urlImagen: categoria?.urlImagen
+                }
+            });
+
+            console.log(ciudad);
+            console.log(categoria);
+            console.log(body);
+
+
+            // Encabezados de la solicitud
+            const headers = {
+                "Authorization": `Bearer ${token}`,
+                "Content-Type": "application/json"
+            };
+
+
+            // Hacer la solicitud POST a la API
+            const crearProducto = await fetch(url, {
+                method: "POST",
+                headers: headers,
+                body: body
+            });
+
+            if (crearProducto.ok) {
+                const response = await crearProducto.json();
+                console.log("Producto enviado con éxito", response);
+                navigate("/addedProduct");
+            } else {
+                throw new Error("Error al enviar el producto");
+            }
+            
+
+
+        } catch (error) {
+            console.error("Error al crear producto" + error);
+            alert("Lamentablemente no se pudo crear el producto")
+
+        }
+    }
+
 
     return (
 
@@ -95,26 +201,28 @@ const Administrador = () => {
 
                 <div>
 
-                    <form onSubmit={handleSubmit(onSubmit)}>
+                    <form >
                         <div className='primerBloque'>
                             <div>
                                 <label> Nombre de la propiedad </label>
-                                <input type="text"  {...register('nombrePropiedad', {
-                                    require: true,
-                                })} className='inputStyle' />
-                                {errors.nombrePropiedad?.type === 'required' && <p> Este campo no puede estar vacío </p>}
+                                <input type="text" onChange={handleNombrePropiedadChange} className='inputStyle' />
                             </div>
                             <div>
                                 <label> Categoria </label>
-                                <select  {...register('Categoria')} className='inputStyle'>
+                                <select  defaultValue={""} className='inputStyle' onChange={handleCategoriaChange}>
+                                <option value="" disabled >Selecciona una categoria</option>
                                     {categorias.map(categoria => (
+                                        <>
+                                        
                                         <option key={categoria.id} value={categoria.id}> {categoria.titulo} </option>
+                                        </>
                                     ))}
                                 </select>
                             </div>
                             <div>
                                 <label> Ciudad </label>
-                                <select className='inputStyle' {...register('Ciudad')}>
+                                <select defaultValue={""} className='inputStyle' onChange={handleCiudadChange}>
+                                <option value="" disabled >Selecciona una ciudad</option>
                                     {ciudades.map(ciudad => (
                                         <option key={ciudad.id} value={ciudad.id}> {ciudad.nombre} </option>
                                     ))}
@@ -122,19 +230,19 @@ const Administrador = () => {
                             </div>
                             <div>
                                 <label> Dirección </label>
-                                <input type="text" className='inputStyle' {...register('Dirección')} />
+                                <input type="text" className='inputStyle'  />
                             </div>
                             <div>
                                 <label> Latitud </label>
-                                <input type="text" className='inputStyle' {...register('Latitud')} />
+                                <input type="text" className='inputStyle'  />
                             </div>
                             <div>
                                 <label> Longitud </label>
-                                <input type="text" className='inputStyle' {...register('Longitud')} />
+                                <input type="text" className='inputStyle'  />
                             </div>
                             <div>
                                 <label> Descripción </label>
-                                <input type="textarea" className='inputStylearea' {...register('Descripción')} />
+                                <input type="textarea" onChange={handleDescripcionChange} className='inputStylearea' />
                             </div>
                         </div>
                         <div className='caracteristicas'>
@@ -144,9 +252,9 @@ const Administrador = () => {
                                     {
                                         atributos.map(atributo => (
                                             <li className="caracteristicasProductosDetail liAdmin" key={atributo.id}>
-                                                <FontAwesomeIcon icon={atributo.idIcono} />
+                                                <FontAwesomeIcon icon={atributo.idIcono}/>
                                                 <span>{atributo.descripcion}</span>
-                                                <input type="checkbox" name="" id="" className='chequear' />
+                                                <input  type="checkbox" name="" id="" className='chequear' />
                                             </li>
                                         ))
                                     }
@@ -161,19 +269,19 @@ const Administrador = () => {
                         <div className='adicionales'>
                             <div>
                                 <label> Normas de la casa </label>
-                                <input type="textarea" className='inputStylearea' {...register('Normas de la casa')} />
+                                <input type="textarea" className='inputStylearea'  />
                             </div>
                             <div>
                                 <label> Salud y seguridad </label>
-                                <input type="textarea" className='inputStylearea' {...register('Salud y seguridad')} />
+                                <input type="textarea" className='inputStylearea'  />
                             </div>
                             <div>
                                 <label> Politicas de cancelación </label>
-                                <input type="textarea" className='inputStylearea' {...register('Politicas de cancelación')} />
+                                <input type="textarea" className='inputStylearea'  />
                             </div>
                         </div>
                         <div className='boton'>
-                            <Link to="/addedProduct"> <input type='submit' value='Crear' className='envioForm' /></Link>
+                             <input type='submit' onClick={handleClick} value='Crear' className='envioForm' />
                         </div>
 
                     </form>
@@ -185,6 +293,7 @@ const Administrador = () => {
     )
 
 }
+
 
 
 export default Administrador;
