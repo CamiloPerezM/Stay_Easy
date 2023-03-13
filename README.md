@@ -35,7 +35,7 @@
 
 Al estar corriendo el Backend desde AWS, no es necesario inicializar algún programa. Solo podemos colocar la URL o dirección correspondiente para poder realizar las peticiones a la API.
 
-**URL o Dirrección:** 3.139.69.10:8080/endpoint correspondiente 
+**URL o Dirección:** 3.139.69.10:8080/endpoint correspondiente 
 
 
 
