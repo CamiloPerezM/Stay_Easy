@@ -53,13 +53,13 @@ function Galeria() {
     <div>
       <div className="galeria">
         <div className="imgPrincipal">
-          <img src={imagenes.imagenes && imagenes.imagenes[0]?.urlImagen} id="imgPrimera" />
+          <img src={imagenes.imagenes && imagenes.imagenes[0]?.urlImagen} id="imgPrimera" onClick={() => handleModal(0)} />
         </div>
 
         <div className="img4">
           {imagenes.imagenes?.slice(1, 5).map((image, index) => (
             <div className="contenedorImg" key={image.id}>
-              <img src={image.urlImagen} alt="Imagen" onClick={() => handleShowModal(index + 1)} />
+              <img src={image.urlImagen} alt="Imagen" onClick={() => handleModal(0)} />
             </div>
           ))}
         </div>
