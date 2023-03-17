@@ -33,66 +33,61 @@ function Buscador() {
   const cityFind = ciudades.find((data) => data.nombre === city);
 
   if (city === null) {
-    if (selectedDates[1] != null && selectedDates[0] != null) {
-      console.log("busqueda por fecha");
+    if (selectedDates != null) {
+      if (selectedDates[1] != null && selectedDates[0] != null) {
+        console.log("busqueda por fecha");
 
-      let annoIn;
-      let mesIn;
-      let diaIn;
+        let annoIn;
+        let mesIn;
+        let diaIn;
 
-      let annoOut;
-      let mesOut;
-      let diaOut;
+        let annoOut;
+        let mesOut;
+        let diaOut;
 
-      annoIn = selectedDates[0].$y;
-      mesIn = selectedDates[0].$M + 1;
-      diaIn = selectedDates[0].$D;
+        annoIn = selectedDates[0].$y;
+        mesIn = selectedDates[0].$M + 1;
+        diaIn = selectedDates[0].$D;
 
-      annoOut = selectedDates[1].$y;
-      mesOut = selectedDates[1].$M + 1;
-      diaOut = selectedDates[1].$D;
+        annoOut = selectedDates[1].$y;
+        mesOut = selectedDates[1].$M + 1;
+        diaOut = selectedDates[1].$D;
 
-      ////
+        ////
 
-      mesIn = mesIn.toString().padStart(2, "0");
-      diaIn = diaIn.toString().padStart(2, "0");
+        mesIn = mesIn.toString().padStart(2, "0");
+        diaIn = diaIn.toString().padStart(2, "0");
 
-      mesOut = mesOut.toString().padStart(2, "0");
-      diaOut = diaOut.toString().padStart(2, "0");
+        mesOut = mesOut.toString().padStart(2, "0");
+        diaOut = diaOut.toString().padStart(2, "0");
 
-      //console.log("Año checkin",annoIn);
-      //console.log("mes checkin",mesIn);
-      //console.log("dia checkin",diaIn);
+        //console.log("Año checkin",annoIn);
+        //console.log("mes checkin",mesIn);
+        //console.log("dia checkin",diaIn);
 
-      //console.log("Año checkin",annoOut);
-      //console.log("Año checkin",mesOut);
-      //console.log("Año checkin",diaOut);
+        //console.log("Año checkin",annoOut);
+        //console.log("Año checkin",mesOut);
+        //console.log("Año checkin",diaOut);
 
-      let stringCheckIn = annoIn + "-" + mesIn + "-" + diaIn;
-      let stringCheckOut = annoOut + "-" + mesOut + "-" + diaOut;
+        let stringCheckIn = annoIn + "-" + mesIn + "-" + diaIn;
+        let stringCheckOut = annoOut + "-" + mesOut + "-" + diaOut;
 
-      //console.log(stringCheckIn);
-      // console.log(stringCheckOut);
+        //console.log(stringCheckIn);
+        // console.log(stringCheckOut);
 
-      // ?checkIn=2022-01-18&checkOut=2024-10-20
+        // ?checkIn=2022-01-18&checkOut=2024-10-20
 
-      const stringPostman =
-        "?checkIn=" + stringCheckIn + "&checkOut=" + stringCheckOut;
+        const stringPostman =
+          "?checkIn=" + stringCheckIn + "&checkOut=" + stringCheckOut;
 
-      console.log("string postman", stringPostman);
+        console.log("string postman", stringPostman);
 
-      
-      ruta = `/producto/fech/${stringPostman}`;
+        ruta = `/producto/fech/${stringPostman}`;
 
-      //ruta = `/producto/fech/`;
+        //ruta = `/producto/fech/`;
 
-      console.log("Ruta",ruta);
-
-
-
-
-
-
+        console.log("Ruta", ruta);
+      }
     } else {
       ruta = `/home`;
     }
@@ -150,13 +145,6 @@ function Buscador() {
       ruta = `/producto/fecha/ciudad/${params}`;
     }
   }
-
-
-
-
-
-
-
 
   const handleApplyButtonClick = () => {
     console.log("Selected dates:", selectedDates);
