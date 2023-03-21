@@ -114,7 +114,7 @@ const Administrador = () => {
 
 
             // URL de la API y token Bearer
-            const url = "http://3.139.69.10:8080/producto/";
+            const url = "http://18.219.37.134:8080/producto/";
             const tokenAbuscar = JSON.parse(localStorage.getItem('user'));
             const token = tokenAbuscar?.token;
 
