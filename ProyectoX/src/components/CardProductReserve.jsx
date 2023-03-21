@@ -13,7 +13,7 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
     useEffect(() => {
         async function getProducts() {
             try {
-                const response = await fetch(`http://3.139.69.10:8080/producto/${id}`);
+                const response = await fetch(`http://18.219.37.134:8080/producto/${id}`);
                 const data = await response.json();
                 setProductoCiudad(data);
             } catch (error) {
@@ -39,7 +39,7 @@ const CardProductReserve = ({fechaInicial, fechaFinal, hora, ciudad}) => {
                 usuario: token2?.usuarioDTO?.id,
             };
             console.log(data);
-            const crearReserva = await fetch("http://3.139.69.10:8080/reserva/registrar", {
+            const crearReserva = await fetch("http://18.219.37.134:8080/reserva/registrar", {
                 method: "POST",
                 body: JSON.stringify(data),
                 headers: {

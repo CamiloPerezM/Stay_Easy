@@ -15,7 +15,7 @@ const FilterCity = () => {
         async function getProducts() {
 
             try {
-                const response = await fetch(`http://3.139.69.10:8080/producto/ciudad/${datos.id}`);
+                const response = await fetch(`http://18.219.37.134:8080/producto/ciudad/${datos.id}`);
                 const data = await response.json();
                 setProductoCiudad(data);
             } catch (error) {
